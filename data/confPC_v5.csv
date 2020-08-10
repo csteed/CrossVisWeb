@@ -1,0 +1,2623 @@
+Name,Year,USENIX_ATC,USENIX_FAST,DSN,HPDC,IEEECluster,HPCA,ICS,ISC,SC
+Sangeetha Abdu Jyothi,2020,1,0,0,0,0,0,0,0,0
+Rachit Agarwal,2020,1,0,0,0,0,0,0,0,0
+Rachit Agarwal,2018,1,0,0,0,0,0,0,0,0
+Nitin Agrawal,2020,1,1,0,0,0,0,0,0,0
+Nitin Agrawal,2019,1,1,0,0,0,0,0,0,0
+Irfan Ahmad,2020,1,0,0,0,0,0,0,0,0
+Irfan Ahmad,2019,1,0,0,0,0,0,0,0,0
+Irfan Ahmad,2018,1,0,0,0,0,0,0,0,0
+Gustavo Alonso,2020,1,0,0,0,0,0,0,0,0
+Deniz Altinbuken,2020,1,0,0,0,0,0,0,0,0
+Deniz Altinbuken,2019,1,0,0,0,0,0,0,0,0
+Deniz Altinbuken,2018,1,0,0,0,0,0,0,0,0
+George Amvrosiadis,2020,1,1,0,0,0,0,0,0,1
+George Amvrosiadis,2019,0,0,0,1,0,0,0,0,0
+George Amvrosiadis,2018,0,0,0,0,0,0,0,0,1
+Andrea Arpaci-Dusseau,2020,1,0,0,0,0,0,0,0,0
+Andrea Arpaci-Dusseau,2018,0,1,0,0,0,0,0,0,0
+Behnaz Arzani,2020,1,0,0,0,0,0,0,0,0
+Mona Attariyan,2020,1,0,0,0,0,0,0,0,0
+Anirudh Badam,2020,1,0,0,0,0,0,0,0,0
+Anirudh Badam,2018,0,1,0,0,0,0,0,0,0
+Anirudh Badam,2019,0,0,0,0,0,1,0,0,0
+Saurabh Bagchi,2020,1,0,1,0,0,0,0,0,0
+Saurabh Bagchi,2019,1,0,1,0,0,0,0,0,0
+Antonio Barbalace,2020,1,0,0,0,0,0,0,0,0
+Antonio Barbalace,2019,1,0,0,0,0,0,0,0,0
+Ran Ben Basat,2020,1,0,0,0,0,0,0,0,0
+Orna Agmon Ben-Yehuda,2020,1,0,0,0,0,0,0,0,0
+Pramod Bhatotia,2020,1,1,0,0,0,0,0,0,0
+Pramod Bhatotia,2018,1,1,0,0,0,0,0,0,0
+Ken Birman,2020,1,0,0,0,0,0,0,0,0
+Ken Birman,2019,1,0,0,0,0,0,0,0,0
+Ken Birman,2018,0,0,1,0,0,0,0,0,0
+Sergey Blagodurov,2020,1,0,0,0,0,0,0,0,0
+Herbert Bos,2020,1,0,0,0,0,0,0,0,0
+Herbert Bos,2019,1,0,0,0,0,0,0,0,0
+Herbert Bos,2018,0,0,1,0,0,0,0,0,0
+James Bottomley,2020,1,0,0,0,0,0,0,0,0
+Kevin Butler,2020,1,0,0,0,0,0,0,0,0
+Yinzhi Cao,2020,1,0,1,0,0,0,0,0,0
+Zhen Cao,2020,1,0,0,0,0,0,0,0,0
+Feng Chen,2020,1,0,0,0,0,0,0,0,0
+Ming Chen,2020,1,0,0,0,0,0,0,0,0
+Young-ri Choi,2020,1,1,0,0,0,0,0,0,0
+Guilherme Cox,2020,1,0,0,0,0,0,0,0,0
+Guilherme Cox,2019,0,0,0,0,1,0,0,0,0
+Heming Cui,2020,1,0,1,0,0,0,0,0,0
+Heming Cui,2019,0,0,1,0,0,0,0,0,0
+Heming Cui,2018,0,0,1,0,0,0,0,0,0
+Dilma Da Silva,2020,1,0,0,0,0,0,0,0,0
+Dilma Da Silva,2019,1,0,0,0,0,0,0,0,1
+Dilma Da Silva,2018,0,0,0,1,0,0,0,0,0
+Alex Daglis,2020,1,0,0,0,0,0,0,0,0
+David Devescery,2020,1,0,0,0,0,0,0,0,0
+Abhinav Duggal,2020,1,0,0,0,0,0,0,0,0
+Michael Ferdman,2020,1,0,0,0,0,0,0,0,0
+Michael Ferdman,2019,0,0,0,0,0,1,0,0,0
+Michael Ferdman,2018,0,0,0,0,0,1,0,0,0
+Pedro Fonseca,2020,1,0,0,0,0,0,0,0,0
+Moshe Gabel,2020,1,0,0,0,0,0,0,0,0
+Moshe Gabel,2019,1,0,0,0,0,0,0,0,0
+Manya Ghobadi,2020,1,0,0,0,0,0,0,0,0
+Jana Giceva,2020,1,0,0,0,0,0,0,0,0
+Ashvin Goel,2020,1,0,0,0,0,0,0,0,0
+Ashvin Goel,2019,1,1,0,0,0,0,0,0,0
+Ashvin Goel,2018,0,0,1,0,0,0,0,0,0
+Xiaohui (Helen) Gu,2020,1,0,1,0,0,0,0,0,0
+Xiaohui (Helen) Gu,2018,1,0,0,0,0,0,0,0,0
+Vishakha Gupta-Cledat,2020,1,0,0,0,0,0,0,0,0
+Andreas Haeberlen,2020,1,0,0,0,0,0,0,0,0
+Dongsu Han,2020,1,0,0,0,0,0,0,0,0
+Danny Harnik,2020,1,0,0,0,0,0,0,0,0
+Tim Harris,2020,1,0,0,0,0,0,0,0,0
+Tim Harris,2019,0,1,0,0,0,0,0,0,0
+Eshcar Hillel,2020,1,0,0,0,0,0,0,0,0
+Michio Honda,2020,1,0,0,0,0,0,0,0,0
+Michio Honda,2018,1,0,0,0,0,0,0,0,0
+Michio Honda,2019,0,0,0,0,0,0,0,0,1
+Yu Hua,2020,1,1,0,0,0,0,0,0,0
+Yu Hua,2019,1,0,0,0,0,0,0,0,1
+Yu Hua,2018,1,0,0,0,0,0,0,0,0
+Jian Huang,2020,1,1,0,0,0,1,0,0,0
+Jian Huang,2019,1,0,0,0,1,0,0,0,0
+Jian Huang,2018,1,0,0,0,1,0,0,0,0
+Trent Jaeger,2020,1,0,0,0,0,0,0,0,0
+Bill Jannen,2020,1,1,0,0,0,0,0,0,0
+Bill Jannen,2019,1,1,0,0,0,0,0,0,0
+Junchen Jiang,2020,1,0,0,0,0,0,0,0,0
+Junchen Jiang,2018,1,0,0,0,0,0,0,0,0
+Changhee Jung,2020,1,0,0,1,0,0,0,0,0
+Changhee Jung,2019,0,0,0,1,0,0,0,0,0
+Changhee Jung,2018,0,0,0,0,0,0,0,0,1
+Sudarsun Kannan,2020,1,0,0,0,0,0,0,0,0
+Sudarsun Kannan,2019,1,0,0,0,0,0,0,0,0
+Baris Kasikci,2020,1,0,0,0,0,0,0,0,0
+Idit Keidar,2020,1,0,0,0,0,0,0,0,0
+Ana  Klimovic,2020,1,0,0,0,0,0,0,0,0
+Michael Kozuch,2020,1,0,0,0,0,0,0,0,0
+Orran Krieger,2020,1,0,0,0,0,0,0,0,0
+Mohan Kumar Kumar,2020,1,0,0,0,0,0,0,0,0
+Youngjin Kwon,2020,1,0,0,0,0,0,0,0,0
+Julia Lawall,2020,1,0,0,0,0,0,0,0,0
+Julia Lawall,2018,1,0,0,0,0,0,0,0,0
+Philip Levis,2020,1,0,0,0,0,0,0,0,0
+Felix Lin,2020,1,0,0,0,0,1,0,0,0
+Heiner Litz,2020,1,0,0,0,0,0,0,0,0
+Vincent Liu,2020,1,0,0,0,0,0,0,0,0
+Brandon Lucia,2020,1,0,0,0,0,0,0,0,0
+Xiaosong Ma,2020,1,1,0,0,0,0,0,1,0
+Xiaosong Ma,2018,1,0,0,1,0,0,0,0,1
+Xiaosong Ma,2019,0,0,0,1,0,0,0,0,1
+Peter Macko,2020,1,0,0,0,0,0,0,0,0
+Peter Macko,2019,0,1,0,0,0,0,0,0,0
+Harsha V. Madhyastha,2020,1,0,0,0,0,0,0,0,0
+Carlos Maltzahn,2020,1,0,0,0,0,0,0,0,0
+Carlos Maltzahn,2018,1,0,0,0,0,0,0,0,1
+Carlos Maltzahn,2019,0,0,0,1,0,0,0,0,0
+Alexander Merritt,2020,1,0,0,0,0,0,0,0,0
+Michael Mesnier,2020,1,0,0,0,0,0,0,0,0
+Changwoo Min,2020,1,1,0,0,0,0,0,0,0
+Changwoo Min,2019,1,0,0,0,0,0,0,0,0
+Changwoo Min,2018,1,0,0,0,0,0,0,0,0
+Shuai Mu,2020,1,0,0,0,0,0,0,0,0
+Gilles Muller,2020,1,0,0,0,0,0,0,0,0
+Gilles Muller,2019,1,0,0,0,0,0,0,0,1
+Kiran-Kumar Muniswamy-Reddy,2020,1,1,0,0,0,0,0,0,0
+Srinivasan Narayanamurthy,2020,1,0,0,0,0,0,0,0,0
+Ravi Netravali,2020,1,0,0,0,0,0,0,0,0
+Radhika Niranjan Mysore,2020,1,0,0,0,0,0,0,0,0
+Roberto Palmieri,2020,1,0,0,0,0,0,0,0,0
+Aurojit Panda,2020,1,0,0,0,0,0,0,0,0
+Aurojit Panda,2019,1,0,0,0,0,0,0,0,0
+Gabriel  Parmer,2020,1,0,0,0,0,0,0,0,0
+Raju Rangaswami,2020,1,0,0,0,0,0,0,0,0
+Raju Rangaswami,2019,0,1,0,0,0,0,0,0,0
+Oriana Riva,2020,1,0,0,0,0,0,0,0,0
+Amitabha Roy,2020,1,0,0,0,0,0,0,0,0
+Larry Rudolph,2020,1,0,0,0,0,0,0,0,0
+Jack Sampson,2020,1,0,0,0,0,0,0,0,0
+Jack Sampson,2018,0,0,0,0,0,1,0,0,0
+Mahadev Satyanarayanan,2020,1,0,0,0,0,0,0,0,0
+Jiri Schindler,2020,1,0,0,0,0,0,0,0,0
+Jiri Schindler,2019,0,1,0,0,0,0,0,0,0
+Malte Schwarzkopf,2020,1,0,0,0,0,0,0,0,0
+Russell Sears,2020,1,0,0,0,0,0,0,0,0
+Russell Sears,2018,1,0,0,0,0,0,0,0,0
+Siddhartha Sen,2020,1,0,0,0,0,0,0,0,0
+Siddhartha Sen,2018,1,0,0,0,0,0,0,0,0
+Philip Shilane,2020,1,0,0,0,0,0,0,0,0
+Philip Shilane,2018,0,1,0,0,0,0,0,0,0
+Mark Silberstein,2020,1,0,0,0,0,0,0,0,0
+Richard Spillane,2020,1,0,0,0,0,0,0,0,0
+Scott Stoller,2020,1,0,0,0,0,0,0,0,0
+Patrick Stuedi,2020,1,0,0,0,0,0,0,0,0
+Patrick Stuedi,2019,1,0,0,0,0,0,0,0,0
+Patrick Stuedi,2018,1,0,0,0,0,0,0,0,0
+Lalith Suresh,2020,1,0,0,0,0,0,0,0,0
+Lalith Suresh,2018,1,0,0,0,0,0,0,0,0
+Amy Tai,2020,1,0,0,0,0,0,0,0,0
+Eno Thereska,2020,1,0,0,0,0,0,0,0,0
+Theodore Ts'o,2020,1,0,0,0,0,0,0,0,0
+Theodore Ts'o,2019,1,0,0,0,0,0,0,0,0
+Alexey Tumanov,2020,1,0,0,0,0,0,0,0,0
+Keval Vora,2020,1,0,0,0,0,0,0,0,0
+Keval Vora,2018,0,0,0,0,0,0,1,0,0
+Ric Wheeler,2020,1,1,0,0,0,0,0,0,0
+Ric Wheeler,2019,1,1,0,0,0,0,0,0,0
+Avani Wildani,2020,1,1,0,0,0,0,0,0,0
+Emmett Witchel,2020,1,0,0,0,0,0,0,0,0
+Yue Yang,2020,1,0,0,0,0,0,0,0,0
+Yue Yang,2019,0,0,0,0,0,0,0,0,1
+Ming Zhao,2020,1,0,0,0,0,0,0,0,0
+Ming Zhao,2018,0,1,0,0,0,0,0,0,1
+Lin Zhong,2020,1,0,0,0,0,1,0,0,0
+Noa Zilberman,2020,1,0,0,0,0,0,0,0,0
+Nadav Amit,2019,1,0,0,0,0,0,0,0,0
+Mahesh Balakrishnan,2019,1,1,0,0,0,0,0,0,0
+Mahesh Balakrishnan,2018,1,1,0,0,0,0,0,0,0
+Andrew Baumann,2019,1,0,0,0,0,0,0,0,0
+Adam Belay,2019,1,0,0,0,0,0,0,0,0
+Edward Bortnikov,2019,1,0,0,0,0,0,0,0,0
+Andre Brinkmann,2019,1,0,0,0,0,0,0,0,0
+Andre Brinkmann,2018,0,1,0,0,1,0,0,0,0
+Andre Brinkmann,2020,0,0,0,0,1,0,0,0,0
+Edouard Bugnion,2019,1,0,0,0,0,0,0,0,0
+Randal Burns,2019,1,0,0,0,0,0,0,0,0
+Randal Burns,2020,0,1,0,0,0,0,0,0,0
+Anton Burtsev,2019,1,0,0,0,0,0,0,0,0
+Anton Burtsev,2018,0,0,0,0,0,0,1,0,0
+Haibo Chen,2019,1,0,0,0,0,0,0,0,0
+Vijay Chidambaram,2019,1,1,0,0,0,0,0,0,0
+Vijay Chidambaram,2018,1,1,0,0,0,0,0,0,0
+Asaf Cidon,2019,1,0,0,0,0,0,0,0,0
+Austin Clements,2019,1,0,0,0,0,0,0,0,0
+David Cock,2019,1,0,0,0,0,0,0,0,0
+Paolo Costa,2019,1,0,0,0,0,0,0,0,0
+Paolo Costa,2018,1,0,0,0,0,0,0,0,0
+John Criswell,2019,1,0,0,0,0,0,0,0,0
+Charlie Curtsinger,2019,1,0,0,0,0,0,0,0,0
+Nathan Dautenhahn,2019,1,0,0,0,0,0,0,0,0
+Eyal de Lara,2019,1,0,0,0,0,0,0,0,0
+Christina Delimitrou,2019,1,0,0,0,0,0,0,0,0
+Angela Demke Brown,2019,1,1,0,0,0,0,0,0,0
+Angela Demke Brown,2020,0,1,0,0,0,0,0,0,0
+Angela Demke Brown,2018,0,1,0,0,0,0,0,0,0
+Fred Douglis,2019,1,0,0,0,0,0,0,0,0
+Eric Eide,2019,1,0,0,0,0,0,0,0,0
+Eric Eide,2018,0,0,1,0,0,0,0,0,0
+Michael Factor,2019,1,0,0,0,0,0,0,0,0
+Pascal Felber,2019,1,0,1,0,0,0,0,0,0
+Pascal Felber,2020,0,0,1,0,0,0,0,0,0
+Pascal Felber,2018,0,0,1,0,0,0,0,0,0
+Christof Fetzer,2019,1,0,0,0,0,0,0,0,0
+Christof Fetzer,2020,0,0,1,0,0,0,0,0,0
+Christof Fetzer,2018,0,0,1,0,0,0,0,0,0
+Ada Gavrilovska,2019,1,0,0,0,0,0,0,0,1
+Ada Gavrilovska,2018,1,0,0,0,0,0,0,0,1
+Phillip Gibbons,2019,1,0,0,0,0,0,0,0,0
+Cristiano Giuffrida,2019,1,0,0,0,0,0,0,0,0
+Boris Grot,2019,1,0,0,0,0,0,0,0,0
+Boris Grot,2018,0,0,0,0,0,1,0,0,0
+Steven Hand,2019,1,0,0,0,0,0,0,0,0
+Liting Hu,2019,1,0,0,0,0,0,0,0,0
+Manos Kapritsos,2019,1,0,0,0,0,0,0,0,0
+Kimberly Keeton,2019,1,1,0,0,0,0,0,0,0
+Kimberly Keeton,2020,0,1,0,0,0,0,0,0,0
+Samira Khan,2019,1,0,0,0,0,0,0,0,1
+Samira Khan,2018,1,0,0,0,0,1,0,0,0
+Taesoo Kim,2019,1,0,0,0,0,0,0,0,0
+Taesoo Kim,2018,1,0,0,0,0,0,0,0,0
+Sam King,2019,1,0,0,0,0,0,0,0,0
+Aasheesh Kolli,2019,1,0,0,0,0,1,0,0,0
+Aasheesh Kolli,2020,0,0,0,0,0,1,0,0,0
+Dejan Kostic,2019,1,0,0,0,0,0,0,0,0
+Geoff Kuenning,2019,1,1,0,0,0,0,0,0,0
+Geoff Kuenning,2020,0,1,0,0,0,0,0,0,0
+Patrick P.C. Lee,2019,1,0,0,0,0,0,0,0,0
+Patrick P.C. Lee,2020,0,1,1,0,0,0,0,0,0
+Xing Lin,2019,1,0,0,0,0,0,0,0,0
+Xing Lin,2018,1,0,0,0,0,0,0,0,0
+Ethan L. Miller,2019,1,0,0,0,0,0,0,0,0
+Ethan L. Miller,2020,0,1,0,0,0,0,0,0,0
+Ethan L. Miller,2018,0,1,0,0,0,0,0,0,0
+Adam Morrison,2019,1,0,0,0,0,0,0,0,0
+Dushyanth Narayanan,2019,1,0,0,0,0,0,0,0,0
+Dushyanth Narayanan,2018,0,1,0,0,0,0,0,0,0
+David Nellans,2019,1,0,0,0,0,0,0,0,0
+Ed Nightingale,2019,1,0,0,0,0,0,0,0,0
+Ed Nightingale,2018,0,1,0,0,0,0,0,0,0
+Sam H. Noh,2019,1,1,0,0,0,0,0,0,0
+Sam H. Noh,2020,0,1,0,0,0,0,0,0,0
+Sam H. Noh,2018,0,1,0,0,0,0,0,0,0
+Peter Pietzuch,2019,1,0,1,0,0,0,0,0,0
+Don Porter,2019,1,0,0,0,0,0,0,0,0
+Don Porter,2020,0,1,0,0,0,0,0,0,0
+Michael Reiter,2019,1,0,0,0,0,0,0,0,0
+Scott Rixner,2019,1,0,0,0,0,0,0,0,0
+Timothy Roscoe,2019,1,0,0,0,0,0,0,0,0
+Chris Rossbach,2019,1,0,0,0,0,0,0,0,0
+Leonid Ryzhyk,2019,1,0,0,0,0,0,0,0,0
+Bianca Schroeder,2019,1,1,0,0,0,0,0,0,0
+Bianca Schroeder,2018,0,1,0,0,0,0,0,0,0
+Liuba Shrira,2019,1,0,0,0,0,0,0,0,0
+Liuba Shrira,2018,0,0,1,0,0,0,0,0,0
+Keith A. Smith,2019,1,1,0,0,0,0,0,0,0
+Keith A. Smith,2018,1,1,0,0,0,0,0,0,0
+Keith A. Smith,2020,0,1,0,0,0,0,0,0,0
+Michael Stumm,2019,1,0,0,0,0,0,0,0,0
+Ryan Stutsman,2019,1,0,0,0,0,0,0,0,0
+Steve Swanson,2019,1,0,0,0,0,0,0,0,0
+Michael Swift,2019,1,0,0,0,0,0,0,0,0
+Nisha Talagala,2019,1,1,0,0,0,0,0,0,0
+Chia-Che Tsai,2019,1,0,0,0,0,0,0,0,0
+Joseph Tucek,2019,1,1,0,0,0,0,0,0,0
+Haris Volos,2019,1,0,0,0,0,0,0,0,0
+Marko Vukolic,2019,1,0,0,0,0,0,0,0,0
+Marko Vukolic,2018,0,0,1,0,0,0,0,0,0
+Carl Waldspurger,2019,1,1,0,0,0,0,0,0,0
+Carl Waldspurger,2020,0,1,0,0,0,0,0,0,0
+Dan Williams,2019,1,0,0,0,0,0,0,0,0
+Youjip Won,2019,1,1,0,0,0,0,0,0,0
+Youjip Won,2018,1,1,0,0,0,0,0,0,0
+Youjip Won,2020,0,1,0,0,0,0,0,0,0
+Gala Yadgar,2019,1,1,0,0,0,0,0,0,0
+Gala Yadgar,2018,1,1,0,0,0,0,0,0,0
+Gala Yadgar,2020,0,1,0,0,0,0,0,0,0
+Yuval Yarom,2019,1,0,0,0,0,0,0,0,0
+Erez Zadok,2019,1,0,0,0,0,0,0,0,0
+Zheng (Eddy) Zhang,2019,1,0,0,0,0,0,0,0,1
+Zheng (Eddy) Zhang,2018,1,0,0,0,0,0,0,0,0
+Aruna Balasubramanian,2018,1,0,0,0,0,0,0,0,0
+Theophilus Benson,2018,1,0,0,0,0,0,0,0,0
+John Bent,2018,1,0,0,0,0,0,0,0,1
+John Bent,2020,0,1,0,0,0,0,0,0,1
+John Bent,2019,0,0,0,0,0,0,0,0,1
+Alex Biryukov,2018,1,0,0,0,0,0,0,0,0
+Dhruba Borthakur,2018,1,0,0,0,0,0,0,0,0
+Nathan Bronson,2018,1,0,0,0,0,0,0,0,0
+Irina Calciu,2018,1,0,0,0,0,0,0,0,0
+Michael Carbin,2018,1,0,0,0,0,0,0,0,0
+David Chu,2018,1,0,0,0,0,0,0,0,0
+Peter Desnoyers,2018,1,0,0,0,0,0,0,0,0
+Peter Desnoyers,2019,0,1,0,0,0,0,0,0,0
+Yufei Ding,2018,1,0,0,0,0,0,0,0,0
+Yufei Ding,2019,0,0,0,0,0,0,0,1,0
+Pierre-Alain Fouque,2018,1,0,0,0,0,0,0,0,0
+Lakshmi Ganesh,2018,1,0,0,0,0,0,0,0,0
+Phillipa Gill,2018,1,0,0,0,0,0,0,0,0
+Indranil Gupta,2018,1,0,0,0,0,0,0,0,0
+Dean Hildebrand,2018,1,1,0,1,0,0,0,0,1
+Dean Hildebrand,2020,0,1,0,1,0,0,0,0,1
+Dean Hildebrand,2019,0,0,0,0,0,0,0,0,1
+H. Howie Huang,2018,1,0,0,0,0,0,0,0,0
+H. Howie Huang,2020,0,1,0,1,0,0,0,0,0
+H. Howie Huang,2019,0,0,0,0,0,0,0,1,0
+Ryan Huang,2018,1,0,0,0,0,0,0,0,0
+David Irwin,2018,1,0,0,1,0,0,0,0,0
+David Irwin,2019,0,0,0,1,0,0,0,0,0
+David Irwin,2020,0,0,0,0,0,0,0,0,1
+Flavio Junqueira,2018,1,0,0,0,0,0,0,0,0
+Asim Kadav,2018,1,0,0,0,0,0,0,0,0
+Konstantinos Karanasos,2018,1,0,0,0,0,0,0,0,0
+Achmad Kistijantoro,2018,1,0,0,0,0,0,0,0,0
+I-Ting Angelina Lee,2018,1,0,0,0,0,0,0,0,0
+Tanakorn Leesatapornwongsa,2018,1,0,0,0,0,0,0,0,0
+Cheng Li,2018,1,0,0,0,0,0,0,0,0
+Jinyang Li,2018,1,0,0,0,0,0,0,0,0
+Dahlia Malkhi,2018,1,0,0,0,0,0,0,0,0
+Iqbal Mohomed,2018,1,0,0,0,0,0,0,0,0
+Cristina Nita-Rotaru,2018,1,0,1,0,0,0,0,0,0
+Vijayan Prabhakaran,2018,1,1,0,0,0,0,0,0,0
+Christopher J. Rossbach,2018,1,0,0,0,0,0,0,0,0
+Haiying Shen,2018,1,0,0,0,0,0,0,0,0
+Alex Shraer,2018,1,0,0,0,0,0,0,0,0
+Brent Stephens,2018,1,0,0,0,0,0,0,0,0
+Christopher Stewart,2018,1,0,0,0,0,0,0,0,0
+Swaminathan Sundararaman,2018,1,0,0,0,0,0,0,0,0
+Swaminathan Sundararaman,2019,0,1,0,0,0,0,0,0,0
+Bhuvan Urgaonkar,2018,1,0,0,0,0,0,0,0,0
+Peter Varman,2018,1,0,0,0,0,0,0,0,0
+Peter Varman,2020,0,0,0,0,0,1,0,0,0
+Shivaram Venkataraman,2018,1,0,0,0,0,0,0,0,0
+Andrew Wang,2018,1,0,0,0,0,0,0,0,0
+Antonia Zhai,2018,1,0,0,0,0,0,0,0,0
+Antonia Zhai,2020,0,0,0,0,0,1,0,0,0
+Irene Zhang,2018,1,0,0,0,0,0,0,0,0
+Yiying Zhang,2018,1,0,0,0,0,0,0,0,0
+Yiying Zhang,2019,0,1,0,0,0,0,0,0,0
+Suparna Bhattacharya,2020,0,1,0,0,0,0,0,0,0
+William J. Bolosky,2020,0,1,0,0,0,0,0,0,0
+André Brinkmann,2020,0,1,0,0,0,0,0,0,0
+André Brinkmann,2019,0,1,0,0,0,0,0,1,0
+Ali R. Butt,2020,0,1,0,1,1,0,0,0,1
+Ali R. Butt,2018,0,0,0,1,1,0,1,0,0
+Gary Grider,2020,0,1,0,0,0,0,0,0,0
+Gary Grider,2019,0,0,0,0,0,0,0,0,1
+Haryadi Gunawi,2020,0,1,0,0,0,0,0,0,0
+Haryadi Gunawi,2019,0,1,0,0,0,0,0,0,0
+Haryadi Gunawi,2018,0,1,0,0,0,0,0,0,0
+Jooyoung Hwang,2020,0,1,0,0,0,0,0,0,0
+Sungjin Lee,2020,0,1,0,0,0,0,0,0,0
+Sungjin Lee,2019,0,1,0,0,0,0,0,0,0
+Darrell Long,2020,0,1,0,0,0,0,0,0,0
+Umesh Maheshwari,2020,0,1,0,0,0,0,0,0,0
+Umesh Maheshwari,2019,0,1,0,0,0,0,0,0,0
+Umesh Maheshwari,2018,0,1,0,0,0,0,0,0,0
+Dalit Naor,2020,0,1,0,0,0,0,0,0,0
+Rob Ross,2020,0,1,0,0,0,0,0,0,0
+Vasily Tarasov,2020,0,1,0,0,0,0,0,0,1
+Vasily Tarasov,2019,0,1,0,1,0,0,0,0,0
+Vasily Tarasov,2018,0,1,0,0,0,0,0,0,0
+Devesh Tiwari,2020,0,1,1,1,0,1,0,0,0
+Devesh Tiwari,2019,0,0,1,1,0,0,0,0,0
+Devesh Tiwari,2018,0,0,1,0,0,0,0,0,1
+Brent Welch,2020,0,1,0,0,0,0,0,0,0
+Brent Welch,2019,0,1,0,0,0,0,0,0,0
+Jishen Zhao,2020,0,1,0,0,0,1,0,0,0
+Jishen Zhao,2019,0,0,0,0,1,1,0,0,1
+Jishen Zhao,2018,0,0,0,0,0,1,0,0,1
+Ajay Gulati,2019,0,1,0,0,0,0,0,0,0
+Cheng Huang,2019,0,1,0,0,0,0,0,0,0
+Cheng Huang,2018,0,1,0,0,0,0,0,0,0
+Rob Johnson,2019,0,1,0,0,0,0,0,0,0
+Arif Merchant,2019,0,1,0,0,0,0,0,0,0
+Arif Merchant,2018,0,1,0,0,0,0,0,0,0
+Onur Mutlu,2019,0,1,1,0,0,0,0,0,0
+Onur Mutlu,2020,0,0,1,0,0,0,0,0,0
+Onur Mutlu,2018,0,0,0,0,0,1,1,0,0
+Florentina Popovici,2019,0,1,0,0,0,0,0,0,0
+Ken Salem,2019,0,1,0,0,0,0,0,0,0
+Ioan Stefanovici,2019,0,1,0,0,0,0,0,0,0
+Andrew Warfield,2019,0,1,0,0,0,0,0,0,0
+Andrew Warfield,2018,0,1,0,0,0,0,0,0,0
+Hakim Weatherspoon,2019,0,1,0,0,0,0,0,0,0
+Kevin Greenan,2018,0,1,0,0,0,0,0,0,0
+Jorge Guerra,2018,0,1,0,0,0,0,0,0,0
+Hong Jiang,2018,0,1,0,0,0,0,0,0,0
+Cristian Ungureanu,2018,0,1,0,0,0,0,0,0,0
+Ashish Vulimiri,2018,0,1,0,0,0,0,0,0,0
+Sage Weil,2018,0,1,0,0,0,0,0,0,0
+﻿Yair Amir,2020,0,0,1,0,0,0,0,0,0
+Homa Alemzadeh,2020,0,0,1,0,0,0,0,0,0
+Homa Alemzadeh,2019,0,0,1,0,0,0,0,0,0
+Homa Alemzadeh,2018,0,0,1,0,0,0,0,0,0
+Alysson Bessani,2020,0,0,1,0,0,0,0,0,0
+Alysson Bessani,2019,0,0,1,0,0,0,0,0,0
+Alysson Bessani,2018,0,0,1,0,0,0,0,0,0
+Andrea Bondavalli,2020,0,0,1,0,0,0,0,0,0
+Andrea Bondavalli,2018,0,0,1,0,0,0,0,0,0
+Sara Bouchenak,2020,0,0,1,0,0,0,0,0,0
+Sara Bouchenak,2019,0,0,1,0,0,0,0,0,0
+Sara Bouchenak,2018,0,0,1,0,0,0,0,0,0
+Peter Buchholz,2020,0,0,1,0,0,0,0,0,0
+Giuliano Casale,2020,0,0,1,0,0,0,0,0,0
+Giuliano Casale,2018,0,0,1,0,0,0,0,0,0
+Giuliano Casale,2019,0,0,0,1,0,0,0,0,0
+Shuo Chen,2020,0,0,1,0,0,0,0,0,0
+Shuo Chen,2019,0,0,1,0,0,0,0,0,0
+Lydia Y. Chen,2020,0,0,1,0,0,0,0,0,0
+Lydia Y. Chen,2019,0,0,1,0,0,0,0,0,0
+Lydia Y. Chen,2018,0,0,1,0,0,0,0,0,0
+Lucy Cherkasova,2020,0,0,1,0,0,0,0,0,0
+Miguel Correia,2020,0,0,1,0,0,0,0,0,0
+Miguel Correia,2019,0,0,1,0,0,0,0,0,0
+Miguel Correia,2018,0,0,1,0,0,0,0,0,0
+Michel Cukier,2020,0,0,1,0,0,0,0,0,0
+Michel Cukier,2018,0,0,1,0,0,0,0,0,0
+Marc Dacier,2020,0,0,1,0,0,0,0,0,0
+Marc Dacier,2018,0,0,1,0,0,0,0,0,0
+Elias Duarte,2020,0,0,1,0,0,0,0,0,0
+Elias Duarte,2019,0,0,1,0,0,0,0,0,0
+Elias Duarte,2018,0,0,1,0,0,0,0,0,0
+Manuel Egele,2020,0,0,1,0,0,0,0,0,0
+Sameh Elnikety,2020,0,0,1,0,0,0,0,0,0
+Sameh Elnikety,2019,0,0,1,0,0,0,0,0,0
+Ryan Gerdes,2020,0,0,1,0,0,0,0,0,0
+Dimitris Gizopoulos,2020,0,0,1,0,0,0,0,0,0
+Neil Gong,2020,0,0,1,0,0,0,0,0,0
+Zhongshu Gu,2020,0,0,1,0,0,0,0,0,0
+Shuai Hao,2020,0,0,1,0,0,0,0,0,0
+Yennun Huang,2020,0,0,1,0,0,0,0,0,0
+Yennun Huang,2019,0,0,1,0,0,0,0,0,0
+Gueyoung Jung,2020,0,0,1,0,0,0,0,0,0
+Zbigniew Kalbarczyk,2020,0,0,1,0,0,0,0,0,0
+Zbigniew Kalbarczyk,2019,0,0,1,0,0,0,0,0,0
+Rudiger Kapitza,2020,0,0,1,0,0,0,0,0,0
+Rudiger Kapitza,2019,0,0,1,0,0,0,0,0,0
+Joost-Pieter Katoen,2020,0,0,1,0,0,0,0,0,0
+Kaustubh Joshi (co-chair),2020,0,0,1,0,0,0,0,0,0
+Chung Hwan Kim,2020,0,0,1,0,0,0,0,0,0
+Dong Seong Kim,2020,0,0,1,0,0,0,0,0,0
+Dong Seong Kim,2019,0,0,1,0,0,0,0,0,0
+Kenji Kono,2020,0,0,1,0,0,0,0,0,0
+Kenji Kono,2019,0,0,1,0,0,0,0,0,0
+Kenji Kono,2018,0,0,1,0,0,0,0,0,0
+Sy-Yen Kuo,2020,0,0,1,0,0,0,0,0,0
+Dmitrii Kuvaiskii,2020,0,0,1,0,0,0,0,0,0
+Zhiqiang Lin,2020,0,0,1,0,0,0,0,0,0
+Qi Li,2020,0,0,1,0,0,0,0,0,0
+Peng Liu,2020,0,0,1,0,0,0,0,0,0
+Michael Lyu,2020,0,0,1,0,0,0,0,0,0
+Michael Lyu,2019,0,0,1,0,0,0,0,0,0
+Michael Lyu,2018,0,0,1,0,0,0,0,0,0
+Nuno Neves,2020,0,0,1,0,0,0,0,0,0
+Nuno Neves,2019,0,0,1,0,0,0,0,0,0
+Miroslav Pajic,2020,0,0,1,0,0,0,0,0,0
+Karthik Pattabiraman,2020,0,0,1,1,0,0,0,0,0
+Karthik Pattabiraman,2018,0,0,1,0,0,0,0,0,0
+Karthik Pattabiraman,2019,0,0,0,1,0,0,0,0,0
+Michael Paulitsch,2020,0,0,1,0,0,0,0,0,0
+Fernando Pedone,2020,0,0,1,0,0,0,0,0,0
+Fernando Pedone,2018,0,0,1,0,0,0,0,0,0
+Sebastiano Peluso,2020,0,0,1,0,0,0,0,0,0
+Atul Prakash,2020,0,0,1,0,0,0,0,0,0
+William Sanders,2020,0,0,1,0,0,0,0,0,0
+Richard Schlichting,2020,0,0,1,0,0,0,0,0,0
+Lorenzo Strigini,2020,0,0,1,0,0,0,0,0,0
+Kun Sun,2020,0,0,1,0,0,0,0,0,0
+Neeraj Suri,2020,0,0,1,0,0,0,0,0,0
+Neeraj Suri,2019,0,0,1,0,0,0,0,0,0
+Timothy Tsai,2020,0,0,1,0,0,0,0,0,0
+Timothy Tsai,2019,0,0,1,0,0,0,0,0,0
+Nektarios Tsoutsos,2020,0,0,1,0,0,0,0,0,0
+Osman Unsal,2020,0,0,1,0,1,0,1,0,1
+Osman Unsal,2019,0,0,0,0,1,0,0,0,1
+Osman Unsal,2018,0,0,0,0,1,0,1,0,0
+Paulo Verissimo,2020,0,0,1,0,0,0,0,0,0
+Jia Wang,2020,0,0,1,0,0,0,0,0,0
+Long Wang,2020,0,0,1,0,0,0,0,0,0
+Long Wang,2019,0,0,1,0,0,0,0,0,0
+Gang Wang,2020,0,0,1,0,0,0,0,0,0
+Haining Wang (co-chair),2020,0,0,1,0,0,0,0,0,0
+Katinka Wolter,2020,0,0,1,0,0,0,0,0,0
+Katinka Wolter,2018,0,0,1,0,0,0,0,0,0
+Timothy Wood,2020,0,0,1,0,0,0,0,0,0
+Feng Yan,2020,0,0,1,0,0,0,0,0,0
+Feng Yan,2019,0,0,0,1,0,0,0,0,0
+Chengmo Yang,2020,0,0,1,0,0,0,0,0,0
+Chengmo Yang,2019,0,0,0,0,0,0,1,0,0
+K. S. Yim,2020,0,0,1,0,0,0,0,0,0
+Chuan Yue,2020,0,0,1,0,0,0,0,0,0
+Ying Zhang,2020,0,0,1,0,0,0,0,0,0
+Fengwei Zhang,2020,0,0,1,0,0,0,0,0,0
+Li Zhou,2020,0,0,1,0,0,0,0,0,0
+Saman Zonouz,2020,0,0,1,0,0,0,0,0,0
+Saman Zonouz,2019,0,0,1,0,0,0,0,0,0
+Alexey Gotsman,2019,0,0,1,0,0,0,0,0,0
+Andrea Ceccarelli,2019,0,0,1,0,0,0,0,0,0
+Andrey Brito,2019,0,0,1,0,0,0,0,0,0
+Andrey Brito,2018,0,0,1,0,0,0,0,0,0
+Benoit Garbinato,2019,0,0,1,0,0,0,0,0,0
+Catello Di Martino,2019,0,0,1,0,0,0,0,0,0
+Catello Di Martino,2018,0,0,1,0,0,0,0,0,0
+Christian Cachin,2019,0,0,1,0,0,0,0,0,0
+Christoph Borchert,2019,0,0,1,0,0,0,0,0,0
+David Kozhaya,2019,0,0,1,0,0,0,0,0,0
+Domenico Cotroneo,2019,0,0,1,0,0,0,0,0,0
+Domenico Cotroneo,2018,0,0,1,0,0,0,0,0,0
+Doug Blough,2019,0,0,1,0,0,0,0,0,0
+Doug Blough,2018,0,0,1,0,0,0,0,0,0
+Elena Troubitsyna,2019,0,0,1,0,0,0,0,0,0
+Elena Troubitsyna,2018,0,0,1,0,0,0,0,0,0
+Elmootazbellah Elnozahy,2019,0,0,1,0,0,0,0,0,0
+Elmootazbellah Elnozahy,2018,0,0,1,0,0,0,0,0,0
+Etienne Riviere,2019,0,0,1,0,0,0,0,0,0
+Etienne Riviere,2018,0,0,1,0,0,0,0,0,0
+Evgenia Smirni,2019,0,0,1,0,0,0,0,0,0
+Evgenia Smirni,2020,0,0,0,1,0,0,0,0,0
+Evgenia Smirni,2018,0,0,0,1,0,0,0,0,0
+Felicita Di Giandomenico,2019,0,0,1,0,0,0,0,0,0
+Fernando Dotti,2019,0,0,1,0,0,0,0,0,0
+Francois Taiani,2019,0,0,1,0,0,0,0,0,0
+Francois Taiani,2018,0,0,1,0,0,0,0,0,0
+Frolin Ocariza,2019,0,0,1,0,0,0,0,0,0
+Gabriela Jacques da Silva,2019,0,0,1,0,0,0,0,0,0
+Gabriela Jacques da Silva,2018,0,0,1,0,0,0,0,0,0
+Haining Wang,2019,0,0,1,0,0,0,0,0,0
+Ilir Gashi,2019,0,0,1,0,0,0,0,0,0
+Ilir Gashi,2018,0,0,1,0,0,0,0,0,0
+Jose Orlando Pereira,2019,0,0,1,0,0,0,0,0,0
+Jose Orlando Pereira,2020,0,0,0,0,0,0,0,0,1
+Jussara M. Almeida,2019,0,0,1,0,0,0,0,0,0
+Kaustubh Joshi,2019,0,0,1,0,0,0,0,0,0
+Keun Soo Yim,2019,0,0,1,0,0,0,0,0,0
+Luis Rodrigues,2019,0,0,1,0,0,0,0,0,0
+Marco Serafini,2019,0,0,1,0,0,0,0,0,0
+Marco Vieira,2019,0,0,1,0,0,0,0,0,0
+Mattan Erez,2019,0,0,1,0,1,0,0,0,1
+Mattan Erez,2020,0,0,0,0,0,0,1,0,0
+Mattan Erez,2018,0,0,0,0,0,0,1,0,0
+Mohamed Kaaniche,2019,0,0,1,0,0,0,0,0,0
+Mohamed Kaaniche,2018,0,0,1,0,0,0,0,0,0
+Nathan DeBardeleben,2019,0,0,1,0,0,0,0,0,0
+Paolo Rech,2019,0,0,1,0,0,0,0,1,0
+Paolo Romano,2019,0,0,1,0,0,0,0,0,0
+Parisa Marandi,2019,0,0,1,0,0,0,0,0,0
+Rakesh Bobba,2019,0,0,1,0,0,0,0,0,0
+Regina Moraes,2019,0,0,1,0,0,0,0,0,0
+Regina Moraes,2018,0,0,1,0,0,0,0,0,0
+Rick Schlichting,2019,0,0,1,0,0,0,0,0,0
+Rick Schlichting,2018,0,0,1,0,0,0,0,0,0
+Santonu Sarkar,2019,0,0,1,0,0,0,0,0,0
+Susanna Donatelli,2019,0,0,1,0,0,0,0,0,0
+Vana Kalogeraki,2019,0,0,1,0,0,0,0,0,0
+Vilas Sridharan,2019,0,0,1,0,0,0,0,0,0
+William H. Sanders,2019,0,0,1,0,0,0,0,0,0
+William H. Sanders,2018,0,0,1,0,0,0,0,0,0
+Achour Mostephaoui,2018,0,0,1,0,0,0,0,0,0
+Alexander Romanovsky,2018,0,0,1,0,0,0,0,0,0
+Arun Somani,2018,0,0,1,0,0,0,0,0,0
+Engin Kirda,2018,0,0,1,0,0,0,0,0,0
+Fabien Hermenier,2018,0,0,1,0,0,0,0,0,0
+Fumio Machida,2018,0,0,1,0,0,0,0,0,0
+Gernot Heiser,2018,0,0,1,0,0,0,0,0,0
+Hari Ramasamy,2018,0,0,1,0,0,0,0,0,0
+Hélène Waeselynck,2018,0,0,1,0,0,0,0,0,0
+Henrique Madeira,2018,0,0,1,0,0,0,0,0,0
+Javier Camara,2018,0,0,1,0,0,0,0,0,0
+Jonny Vinter,2018,0,0,1,0,0,0,0,0,0
+José Orlando Pereira,2018,0,0,1,0,0,0,0,0,0
+Juan Carlos Ruiz García,2018,0,0,1,0,0,0,0,0,0
+Katerina Goseva-Popstojanova,2018,0,0,1,0,0,0,0,0,0
+Luigi Romano,2018,0,0,1,0,0,0,0,0,0
+Matti Hiltunen,2018,0,0,1,0,0,0,0,0,0
+Mike Swift,2018,0,0,1,0,0,0,0,0,0
+Mohammad Zulkernine,2018,0,0,1,0,0,0,0,0,0
+Olaf Spinczyk,2018,0,0,1,0,0,0,0,0,0
+Peter Kemper,2018,0,0,1,0,0,0,0,0,0
+Phil Koopman,2018,0,0,1,0,0,0,0,0,0
+Philipp Reinecke,2018,0,0,1,0,0,0,0,0,0
+Rachid Guerraoui,2018,0,0,1,0,0,0,0,0,0
+Rogério de Lemos,2018,0,0,1,0,0,0,0,0,0
+Rüdiger Kapitza,2018,0,0,1,0,0,0,0,0,0
+Samuel Kounev,2018,0,0,1,0,0,0,0,0,0
+Simin Nadjm-Tehrani,2018,0,0,1,0,0,0,0,0,0
+Sonia Ben Mokhtar,2018,0,0,1,0,0,0,0,0,0
+Tadashi Dohi,2018,0,0,1,0,0,0,0,0,0
+Veena Mendiratta,2018,0,0,1,0,0,0,0,0,0
+Vincent Naessens,2018,0,0,1,0,0,0,0,0,0
+Xavier Defago,2018,0,0,1,0,0,0,0,0,0
+Yair Amir,2018,0,0,1,0,0,0,0,0,0
+Yvan Labiche,2018,0,0,1,0,0,0,0,0,0
+Samer Al-Kiswany,2020,0,0,0,1,0,0,0,0,0
+Samer Al-Kiswany,2018,0,0,0,1,0,0,0,0,0
+Ali Anwar,2020,0,0,0,1,0,0,0,0,1
+Ali Anwar,2019,0,0,0,1,1,0,0,0,0
+Pavan Balaji,2020,0,0,0,1,0,0,0,0,1
+Pavan Balaji,2018,0,0,0,0,0,0,0,0,1
+Pavan Balaji,2019,0,0,0,0,0,0,0,0,1
+Michela Becchi,2020,0,0,0,1,1,0,0,0,1
+Michela Becchi,2019,0,0,0,1,0,0,0,0,1
+Michela Becchi,2018,0,0,0,1,1,0,0,0,1
+Patrick G. Bridges,2020,0,0,0,1,1,0,0,0,0
+Patrick G. Bridges,2018,0,0,0,1,0,0,0,0,1
+Patrick G. Bridges,2019,0,0,0,0,0,0,0,0,1
+Kirk Cameron,2020,0,0,0,1,0,0,0,0,1
+Kirk Cameron,2019,0,0,0,1,0,0,0,0,1
+Franck Cappello,2020,0,0,0,1,0,0,0,0,1
+Franck Cappello,2019,0,0,0,1,0,0,0,0,1
+Franck Cappello,2018,0,0,0,0,0,0,0,0,1
+Abhishek Chandra,2020,0,0,0,1,0,0,0,0,0
+Abhishek Chandra,2019,0,0,0,1,0,0,0,0,0
+Kyle Chard,2020,0,0,0,1,0,0,0,0,1
+Kyle Chard,2018,0,0,0,0,0,0,0,0,1
+Kyle Chard,2019,0,0,0,0,0,0,0,0,1
+Jeff Chase,2020,0,0,0,1,0,0,0,0,0
+Yue Cheng,2020,0,0,0,1,0,0,0,0,1
+Yue Cheng,2019,0,0,0,1,0,0,0,0,0
+Yue Cheng,2018,0,0,0,1,0,0,0,0,0
+Andrew Chien,2020,0,0,0,1,0,0,0,0,0
+Ayse Coskun,2020,0,0,0,1,0,0,0,0,0
+Peter Dinda,2020,0,0,0,1,0,0,0,0,1
+Peter Dinda,2019,0,0,0,1,0,0,0,0,1
+Peter Dinda,2018,0,0,0,1,0,0,0,0,1
+Dick Epema,2020,0,0,0,1,0,0,0,0,0
+Dick Epema,2019,0,0,0,1,0,0,0,0,0
+Dick Epema,2018,0,0,0,1,0,0,0,0,0
+Renato Figueiredo,2020,0,0,0,1,0,0,0,0,0
+Renato Figueiredo,2019,0,0,0,1,0,0,0,0,0
+Renato Figueiredo,2018,0,0,0,1,0,0,0,0,0
+Liana Fong,2020,0,0,0,1,0,0,0,0,1
+Liana Fong,2019,0,0,0,1,0,0,0,0,1
+Liana Fong,2018,0,0,0,1,0,0,0,0,0
+Ana Gainaru,2020,0,0,0,1,1,0,0,0,1
+Ana Gainaru,2018,0,0,0,0,0,0,0,0,1
+Ana Gainaru,2019,0,0,0,0,0,0,0,0,1
+Balazs Gerofi,2020,0,0,0,1,1,0,0,0,1
+Balazs Gerofi,2018,0,0,0,0,0,0,0,0,1
+Balazs Gerofi,2019,0,0,0,0,0,0,0,0,1
+Kartik Gopalan,2020,0,0,0,1,0,0,0,0,0
+Kartik Gopalan,2019,0,0,0,1,0,0,0,0,0
+Kartik Gopalan,2018,0,0,0,1,0,0,0,0,0
+Tian Guo,2020,0,0,0,1,0,0,0,0,0
+Adriana Iamnitchi,2020,0,0,0,1,0,0,0,0,0
+Adriana Iamnitchi,2019,0,0,0,1,0,0,0,0,0
+Adriana Iamnitchi,2018,0,0,0,1,0,0,0,0,1
+Alexandru Iosup,2020,0,0,0,1,0,0,0,0,0
+Alexandru Iosup,2019,0,0,0,0,0,0,0,0,1
+Kate Keahey,2020,0,0,0,1,0,0,0,0,0
+Kate Keahey,2018,0,0,0,1,0,0,0,0,1
+Kate Keahey,2019,0,0,0,0,0,0,0,0,1
+Jack Lange,2020,0,0,0,1,0,0,0,0,0
+Jack Lange,2019,0,0,0,1,0,0,0,0,0
+Hang Liu,2020,0,0,0,1,0,0,0,0,1
+Hang Liu,2019,0,0,0,1,0,0,0,0,0
+Hang Liu,2018,0,0,0,1,0,0,0,0,0
+Tongping Liu,2020,0,0,0,1,0,0,0,0,0
+Jay Lofstead,2020,0,0,0,1,1,0,0,0,0
+Jay Lofstead,2019,0,0,0,1,0,0,0,1,0
+Jay Lofstead,2018,0,0,0,1,0,0,0,1,0
+Naoya Maruyama,2020,0,0,0,1,1,0,0,1,0
+Naoya Maruyama,2018,0,0,0,0,0,0,0,0,1
+Ninfang Mi,2020,0,0,0,1,0,0,0,0,0
+Dimitrios Nikolopoulos,2020,0,0,0,1,0,0,1,1,0
+Dimitrios Nikolopoulos,2019,0,0,0,1,0,0,0,1,0
+Dimitrios Nikolopoulos,2018,0,0,0,0,0,0,0,1,1
+Tatebe Osamu,2020,0,0,0,1,0,0,0,0,0
+Sangmi Pallickara,2020,0,0,0,1,0,0,0,0,0
+Sangmi Pallickara,2018,0,0,0,1,0,0,0,0,0
+Swaroop Pophale,2020,0,0,0,1,0,0,0,0,0
+Swaroop Pophale,2019,0,0,0,0,0,0,0,0,1
+Ioan Raicu,2020,0,0,0,1,0,0,0,0,1
+Ioan Raicu,2019,0,0,0,1,1,0,0,0,1
+Ioan Raicu,2018,0,0,0,0,0,0,0,0,1
+Lavanya Ramakrishnan,2020,0,0,0,1,0,0,0,0,1
+Lavanya Ramakrishnan,2019,0,0,0,1,0,0,0,0,1
+Lavanya Ramakrishnan,2018,0,0,0,0,0,0,0,0,1
+Matei Ripeanu,2020,0,0,0,1,0,0,0,0,0
+Matei Ripeanu,2019,0,0,0,1,0,0,0,0,1
+Matei Ripeanu,2018,0,0,0,1,0,0,0,0,1
+Martin Schulz,2020,0,0,0,1,0,0,1,1,1
+Martin Schulz,2019,0,0,0,0,0,0,0,1,1
+Martin Schulz,2018,0,0,0,0,0,0,1,1,0
+Prateek Sharma,2020,0,0,0,1,0,0,0,0,0
+Prashant Shenoy,2020,0,0,0,1,0,0,0,0,0
+Shuaiwen Leon Song,2020,0,0,0,1,0,0,0,0,0
+Shuaiwen Leon Song,2018,0,0,0,1,0,0,0,0,0
+Shuaiwen Leon Song,2019,0,0,0,0,0,0,0,0,1
+Michela Taufer,2020,0,0,0,1,0,0,0,0,1
+Michela Taufer,2019,0,0,0,1,0,0,0,0,0
+Michela Taufer,2018,0,0,0,1,1,0,0,1,1
+Douglas Thain,2020,0,0,0,1,0,0,0,0,1
+Douglas Thain,2019,0,0,0,1,0,0,0,0,1
+Douglas Thain,2018,0,0,0,1,0,0,0,0,1
+Ana Lucia Varbanescu,2020,0,0,0,1,1,0,0,1,1
+Ana Lucia Varbanescu,2019,0,0,0,1,0,0,0,1,1
+Ana Lucia Varbanescu,2018,0,0,0,1,0,0,0,1,1
+Sudharshan S. Vazhkudai,2020,0,0,0,1,1,0,0,0,1
+Sudharshan S. Vazhkudai,2019,0,0,0,1,0,0,0,0,1
+Sudharshan S. Vazhkudai,2018,0,0,0,1,1,0,0,0,0
+Salim Hariri,2020,0,0,0,1,0,0,0,0,1
+Arthur (Barney) Maccabe,2020,0,0,0,1,0,0,0,1,1
+Arthur (Barney) Maccabe,2019,0,0,0,1,0,0,0,0,1
+Arthur (Barney) Maccabe,2018,0,0,0,1,0,0,0,0,0
+Manish Parashar,2020,0,0,0,1,0,0,0,0,0
+Manish Parashar,2018,0,0,0,1,0,0,0,0,1
+Manish Parashar,2019,0,0,0,0,0,0,0,0,1
+Kenjiro Taura,2020,0,0,0,1,0,0,0,0,1
+Kenjiro Taura,2018,0,0,0,1,0,0,0,0,1
+Kenjiro Taura,2019,0,0,0,0,0,0,0,1,1
+Jon Weissman,2020,0,0,0,1,0,0,0,0,0
+Jon Weissman,2018,0,0,0,1,0,0,0,0,0
+Christos Antonopoulos,2019,0,0,0,1,0,0,0,0,0
+Christos Antonopoulos,2018,0,0,0,0,0,0,0,1,0
+Ryan Chard,2019,0,0,0,1,0,0,0,0,0
+Andrew A. Chien,2019,0,0,0,1,0,0,0,0,0
+Andrew A. Chien,2018,0,0,0,1,0,0,0,0,0
+David Eyres,2019,0,0,0,1,0,0,0,0,0
+David Eyres,2018,0,0,0,1,0,0,0,0,0
+José Fortes,2019,0,0,0,1,0,0,0,0,0
+Anshul Gandhi,2019,0,0,0,1,0,0,0,0,0
+Dimitrios Gizopoulos,2019,0,0,0,1,0,0,0,0,0
+Adwait Jog,2019,0,0,0,1,0,0,0,0,0
+Adwait Jog,2020,0,0,0,0,0,1,0,0,0
+Adwait Jog,2018,0,0,0,0,0,1,0,0,0
+Ningfang Mi,2019,0,0,0,1,0,0,0,0,0
+Ningfang Mi,2020,0,0,0,0,0,0,0,0,1
+Kathryn Mohror,2019,0,0,0,1,1,0,0,1,1
+Kathryn Mohror,2020,0,0,0,0,1,0,0,1,1
+Kathryn Mohror,2018,0,0,0,0,0,0,0,0,1
+Judy Qiu,2019,0,0,0,1,1,0,0,0,0
+Judy Qiu,2018,0,0,0,1,0,0,0,0,0
+M.Mustafa Rafique,2019,0,0,0,1,0,0,0,0,0
+Bin Ren,2019,0,0,0,1,0,0,0,0,0
+Rich Wolski,2019,0,0,0,1,0,0,0,0,0
+Rich Wolski,2018,0,0,0,0,0,0,0,0,1
+Ji Xue,2019,0,0,0,1,0,0,0,0,0
+Ji Xue,2020,0,0,0,0,0,0,0,0,1
+Li Zhang,2019,0,0,0,1,0,0,0,0,0
+Andre Luckow,2018,0,0,0,1,0,0,0,0,0
+Aydin Buluc,2018,0,0,0,1,0,0,0,0,1
+Aydin Buluc,2019,0,0,0,0,0,0,0,0,1
+Aydin Buluc,2020,0,0,0,0,0,0,0,0,1
+Bogdan Nicolae,2018,0,0,0,1,1,0,0,0,1
+Bogdan Nicolae,2019,0,0,0,0,1,0,0,0,1
+Bogdan Nicolae,2020,0,0,0,0,0,0,0,0,1
+Christine Morin,2018,0,0,0,1,0,0,0,0,1
+Christine Morin,2019,0,0,0,0,0,0,0,0,1
+David Abramson,2018,0,0,0,1,0,0,0,0,1
+David Abramson,2019,0,0,0,0,0,0,0,0,1
+David Abramson,2020,0,0,0,0,0,0,0,0,1
+Frank Cappello,2018,0,0,0,1,0,0,0,0,0
+Gabriel Antoniu,2018,0,0,0,1,0,0,0,0,1
+Gabriel Antoniu,2020,0,0,0,0,1,0,0,0,0
+Gabriel Antoniu,2019,0,0,0,0,1,0,0,0,1
+Henri Bal,2018,0,0,0,1,0,0,0,0,0
+Ian Foster,2018,0,0,0,1,1,0,0,0,1
+Ian Foster,2019,0,0,0,0,1,0,0,0,0
+Jiwu Shu,2018,0,0,0,1,0,0,0,0,0
+John (Jack) Lange,2018,0,0,0,1,0,0,0,0,0
+Narayanan Sundaram,2018,0,0,0,1,0,0,0,0,0
+Radu Prodan,2018,0,0,0,1,0,0,0,0,1
+Radu Prodan,2019,0,0,0,0,0,0,0,0,1
+Shantenu Jha,2018,0,0,0,1,0,0,0,0,1
+Shantenu Jha,2019,0,0,0,0,0,0,0,0,1
+Sriram Govindan,2018,0,0,0,1,0,0,0,0,0
+Zizhong Chen,2018,0,0,0,1,0,0,0,0,1
+Emmanuel Jeannot,2020,0,0,0,0,1,0,0,0,1
+Emmanuel Jeannot,2019,0,0,0,0,0,0,0,0,1
+Cristiana Bentes,2020,0,0,0,0,1,0,0,0,1
+Francieli Zanon Boito,2020,0,0,0,0,1,0,0,0,1
+Louis-Claude Canon,2020,0,0,0,0,1,0,0,0,0
+Gabriele Cavallaro,2020,0,0,0,0,1,0,0,0,0
+Alexandre Denis,2020,0,0,0,0,1,0,0,0,0
+Alexandre Denis,2018,0,0,0,0,0,0,0,0,1
+Nicolas Denoyelle,2020,0,0,0,0,1,0,0,0,0
+Pedro Diniz,2020,0,0,0,0,1,0,0,0,0
+Anshu Dubey,2020,0,0,0,0,1,0,0,1,1
+Anshu Dubey,2018,0,0,0,0,0,0,0,0,1
+Anshu Dubey,2019,0,0,0,0,0,0,0,1,1
+Fanny Dufossé,2020,0,0,0,0,1,0,0,0,0
+Trilce Estrada,2020,0,0,0,0,1,0,0,0,0
+Trilce Estrada,2019,0,0,0,0,1,0,0,0,1
+Trilce Estrada,2018,0,0,0,0,1,0,0,0,1
+Mathieu Faverge,2020,0,0,0,0,1,0,0,0,0
+Edgar Gabriel,2020,0,0,0,0,1,0,0,0,0
+Rong Ge,2020,0,0,0,0,1,0,0,0,1
+Rong Ge,2019,0,0,0,0,1,0,1,0,1
+Rong Ge,2018,0,0,0,0,1,0,0,0,1
+Amina Guermouche,2020,0,0,0,0,1,0,0,0,0
+Amina Guermouche,2019,0,0,0,0,1,0,0,0,0
+Amina Guermouche,2018,0,0,0,0,0,0,0,0,1
+Paul Hovland,2020,0,0,0,0,1,0,0,0,0
+Aleksandar Ilic,2020,0,0,0,0,1,0,0,0,0
+Daniel Kressner,2020,0,0,0,0,1,0,0,0,0
+Johannes Langguth,2020,0,0,0,0,1,0,0,0,0
+Johannes Langguth,2018,0,0,0,0,1,0,0,0,0
+Hatem Ltaief,2020,0,0,0,0,1,0,1,1,1
+Hatem Ltaief,2019,0,0,0,0,1,0,0,1,1
+Hatem Ltaief,2018,0,0,0,0,1,0,0,0,1
+Piotr Luszczek,2020,0,0,0,0,1,0,0,0,0
+Piotr Luszczek,2019,0,0,0,0,1,0,0,0,0
+Piotr Luszczek,2018,0,0,0,0,1,0,0,0,0
+Preeti Malakar,2020,0,0,0,0,1,0,0,1,1
+Gabriele Mencagli,2020,0,0,0,0,1,0,0,0,0
+Gabriele Mencagli,2019,0,0,0,0,1,0,0,0,0
+Harshitha Menon,2020,0,0,0,0,1,0,0,0,1
+Shirley Moore,2020,0,0,0,0,1,0,1,0,0
+Shirley Moore,2019,0,0,0,0,1,0,1,0,0
+Shirley Moore,2018,0,0,0,0,1,0,0,0,0
+Tapasya Patki,2020,0,0,0,0,1,0,0,0,0
+Tapasya Patki,2018,0,0,0,0,0,0,0,0,1
+Tapasya Patki,2019,0,0,0,0,0,0,0,0,1
+Swann Perarbau,2020,0,0,0,0,1,0,0,0,0
+Antonio J. Peña,2020,0,0,0,0,1,0,0,0,0
+Antonio J. Peña,2019,0,0,0,0,1,0,0,0,1
+Antonio J. Peña,2018,0,0,0,0,1,0,0,0,0
+Jelena Pjesivac-Grbovic,2020,0,0,0,0,1,0,0,0,0
+Jelena Pjesivac-Grbovic,2018,0,0,0,0,0,0,0,0,1
+Enrique S. Quintana-Ortí,2020,0,0,0,0,1,0,0,0,0
+Martin Swany,2020,0,0,0,0,1,0,0,0,0
+Daisuke Takahashi,2020,0,0,0,0,1,0,0,1,0
+Adrian Tate,2020,0,0,0,0,1,0,0,0,0
+Mohamed Wahib,2020,0,0,0,0,1,0,0,0,1
+Mohamed Wahib,2018,0,0,0,0,0,0,0,0,1
+Philippe Navaux,2020,0,0,0,0,1,0,1,0,0
+Nelson Amaral,2020,0,0,0,0,1,0,0,0,0
+Rodolfo Azevedo,2020,0,0,0,0,1,0,0,0,0
+Harold Castro,2020,0,0,0,0,1,0,0,0,0
+Wenguang Chen,2020,0,0,0,0,1,0,0,0,0
+Wenguang Chen,2018,0,0,0,0,1,0,1,0,0
+Wenguang Chen,2019,0,0,0,0,0,0,0,0,1
+Matthias Diener,2020,0,0,0,0,1,0,0,0,0
+Matthias Diener,2018,0,0,0,0,0,0,0,0,1
+Matthias Diener,2019,0,0,0,0,0,0,0,0,1
+Lucia Drummond,2020,0,0,0,0,1,0,0,0,0
+Lisandro Granville,2020,0,0,0,0,1,0,0,0,0
+Avi Mendelson,2020,0,0,0,0,1,0,0,0,1
+Avi Mendelson,2019,0,0,0,0,0,0,0,0,1
+Esteban Meneses,2020,0,0,0,0,1,0,0,0,1
+Esteban Meneses,2018,0,0,0,0,0,0,0,0,1
+Frank Mueller,2020,0,0,0,0,1,0,0,0,0
+Frank Mueller,2019,0,0,0,0,1,0,1,1,0
+Frank Mueller,2018,0,0,0,0,1,0,0,0,0
+Anne-Cecile Orgerie,2020,0,0,0,0,1,0,0,0,1
+Anne-Cecile Orgerie,2018,0,0,0,0,0,0,0,0,1
+Kentaro Sano,2020,0,0,0,0,1,0,0,0,1
+Kentaro Sano,2019,0,0,0,0,1,0,0,0,0
+Kentaro Sano,2018,0,0,0,0,1,0,0,0,0
+Pierre Sens,2020,0,0,0,0,1,0,0,0,0
+Shinji Sumimoto,2020,0,0,0,0,1,0,0,0,0
+Shinji Sumimoto,2018,0,0,0,0,1,0,0,1,0
+James Lin,2020,0,0,0,0,1,0,0,0,0
+James Lin,2019,0,0,0,0,0,0,0,0,1
+Marco Aldinucci,2020,0,0,0,0,1,0,0,0,0
+Marco Aldinucci,2018,0,0,0,0,1,0,0,0,0
+Hartwig Anzt,2020,0,0,0,0,1,0,0,0,0
+Amy Apon,2020,0,0,0,0,1,0,0,0,0
+Amy Apon,2018,0,0,0,0,1,0,0,0,1
+George Bosilca,2020,0,0,0,0,1,0,0,0,1
+George Bosilca,2018,0,0,0,0,0,0,0,0,1
+Raphael Y. de Camargo,2020,0,0,0,0,1,0,0,0,0
+Alfredo Goldman,2020,0,0,0,0,1,0,1,0,0
+Alfredo Goldman,2019,0,0,0,0,0,0,0,0,1
+Georgios Goumas,2020,0,0,0,0,1,0,0,0,1
+Georgios Goumas,2018,0,0,0,0,0,0,0,1,0
+Ignacio Laguna,2020,0,0,0,0,1,0,0,0,1
+Ignacio Laguna,2019,0,0,0,0,1,0,0,0,0
+Zhiling Lan,2020,0,0,0,0,1,0,0,0,1
+Zhiling Lan,2018,0,0,0,0,1,0,0,0,1
+Zhiling Lan,2019,0,0,0,0,0,0,0,0,1
+Dong Li,2020,0,0,0,0,1,0,0,0,0
+Dong Li,2019,0,0,0,0,1,0,0,0,0
+Dong Li,2018,0,0,0,0,1,0,0,0,1
+Olga Pearce,2020,0,0,0,0,1,0,0,0,1
+Olga Pearce,2019,0,0,0,0,1,0,0,0,1
+Olga Pearce,2018,0,0,0,0,0,0,0,0,1
+Christian Pérez,2020,0,0,0,0,1,0,0,0,0
+Christian Pérez,2018,0,0,0,0,1,0,0,0,0
+Massimo Torquati,2020,0,0,0,0,1,0,0,0,0
+Massimo Torquati,2018,0,0,0,0,1,0,0,0,0
+Antonino Tumeo,2020,0,0,0,0,1,0,1,0,1
+Antonino Tumeo,2019,0,0,0,0,0,0,0,1,1
+Antonino Tumeo,2018,0,0,0,0,0,0,0,1,0
+Zhijia Zhao,2020,0,0,0,0,1,0,0,0,0
+Zhijia Zhao,2019,0,0,0,0,0,0,0,1,0
+Dingwen Tao,2020,0,0,0,0,1,0,0,0,1
+Wei Wu,2020,0,0,0,0,1,0,0,0,1
+Wei Wu,2019,0,0,0,0,0,0,0,0,1
+Osamu Tatebe,2020,0,0,0,0,1,0,0,0,1
+Osamu Tatebe,2019,0,0,0,0,1,0,0,1,1
+Osamu Tatebe,2018,0,0,0,0,1,0,0,1,1
+Gagan Agrawal,2020,0,0,0,0,1,0,0,0,1
+Gagan Agrawal,2019,0,0,0,0,1,0,0,0,0
+Gagan Agrawal,2018,0,0,0,0,1,0,1,0,0
+Suren Byna,2020,0,0,0,0,1,0,0,1,1
+Suren Byna,2019,0,0,0,0,1,0,0,0,1
+Suren Byna,2018,0,0,0,0,1,0,0,1,1
+Jesus Carretero,2020,0,0,0,0,1,0,0,0,0
+Jesus Carretero,2019,0,0,0,0,1,0,0,0,0
+Jesus Carretero,2018,0,0,0,0,1,0,0,0,0
+Sheng Di,2020,0,0,0,0,1,0,0,0,0
+Sheng Di,2018,0,0,0,0,0,0,0,0,1
+Takahiro Hirofuchi,2020,0,0,0,0,1,0,0,0,0
+Hideyuki Kawashima,2020,0,0,0,0,1,0,0,0,0
+Hideyuki Kawashima,2019,0,0,0,0,0,0,0,1,0
+Hideyuki Kawashima,2018,0,0,0,0,0,0,0,1,0
+Scott Klasky,2020,0,0,0,0,1,0,0,0,0
+Scott Klasky,2018,0,0,0,0,0,0,0,1,0
+Glenn Lockwood,2020,0,0,0,0,1,0,0,0,0
+Suzanne McIntosh,2020,0,0,0,0,1,0,0,1,1
+Suzanne McIntosh,2019,0,0,0,0,1,0,0,1,1
+Suzanne McIntosh,2018,0,0,0,0,0,0,0,0,1
+Hiroki Ohtsuji,2020,0,0,0,0,1,0,0,0,0
+Robert B. Ross,2020,0,0,0,0,1,0,0,0,0
+Robert B. Ross,2018,0,0,0,0,0,0,0,0,1
+Kento Sato,2020,0,0,0,0,1,0,0,0,1
+Kento Sato,2018,0,0,0,0,0,0,0,0,1
+Kento Sato,2019,0,0,0,0,0,0,0,0,1
+Hiroaki Shiokawa,2020,0,0,0,0,1,0,0,0,0
+Weikuan Yu,2020,0,0,0,0,1,0,0,0,0
+Weikuan Yu,2018,0,0,0,0,1,0,0,0,0
+Amelie Chi Zhou,2020,0,0,0,0,1,0,0,0,1
+Amelie Chi Zhou,2018,0,0,0,0,1,0,0,0,1
+Amelie Chi Zhou,2019,0,0,0,0,0,0,0,0,1
+Engin Arslan,2019,0,0,0,0,1,0,0,0,0
+Engin Arslan,2018,0,0,0,0,1,0,0,0,0
+Michael Bader,2019,0,0,0,0,1,0,0,0,1
+Michael Bader,2018,0,0,0,0,1,0,0,0,1
+Costas Bekas,2019,0,0,0,0,1,0,0,0,0
+Costas Bekas,2020,0,0,0,0,0,0,1,0,0
+Huilong Chen,2019,0,0,0,0,1,0,0,0,0
+Rafael Ferreira da Silva,2019,0,0,0,0,1,0,0,0,0
+Rafael Ferreira da Silva,2018,0,0,0,0,1,0,0,0,0
+Alice Koniges,2019,0,0,0,0,1,0,0,0,0
+Alice Koniges,2018,0,0,0,0,0,0,0,0,1
+Johannes Lagguth,2019,0,0,0,0,1,0,0,0,0
+Richard Membarth,2019,0,0,0,0,1,0,0,0,0
+Richard Membarth,2018,0,0,0,0,1,0,0,1,0
+Gihan Mudalige,2019,0,0,0,0,1,0,0,0,0
+Gihan Mudalige,2018,0,0,0,0,1,0,0,0,0
+Sivasankaran Rajamanickam,2019,0,0,0,0,1,0,0,0,0
+Sivasankaran Rajamanickam,2018,0,0,0,0,1,0,0,0,1
+Sivasankaran Rajamanickam,2020,0,0,0,0,0,0,0,0,1
+Suzanne Shontz,2019,0,0,0,0,1,0,0,0,1
+Suzanne Shontz,2018,0,0,0,0,1,0,0,0,0
+Suzanne Shontz,2020,0,0,0,0,0,0,0,0,1
+Francesco Silvestri,2019,0,0,0,0,1,0,0,0,0
+Francesco Silvestri,2018,0,0,0,0,1,0,0,0,0
+Shaden Smith,2019,0,0,0,0,1,0,0,0,0
+Shaden Smith,2018,0,0,0,0,1,0,0,0,0
+Shaden Smith,2020,0,0,0,0,0,0,0,0,1
+Hari Sundar,2019,0,0,0,0,1,0,1,0,1
+Hari Sundar,2018,0,0,0,0,1,0,0,0,0
+Nathan Tallent,2019,0,0,0,0,1,0,0,0,1
+Nathan Tallent,2018,0,0,0,0,1,0,1,0,1
+Ramachandran Vaidyanathan,2019,0,0,0,0,1,0,0,0,0
+Tobias Weinzierl,2019,0,0,0,0,1,0,0,0,0
+Tobias Weinzierl,2018,0,0,0,0,1,0,0,1,0
+Freddie Witherden,2019,0,0,0,0,1,0,0,0,0
+Freddie Witherden,2018,0,0,0,0,1,0,0,0,0
+Rio Yokota,2019,0,0,0,0,1,0,0,0,1
+Rio Yokota,2018,0,0,0,0,1,0,0,0,1
+Rio Yokota,2020,0,0,0,0,0,0,0,0,1
+Yungang Bao,2019,0,0,0,0,1,0,1,0,0
+Scott Beamer,2019,0,0,0,0,1,0,0,0,0
+Scott Beamer,2018,0,0,0,0,0,0,0,0,1
+Sudheer Chunduri,2019,0,0,0,0,1,0,0,0,0
+Sudheer Chunduri,2020,0,0,0,0,0,0,0,1,0
+Alexandros Daglis,2019,0,0,0,0,1,0,0,0,0
+Sven Karlsson,2019,0,0,0,0,1,0,0,0,0
+Hyesoon Kim,2019,0,0,0,0,1,0,0,0,0
+John Kim,2019,0,0,0,0,1,1,0,0,1
+John Kim,2018,0,0,0,0,0,0,0,0,1
+John Kim,2020,0,0,0,0,0,0,0,0,1
+Jagadish Kotra,2019,0,0,0,0,1,0,0,0,0
+Vassilis Papaefstathiou,2019,0,0,0,0,1,0,0,0,0
+Gilles Pokham,2019,0,0,0,0,1,0,0,0,0
+Steve Reihnhart,2019,0,0,0,0,1,0,0,0,0
+Minsoo Rhu,2019,0,0,0,0,1,1,0,0,1
+Alex Rico,2019,0,0,0,0,1,0,0,0,0
+Alex Rico,2018,0,0,0,0,0,0,1,0,0
+Jeremy Wilkie,2019,0,0,0,0,1,0,0,0,0
+Seyed Majid Zahedi,2019,0,0,0,0,1,0,0,0,0
+Tianhao Zheng,2019,0,0,0,0,1,0,0,0,0
+Albert Zomaya,2019,0,0,0,0,1,0,0,0,0
+Michaela Becchi,2019,0,0,0,0,1,0,0,0,0
+Aurelien Bouteiller,2019,0,0,0,0,1,0,0,0,0
+Aurelien Bouteiller,2018,0,0,0,0,0,0,0,0,1
+Taisuke Boku,2019,0,0,0,0,1,0,0,0,1
+Taisuke Boku,2018,0,0,0,0,0,0,1,0,1
+Taisuke Boku,2020,0,0,0,0,0,0,0,0,1
+Ivona Brandi&cacute,2019,0,0,0,0,1,0,0,0,0
+Anthony Danalis,2019,0,0,0,0,1,0,0,0,0
+Judit Gimenez,2019,0,0,0,0,1,0,0,0,1
+Judit Gimenez,2020,0,0,0,0,0,0,0,0,1
+Taylor Groves,2019,0,0,0,0,1,0,0,0,0
+Samuel Gutierrez,2019,0,0,0,0,1,0,0,0,0
+Dieter Kranzlmuller,2019,0,0,0,0,1,0,0,0,0
+Laurent Lefevre,2019,0,0,0,0,1,0,0,0,0
+Abid Malik,2019,0,0,0,0,1,0,0,0,0
+Abid Malik,2018,0,0,0,0,1,0,0,0,0
+Erika Parsons,2019,0,0,0,0,1,0,0,0,1
+Erika Parsons,2020,0,0,0,0,0,0,0,0,1
+Ivan Rodero,2019,0,0,0,0,1,0,0,0,1
+Ivan Rodero,2018,0,0,0,0,0,0,0,0,1
+Seetheram Seelam,2019,0,0,0,0,1,0,0,0,0
+Sameer Shende,2019,0,0,0,0,1,0,0,0,1
+Sameer Shende,2018,0,0,0,0,0,0,0,0,1
+Sameer Shende,2020,0,0,0,0,0,0,0,0,1
+Alexandru Uta,2019,0,0,0,0,1,0,0,0,0
+Alexandru Uta,2020,0,0,0,0,0,0,0,0,1
+Carlos Varela,2019,0,0,0,0,1,0,0,0,0
+Patrick Widener,2019,0,0,0,0,1,0,0,0,0
+Jia Zou,2019,0,0,0,0,1,0,0,0,0
+Jia Zou,2018,0,0,0,0,1,0,0,0,0
+Philip Carns,2019,0,0,0,0,1,0,0,0,0
+Philip Carns,2020,0,0,0,0,0,0,0,1,0
+Toni Cortez,2019,0,0,0,0,1,0,0,0,0
+Alexandru Costan,2019,0,0,0,0,1,0,0,0,1
+Alexandru Costan,2018,0,0,0,0,1,0,0,0,1
+Alexandru Costan,2020,0,0,0,0,0,0,0,0,1
+Matthieu Dorier,2019,0,0,0,0,1,0,0,0,0
+Matthieu Dorier,2018,0,0,0,0,1,0,0,1,0
+Matthieu Dorier,2020,0,0,0,0,0,0,0,0,1
+Pilar Gonzalez-Ferez,2019,0,0,0,0,1,0,0,0,0
+Shadi Ibrahim,2019,0,0,0,0,1,0,0,0,1
+Shadi Ibrahim,2018,0,0,0,0,0,0,0,0,1
+Shadi Ibrahim,2020,0,0,0,0,0,0,0,0,1
+Hai Jin,2019,0,0,0,0,1,0,0,0,0
+Hai Jin,2018,0,0,0,0,1,0,0,0,0
+Michael Kuhn,2019,0,0,0,0,1,0,0,0,1
+Michael Kuhn,2018,0,0,0,0,0,0,0,0,1
+Adrien Lebre,2019,0,0,0,0,1,0,0,0,0
+Pierre Matri,2019,0,0,0,0,1,0,0,0,0
+Sai Narasimhamurthy,2019,0,0,0,0,1,0,0,0,0
+Youssef Nashed,2019,0,0,0,0,1,0,0,0,0
+Ramon Nou,2019,0,0,0,0,1,0,0,0,0
+Lukas Rupprecht,2019,0,0,0,0,1,0,0,0,0
+Lukas Rupprecht,2018,0,0,0,0,1,0,0,0,0
+Lukas Rupprecht,2020,0,0,0,0,0,0,0,0,1
+Alberto Sanchez,2019,0,0,0,0,1,0,0,0,0
+Michael Schoettner,2019,0,0,0,0,1,0,0,0,0
+Michael Schoettner,2018,0,0,0,0,1,0,0,0,0
+Robert Sisneros,2019,0,0,0,0,1,0,0,0,0
+Robert Sisneros,2018,0,0,0,0,1,0,0,0,0
+Domenico Talia,2019,0,0,0,0,1,0,0,0,0
+Domenico Talia,2018,0,0,0,0,1,0,0,0,0
+Jon Woodring,2019,0,0,0,0,1,0,0,0,0
+Jon Woodring,2018,0,0,0,0,1,0,0,0,0
+Maria S. Perez,2019,0,0,0,0,1,0,0,0,0
+Maria S. Perez,2018,0,0,0,0,1,0,0,0,0
+Dorian Arnold,2019,0,0,0,0,1,0,0,0,0
+Amanda Randles,2019,0,0,0,0,1,0,0,0,1
+Amanda Randles,2018,0,0,0,0,1,0,0,0,1
+Amanda Randles,2020,0,0,0,0,0,0,0,0,1
+Harald Koestler,2018,0,0,0,0,1,0,0,0,0
+Vadym Aizinger,2018,0,0,0,0,1,0,0,0,0
+Ariful Azad,2018,0,0,0,0,1,0,0,0,1
+Ariful Azad,2019,0,0,0,0,0,0,0,0,1
+Dominik Bartuschat,2018,0,0,0,0,1,0,0,0,0
+Ben Bergen,2018,0,0,0,0,1,0,0,0,0
+Matthias Bolten,2018,0,0,0,0,1,0,0,0,0
+Adrian Castello,2018,0,0,0,0,1,0,0,0,0
+Aparna Chandramowlishwaran,2018,0,0,0,0,1,0,0,0,1
+Aparna Chandramowlishwaran,2019,0,0,0,0,0,0,0,0,1
+Aparna Chandramowlishwaran,2020,0,0,0,0,0,0,0,0,1
+Sunita Chandrasekaran,2018,0,0,0,0,1,0,0,0,1
+Sunita Chandrasekaran,2019,0,0,0,0,0,0,0,1,1
+Sunita Chandrasekaran,2020,0,0,0,0,0,0,0,0,1
+Karen Devine,2018,0,0,0,0,1,0,0,0,0
+Karen Devine,2019,0,0,0,0,0,0,0,0,1
+Karen Devine,2020,0,0,0,0,0,0,0,0,1
+Christian Engwer,2018,0,0,0,0,1,0,0,0,0
+Travis Johnston,2018,0,0,0,0,1,0,0,0,0
+Travis Johnston,2019,0,0,0,0,0,0,0,0,1
+Travis Johnston,2020,0,0,0,0,0,0,0,0,1
+Volodymyr Kindratenko,2018,0,0,0,0,1,0,0,0,1
+Volodymyr Kindratenko,2020,0,0,0,0,0,0,0,0,1
+Maciej Malawski,2018,0,0,0,0,1,0,0,0,1
+Maciej Malawski,2019,0,0,0,0,0,0,0,0,1
+Philipp Neumann,2018,0,0,0,0,1,0,0,1,0
+Philipp Neumann,2019,0,0,0,0,0,0,0,1,0
+Anna Queralt,2018,0,0,0,0,1,0,0,0,0
+A. Erdem Sariyuce,2018,0,0,0,0,1,0,0,0,0
+Ramachandran (Vaidy) Vaidyanathan,2018,0,0,0,0,1,0,0,0,0
+Roland Haas,2018,0,0,0,0,1,0,0,0,0
+Armin Größlinger,2018,0,0,0,0,1,0,0,0,0
+Dirk Pflüger,2018,0,0,0,0,1,0,0,0,0
+Min Si,2018,0,0,0,0,1,0,1,0,0
+Min Si,2019,0,0,0,0,0,0,0,0,1
+Min Si,2020,0,0,0,0,0,0,1,0,1
+Bertil Schmidt,2018,0,0,0,0,1,0,0,0,0
+Istvan Reguly,2018,0,0,0,0,1,0,0,0,0
+Richard Veras,2018,0,0,0,0,1,0,0,0,0
+Masaaki Kondo,2018,0,0,0,0,1,0,0,0,0
+Masaaki Kondo,2020,0,0,0,0,0,0,0,0,1
+Ivona Brandić,2018,0,0,0,0,1,0,0,0,0
+Holger Fröning,2018,0,0,0,0,1,0,0,1,0
+Holger Fröning,2019,0,0,0,0,0,0,0,1,0
+Costin Iancu,2018,0,0,0,0,1,0,0,0,0
+Myoungsoo Jung,2018,0,0,0,0,1,1,0,0,0
+Michihiro Koibuchi,2018,0,0,0,0,1,0,0,0,0
+John Lange,2018,0,0,0,0,1,0,0,0,0
+John Lange,2019,0,0,0,0,0,0,0,0,1
+John Lange,2020,0,0,0,0,0,0,0,0,1
+Anne-Cécile ORGERIE,2018,0,0,0,0,1,0,0,0,0
+Xiaorui Wang,2018,0,0,0,0,1,0,0,0,0
+Huiyang Zhou,2018,0,0,0,0,1,1,0,0,0
+Huiyang Zhou,2020,0,0,0,0,0,1,0,0,0
+Boyana Norris,2018,0,0,0,0,1,0,0,0,1
+Boyana Norris,2019,0,0,0,0,0,0,1,0,1
+Amer Abdelhalim,2018,0,0,0,0,1,0,0,0,0
+Olivier Aumage,2018,0,0,0,0,1,0,0,0,0
+Leonardo Bautista-Gomez,2018,0,0,0,0,1,0,0,0,1
+Leonardo Bautista-Gomez,2019,0,0,0,0,0,0,0,0,1
+Leonardo Bautista-Gomez,2020,0,0,0,0,0,0,0,0,1
+Huimin Cui,2018,0,0,0,0,1,0,0,0,0
+Huimin Cui,2020,0,0,0,0,0,0,0,1,0
+Minh Dinh,2018,0,0,0,0,1,0,0,0,0
+Ann Gentile,2018,0,0,0,0,1,0,0,0,0
+Atsushi Hori,2018,0,0,0,0,1,0,0,0,0
+Atsushi Hori,2020,0,0,0,0,0,0,0,0,1
+Hiroshi Inoue,2018,0,0,0,0,1,0,0,0,0
+Dieter Kranzlmueller,2018,0,0,0,0,1,0,0,0,0
+Sriram Krishnamoorthy,2018,0,0,0,0,1,0,0,0,1
+Sriram Krishnamoorthy,2019,0,0,0,0,0,0,0,0,1
+Sriram Krishnamoorthy,2020,0,0,0,0,0,0,0,1,0
+Catherine Olschanowsky,2018,0,0,0,0,1,0,0,0,1
+Catherine Olschanowsky,2020,0,0,0,0,0,0,0,0,1
+Catherine Olschanowsky,2019,0,0,0,0,0,0,0,1,0
+Miquel Pericàs,2018,0,0,0,0,1,0,0,0,0
+Dana Petcu,2018,0,0,0,0,1,0,0,0,0
+Olga Pierce,2018,0,0,0,0,1,0,0,0,0
+Florin Pop,2018,0,0,0,0,1,0,0,0,0
+Chandra Krintz,2018,0,0,0,0,1,0,0,0,0
+Janine Bennett,2018,0,0,0,0,1,0,0,0,0
+Elisa Bertino,2018,0,0,0,0,1,0,0,0,0
+Kalyana Chadalavada,2018,0,0,0,0,1,0,0,0,0
+Darrell Ling,2018,0,0,0,0,1,0,0,0,0
+Faisal Nawab,2018,0,0,0,0,1,0,0,0,0
+David Pugmire,2018,0,0,0,0,1,0,0,0,0
+Wolski Rich,2018,0,0,0,0,1,0,0,0,0
+Xuanhua Shi,2018,0,0,0,0,1,0,0,0,0
+Xuanhua Shi,2020,0,0,0,0,0,0,1,1,0
+Mark van Moer,2018,0,0,0,0,1,0,0,0,0
+Martin Strohbach,2018,0,0,0,0,1,0,0,0,0
+Zhengyu Yang,2018,0,0,0,0,1,0,0,0,0
+Alex Sim,2018,0,0,0,0,1,0,0,0,0
+Jiayin Wang,2018,0,0,0,0,1,0,0,0,0
+David E. Keyes,2018,0,0,0,0,0,0,0,0,1
+Esmond G. Ng,2018,0,0,0,0,0,0,0,0,1
+Michael A. Heroux,2018,0,0,0,0,0,0,0,0,1
+Torsten Hoefler,2018,0,0,0,0,0,0,0,0,1
+Torsten Hoefler,2019,0,0,0,0,0,0,0,0,1
+Todd Gamblin,2018,0,0,0,0,0,0,0,0,1
+Todd Gamblin,2019,0,0,0,0,0,0,0,0,1
+Maryam Dehnavi,2018,0,0,0,0,0,0,0,0,1
+Maryam Dehnavi,2019,0,0,0,0,0,0,0,0,1
+Maryam Dehnavi,2020,0,0,0,0,0,0,0,0,1
+Srinivas Aluru,2018,0,0,0,0,0,0,0,0,1
+Srinivas Aluru,2019,0,0,0,0,0,0,0,1,1
+Sanjukta Bhowmick,2018,0,0,0,0,0,0,0,0,1
+Sanjukta Bhowmick,2019,0,0,0,0,0,0,0,0,1
+Sanjukta Bhowmick,2020,0,0,0,0,0,0,0,0,1
+George Biros,2018,0,0,0,0,0,0,0,0,1
+George Biros,2019,0,0,0,0,0,0,0,0,1
+George Biros,2020,0,0,0,0,0,0,0,0,1
+Erin Carson,2018,0,0,0,0,0,0,0,0,1
+Edmond Chow,2018,0,0,0,0,0,0,0,0,1
+Amir Gholami,2018,0,0,0,0,0,0,0,0,1
+Amir Gholami,2019,0,0,0,0,0,0,0,0,1
+Amir Gholami,2020,0,0,0,0,0,0,0,0,1
+Pieter Ghysels,2018,0,0,0,0,0,0,0,0,1
+Ananth Grama,2018,0,0,0,0,0,0,0,0,1
+Judith C. Hill,2018,0,0,0,0,0,0,0,0,1
+Judith C. Hill,2019,0,0,0,0,0,0,0,0,1
+Judith C. Hill,2020,0,0,0,0,0,0,0,0,1
+Howie Huang,2018,0,0,0,0,0,0,1,0,1
+Howie Huang,2019,0,0,0,0,0,0,0,0,1
+George Karypis,2018,0,0,0,0,0,0,0,0,1
+Kamer Kaya,2018,0,0,0,0,0,0,0,0,1
+Kamer Kaya,2020,0,0,0,0,0,0,0,1,0
+Kamer Kaya,2019,0,0,0,0,0,0,0,1,0
+Nicholas Knight,2018,0,0,0,0,0,0,0,0,1
+Penporn Koanantakool,2018,0,0,0,0,0,0,0,0,1
+Weifeng Liu,2018,0,0,0,0,0,0,1,0,1
+Weifeng Liu,2019,0,0,0,0,0,0,0,0,1
+Andrew Lumsdaine,2018,0,0,0,0,0,0,0,0,1
+Saeed Maleki,2018,0,0,0,0,0,0,0,0,1
+Misun Min,2018,0,0,0,0,0,0,0,0,1
+Beaumont Olivier,2018,0,0,0,0,0,0,0,0,1
+Mostofa Patwary,2018,0,0,0,0,0,0,0,0,1
+Mostofa Patwary,2020,0,0,0,0,0,0,0,0,1
+Cynthia Phillips,2018,0,0,0,0,0,0,0,0,1
+Cynthia Phillips,2019,0,0,0,0,0,0,0,0,1
+Mikhail Smelyanskiy,2018,0,0,0,0,0,0,0,0,1
+Edgar Solomonik,2018,0,0,0,0,0,0,0,0,1
+Edgar Solomonik,2019,0,0,0,0,0,0,0,1,1
+Edgar Solomonik,2020,0,0,0,0,0,0,0,0,1
+Guangming Tan,2018,0,0,0,0,0,0,0,0,1
+Guangming Tan,2019,0,0,0,0,0,0,0,0,1
+Guangming Tan,2020,0,0,0,0,0,0,1,1,1
+Schardl Tao B.,2018,0,0,0,0,0,0,0,0,1
+Erik Draeger,2018,0,0,0,0,0,0,0,0,1
+Allison H. Baker,2018,0,0,0,0,0,0,0,0,1
+Allison H. Baker,2019,0,0,0,0,0,0,0,0,1
+Allison H. Baker,2020,0,0,0,0,0,0,0,0,1
+H. Metin Aktulga,2018,0,0,0,0,0,0,0,0,1
+Martin Berzins,2018,0,0,0,0,0,0,0,0,1
+Donna Calhoun,2018,0,0,0,0,0,0,0,0,1
+Donna Calhoun,2019,0,0,0,0,0,0,0,0,1
+Donna Calhoun,2020,0,0,0,0,0,0,0,0,1
+fabien delalondre,2018,0,0,0,0,0,0,0,0,1
+John Dennis,2018,0,0,0,0,0,0,0,0,1
+Pradeep Dubey,2018,0,0,0,0,0,0,0,0,1
+Pradeep Dubey,2019,0,0,0,0,0,0,0,0,1
+Pradeep Dubey,2020,0,0,0,0,0,0,0,0,1
+Joe Eaton,2018,0,0,0,0,0,0,0,0,1
+Yasunori Futamura,2018,0,0,0,0,0,0,0,0,1
+Xiaohu Guo,2018,0,0,0,0,0,0,0,0,1
+Xiaohu Guo,2019,0,0,0,0,0,0,0,1,1
+Xiaohu Guo,2020,0,0,0,0,0,0,0,0,1
+Thomas Hauser,2018,0,0,0,0,0,0,0,0,1
+Ahmed E. Ismail,2018,0,0,0,0,0,0,0,0,1
+Robert Jacob,2018,0,0,0,0,0,0,0,0,1
+Mathias Jacquelin,2018,0,0,0,0,0,0,0,0,1
+Kirk E. Jordan,2018,0,0,0,0,0,0,0,0,1
+Kirk E. Jordan,2019,0,0,0,0,0,0,0,0,1
+Kirk E. Jordan,2020,0,0,0,0,0,0,0,0,1
+Ian Karlin,2018,0,0,0,0,0,0,0,0,1
+Miriam Mehl,2018,0,0,0,0,0,0,0,1,1
+Miriam Mehl,2019,0,0,0,0,0,0,0,0,1
+Bronson Messer,2018,0,0,0,0,0,0,0,0,1
+Bronson Messer,2019,0,0,0,0,0,0,0,0,1
+Aiichiro Nakano,2018,0,0,0,0,0,0,0,0,1
+Peter Nugent,2018,0,0,0,0,0,0,0,0,1
+Christopher S. Oehmen,2018,0,0,0,0,0,0,0,0,1
+Ernesto Prudencio,2018,0,0,0,0,0,0,0,0,1
+Daniel Reynolds,2018,0,0,0,0,0,0,0,0,1
+Daniel Reynolds,2019,0,0,0,0,0,0,0,0,1
+Daniel Roten,2018,0,0,0,0,0,0,0,0,1
+Tom Spelce,2018,0,0,0,0,0,0,0,0,1
+Michael Sprague,2018,0,0,0,0,0,0,0,0,1
+Heidi K. Thornquist,2018,0,0,0,0,0,0,0,0,1
+Sofia Vallecorsa,2018,0,0,0,0,0,0,0,0,1
+Sofia Vallecorsa,2020,0,0,0,0,0,0,0,0,1
+Simon Hammond,2018,0,0,0,0,0,0,0,0,1
+Simon Hammond,2019,0,0,0,0,0,0,0,0,1
+Simon Hammond,2020,0,0,0,0,0,0,0,0,1
+Madeleine Glick,2018,0,0,0,0,0,0,0,0,1
+Madeleine Glick,2019,0,0,0,0,0,0,0,0,1
+Madeleine Glick,2020,0,0,0,0,0,0,0,0,1
+Amro Awad,2018,0,0,0,0,0,0,0,0,1
+Amro Awad,2020,0,0,0,0,0,1,0,0,0
+Abdel-Hameed A. Badawy,2018,0,0,0,0,0,0,0,0,1
+Ray Bair,2018,0,0,0,0,0,0,0,0,1
+Kevin J. Barker,2018,0,0,0,0,0,0,0,0,1
+Kevin J. Barker,2019,0,0,0,0,0,0,0,0,1
+Jonathan Beard,2018,0,0,0,0,0,0,0,0,1
+Jonathan Beard,2019,0,0,0,0,0,0,0,1,1
+Jonathan Beard,2020,0,0,0,0,0,0,0,1,1
+David Beckingsale,2018,0,0,0,0,0,0,0,0,1
+Carlo Bertolli,2018,0,0,0,0,0,0,0,0,1
+Carlo Bertolli,2020,0,0,0,0,0,0,0,0,1
+Abhinav Bhatele,2018,0,0,0,0,0,0,0,0,1
+Abhinav Bhatele,2020,0,0,0,0,0,0,0,1,0
+Doug Doerfler,2018,0,0,0,0,0,0,0,0,1
+Daniel J. Ernst,2018,0,0,0,0,0,0,0,0,1
+Daniel J. Ernst,2019,0,0,0,0,0,0,0,0,1
+Ryan Goodfellow,2018,0,0,0,0,0,0,0,0,1
+John Leidel,2018,0,0,0,0,0,0,0,0,1
+John Leidel,2019,0,0,0,0,0,0,0,1,1
+n.mcdonald83@gmail.com McDonald,2018,0,0,0,0,0,0,0,0,1
+Gwendolyn Voskuilen,2018,0,0,0,0,0,0,0,0,1
+Gwendolyn Voskuilen,2019,0,0,0,0,0,0,0,0,1
+Noel Wheeler,2018,0,0,0,0,0,0,0,0,1
+Noel Wheeler,2019,0,0,0,0,0,0,0,0,1
+Jeremiah J. Wilke,2018,0,0,0,0,0,0,0,0,1
+Steven A. Wright,2018,0,0,0,0,0,0,0,0,1
+Ilkay Altintas,2018,0,0,0,0,0,0,0,1,1
+Ilkay Altintas,2019,0,0,0,0,0,0,0,0,1
+Roger Barga,2018,0,0,0,0,0,0,0,0,1
+Roger Barga,2019,0,0,0,0,0,0,0,0,1
+Judy Fox,2018,0,0,0,0,0,0,0,0,1
+Judy Fox,2019,0,0,0,0,0,0,0,0,1
+Judy Fox,2020,0,0,0,0,0,0,0,1,1
+Dennis Gannon,2018,0,0,0,0,0,0,0,0,1
+Dennis Gannon,2019,0,0,0,0,0,0,0,0,1
+Kyle Hale,2018,0,0,0,0,0,0,0,0,1
+Jeff R. Hammond,2018,0,0,0,0,0,0,0,0,1
+Jeff R. Hammond,2019,0,0,0,0,0,0,0,0,1
+Jeff R. Hammond,2020,0,0,0,0,0,0,0,0,1
+Brandic Ivona,2018,0,0,0,0,0,0,0,0,1
+Anirban Mandal,2018,0,0,0,0,0,0,0,0,1
+Kelly Gaither,2018,0,0,0,0,0,0,0,0,1
+Kelly Gaither,2019,0,0,0,0,0,0,0,0,1
+Kelly Gaither,2020,0,0,0,0,0,0,0,0,1
+James P. Ahrens,2018,0,0,0,0,0,0,0,0,1
+Janine C. Bennett,2018,0,0,0,0,0,0,0,0,1
+Janine C. Bennett,2019,0,0,0,0,0,0,0,0,1
+Janine C. Bennett,2020,0,0,0,0,0,0,0,0,1
+Wes Bethel,2018,0,0,0,0,0,0,0,0,1
+Andr� Brinkmann,2018,0,0,0,0,0,0,0,0,1
+John Clyne,2018,0,0,0,0,0,0,0,0,1
+Toni Cortes,2018,0,0,0,0,0,0,0,0,1
+Toni Cortes,2019,0,0,0,0,0,0,0,1,1
+Steffen Frey,2018,0,0,0,0,0,0,0,1,1
+Joseph A. Insley,2018,0,0,0,0,0,0,0,0,1
+Joseph A. Insley,2019,0,0,0,0,0,0,0,0,1
+Joseph A. Insley,2020,0,0,0,0,0,0,0,0,1
+Wei-keng Liao,2018,0,0,0,0,0,0,0,0,1
+Kwan-Liu Ma,2018,0,0,0,0,0,0,0,0,1
+Kenneth Moreland,2018,0,0,0,0,0,0,0,0,1
+Paul A. Navratil,2018,0,0,0,0,0,0,0,0,1
+Sarah M. Neuwirth,2018,0,0,0,0,0,0,0,0,1
+Sarah M. Neuwirth,2020,0,0,0,0,0,0,0,0,1
+Michael E. Papka,2018,0,0,0,0,0,0,0,0,1
+John Patchett,2018,0,0,0,0,0,0,0,1,1
+Tom Peterka,2018,0,0,0,0,0,0,0,0,1
+Kristi Potter,2018,0,0,0,0,0,0,0,0,1
+Kristi Potter,2019,0,0,0,0,0,0,0,0,1
+Kristi Potter,2020,0,0,0,0,0,0,0,0,1
+María S. Pérez,2018,0,0,0,0,0,0,0,0,1
+María S. Pérez,2019,0,0,0,0,0,0,0,0,1
+Brad Whitlock,2018,0,0,0,0,0,0,0,0,1
+Felix Wolf,2018,0,0,0,0,0,0,0,0,1
+Felix Wolf,2019,0,0,0,0,0,0,0,0,1
+Felix Wolf,2020,0,0,0,0,0,0,0,1,1
+Laura C. Carrington,2018,0,0,0,0,0,0,0,0,1
+Laura C. Carrington,2019,0,0,0,0,0,0,0,0,1
+Laura C. Carrington,2020,0,0,0,0,0,0,0,0,1
+Sadaf R. Alam,2018,0,0,0,0,0,0,0,0,1
+Sadaf R. Alam,2019,0,0,0,0,0,0,0,0,1
+Sadaf R. Alam,2020,0,0,0,0,0,0,0,0,1
+Luiz DeRose,2018,0,0,0,0,0,0,0,0,1
+Luiz DeRose,2019,0,0,0,0,0,0,0,0,1
+Luiz DeRose,2020,0,0,0,0,0,0,0,0,1
+Dmitry Duplyakin,2018,0,0,0,0,0,0,0,0,1
+Salvatore Filippone,2018,0,0,0,0,0,0,0,0,1
+Markus Geimer,2018,0,0,0,0,0,0,0,0,1
+Jeffrey K. Hollingsworth,2018,0,0,0,0,0,0,0,0,1
+Jeffrey K. Hollingsworth,2019,0,0,0,0,0,0,0,0,1
+Sascha Hunold,2018,0,0,0,0,0,0,0,0,1
+Sascha Hunold,2020,0,0,0,0,0,0,0,1,0
+Katherine Isaacs,2018,0,0,0,0,0,0,0,0,1
+Tanzima Islam,2018,0,0,0,0,0,0,0,0,1
+Tanzima Islam,2019,0,0,0,0,0,0,0,0,1
+Tanzima Islam,2020,0,0,0,0,0,0,0,1,1
+Heike Jagode,2018,0,0,0,0,0,0,0,0,1
+Heike Jagode,2019,0,0,0,0,0,0,0,0,1
+Heike Jagode,2020,0,0,0,0,0,0,0,0,1
+Andreas Knuepfer,2018,0,0,0,0,0,0,0,0,1
+Andreas Knuepfer,2019,0,0,0,0,0,0,0,0,1
+Arnaud Legrand,2018,0,0,0,0,0,0,0,0,1
+Arnaud Legrand,2019,0,0,0,0,0,0,0,1,0
+John Linford,2018,0,0,0,0,0,0,0,0,1
+John Linford,2019,0,0,0,0,0,0,0,0,1
+John Linford,2020,0,0,0,0,0,0,0,0,1
+David Lowenthal,2018,0,0,0,0,0,0,0,0,1
+Guillaume Mercier,2018,0,0,0,0,0,0,0,0,1
+Guillaume Mercier,2020,0,0,0,0,0,0,0,1,0
+Shirley V. Moore,2018,0,0,0,0,0,0,0,0,1
+Matthias S. Mueller,2018,0,0,0,0,0,0,0,0,1
+Matthias S. Mueller,2019,0,0,0,0,0,0,0,0,1
+Matthias S. Mueller,2020,0,0,0,0,0,0,0,0,1
+Miquel Pericas,2018,0,0,0,0,0,0,0,1,1
+Fabrizio Petrini,2018,0,0,0,0,0,0,0,0,1
+Fabrizio Petrini,2019,0,0,0,0,0,0,0,1,1
+Fabrizio Petrini,2020,0,0,0,0,0,0,0,0,1
+Steve Poole,2018,0,0,0,0,0,0,0,0,1
+Ananta Tiwari,2018,0,0,0,0,0,0,0,0,1
+Miwako Tsuji,2018,0,0,0,0,0,0,0,0,1
+Miwako Tsuji,2020,0,0,0,0,0,0,0,1,1
+Michele Weiland,2018,0,0,0,0,0,0,0,0,1
+Michele Weiland,2019,0,0,0,0,0,0,0,0,1
+Michele Weiland,2020,0,0,0,0,0,0,0,1,0
+Jidong Zhai,2018,0,0,0,0,0,0,0,0,1
+Jidong Zhai,2019,0,0,0,0,0,0,0,0,1
+Jidong Zhai,2020,0,0,0,0,0,0,1,1,1
+Patrick S. McCormick,2018,0,0,0,0,0,0,0,0,1
+George Almasi,2018,0,0,0,0,0,0,0,0,1
+George Almasi,2020,0,0,0,0,0,0,0,0,1
+Scott B. Baden,2018,0,0,0,0,0,0,0,0,1
+Protonu Basu,2018,0,0,0,0,0,0,0,0,1
+Brad Chamberlain,2018,0,0,0,0,0,0,0,0,1
+Brad Chamberlain,2019,0,0,0,0,0,0,0,1,0
+Barbara M. Chapman,2018,0,0,0,0,0,0,0,0,1
+Barbara M. Chapman,2020,0,0,0,0,0,0,0,0,1
+Michael Garland,2018,0,0,0,0,0,0,0,0,1
+Michael Garland,2019,0,0,0,0,0,0,0,0,1
+Andreas Kloeckner,2018,0,0,0,0,0,0,0,0,1
+Jaejin Lee,2018,0,0,0,0,0,0,0,0,1
+Jaejin Lee,2020,0,0,0,0,0,0,1,1,1
+Seyong Lee,2018,0,0,0,0,0,0,0,0,1
+Stephen L. Olivier,2018,0,0,0,0,0,0,0,0,1
+Ponnuswamy Sadayappan,2018,0,0,0,0,0,0,0,0,1
+Ponnuswamy Sadayappan,2019,0,0,0,0,0,0,0,0,1
+Thomas R. W. Scogland,2018,0,0,0,0,0,0,0,0,1
+Xipeng Shen,2018,0,0,0,0,0,0,0,0,1
+Xipeng Shen,2019,0,0,0,0,0,0,0,1,1
+Xipeng Shen,2020,0,0,0,0,0,0,0,0,1
+Elliott Slaughter,2018,0,0,0,0,0,0,0,0,1
+Michelle Strout,2018,0,0,0,0,0,0,0,0,1
+Michelle Strout,2019,0,0,0,0,0,0,0,0,1
+Bronis R. de Supinski,2018,0,0,0,0,0,0,0,0,1
+Bronis R. de Supinski,2020,0,0,0,0,0,0,0,0,1
+Ashley Barker,2018,0,0,0,0,0,0,0,0,1
+Ashley Barker,2019,0,0,0,0,0,0,0,0,1
+Ashley Barker,2020,0,0,0,0,0,0,0,0,1
+Susan Coghlan,2018,0,0,0,0,0,0,0,0,1
+Susan Coghlan,2019,0,0,0,0,0,0,0,1,0
+Wu Feng,2018,0,0,0,0,0,0,0,0,1
+Wu Feng,2019,0,0,0,0,0,0,0,0,1
+Wu Feng,2020,0,0,0,0,0,0,0,0,1
+Fernanda Foertter,2018,0,0,0,0,0,0,0,0,1
+Fernanda Foertter,2019,0,0,0,0,0,0,0,0,1
+Fernanda Foertter,2020,0,0,0,0,0,0,0,0,1
+Marta Garcia,2018,0,0,0,0,0,0,0,0,1
+Marta Garcia,2020,0,0,0,0,0,0,0,0,1
+Maria Grazia Giuffreda,2018,0,0,0,0,0,0,0,0,1
+Maria Grazia Giuffreda,2020,0,0,0,0,0,0,0,0,1
+Robin J. Goldstone,2018,0,0,0,0,0,0,0,0,1
+Bilel Hadri,2018,0,0,0,0,0,0,0,0,1
+Bilel Hadri,2019,0,0,0,0,0,0,0,1,1
+Bilel Hadri,2020,0,0,0,0,0,0,0,0,1
+Daniel Holmes,2018,0,0,0,0,0,0,0,0,1
+Daniel Holmes,2020,0,0,0,0,0,0,0,1,0
+Daniel Holmes,2019,0,0,0,0,0,0,0,1,0
+Bernd Mohr,2018,0,0,0,0,0,0,0,1,1
+Bernd Mohr,2019,0,0,0,0,0,0,0,1,1
+Bernd Mohr,2020,0,0,0,0,0,0,0,1,1
+W. Cyrus Proctor,2018,0,0,0,0,0,0,0,0,1
+Tabitha K. Samuel,2018,0,0,0,0,0,0,0,0,1
+Tabitha K. Samuel,2020,0,0,0,0,0,0,0,0,1
+Samantika Sury,2018,0,0,0,0,0,0,0,0,1
+Cathy Willis,2018,0,0,0,0,0,0,0,0,1
+Cathy Willis,2020,0,0,0,0,0,0,0,0,1
+Woo-Sun Yang,2018,0,0,0,0,0,0,0,0,1
+Ron Brightwell,2018,0,0,0,0,0,0,0,0,1
+Ron Brightwell,2020,0,0,0,0,0,0,1,1,0
+Ron Brightwell,2019,0,0,0,0,0,0,0,1,0
+Rosa M. Badia,2018,0,0,0,0,0,0,0,0,1
+Rosa M. Badia,2019,0,0,0,0,0,0,0,0,1
+Florina M. Ciorba,2018,0,0,0,0,0,0,0,0,1
+Florina M. Ciorba,2019,0,0,0,0,0,0,0,0,1
+Florina M. Ciorba,2020,0,0,0,0,0,0,0,0,1
+Christian Engelmann,2018,0,0,0,0,0,0,0,0,1
+Marta Garcia-Gasulla,2018,0,0,0,0,0,0,0,0,1
+Elsa J. Gonsiorowski,2018,0,0,0,0,0,0,0,0,1
+Elsa J. Gonsiorowski,2019,0,0,0,0,0,0,0,0,1
+Elsa J. Gonsiorowski,2020,0,0,0,0,0,0,0,0,1
+Kamil Iskra,2018,0,0,0,0,0,0,0,0,1
+Kamil Iskra,2019,0,0,0,0,0,0,0,0,1
+Larry Kaplan,2018,0,0,0,0,0,0,0,0,1
+Larry Kaplan,2019,0,0,0,0,0,0,0,0,1
+Larry Kaplan,2020,0,0,0,0,0,0,0,0,1
+Brian Kocoloski,2018,0,0,0,0,0,0,0,0,1
+Stefan Lankes,2018,0,0,0,0,0,0,0,0,1
+Raymond Namyst,2018,0,0,0,0,0,0,0,0,1
+Raymond Namyst,2019,0,0,0,0,0,0,0,0,1
+Yoonho Park,2018,0,0,0,0,0,0,0,0,1
+Kevin Pedretti,2018,0,0,0,0,0,0,0,0,1
+Rolf Riesen,2018,0,0,0,0,0,0,0,0,1
+Eric Van Hensbergen,2018,0,0,0,0,0,0,0,0,1
+Abhinav Vishnu,2018,0,0,0,0,0,0,0,0,1
+Abhinav Vishnu,2019,0,0,0,0,0,0,0,0,1
+Abhinav Vishnu,2020,0,0,0,0,0,0,0,0,1
+Carsten Weinhold,2018,0,0,0,0,0,0,0,0,1
+Tal Ben-Nun,2018,0,0,0,0,0,0,0,0,1
+Tal Ben-Nun,2019,0,0,0,0,0,0,0,0,1
+Tal Ben-Nun,2020,0,0,0,0,0,0,0,0,1
+Dumitru Erhan,2018,0,0,0,0,0,0,0,0,1
+Jayaraman J. Thiagarajan,2018,0,0,0,0,0,0,0,0,1
+Mariam Kiran,2018,0,0,0,0,0,0,0,0,1
+Mariam Kiran,2020,0,0,0,0,0,0,0,0,1
+Arun Luthra,2018,0,0,0,0,0,0,0,0,1
+Jack Dongarra,2018,0,0,0,0,0,0,0,0,1
+Jack Dongarra,2019,0,0,0,0,0,0,0,0,1
+Katherine Yelick,2018,0,0,0,0,0,0,0,0,1
+Dorian C. Arnold,2018,0,0,0,0,0,0,0,0,1
+Dorian C. Arnold,2019,0,0,0,0,0,0,0,0,1
+Dorian C. Arnold,2020,0,0,0,0,0,0,0,0,1
+Anne Benoit,2018,0,0,0,0,0,0,0,0,1
+Anne Benoit,2019,0,0,0,0,0,0,0,0,1
+Anne Benoit,2020,0,0,0,0,0,0,0,1,1
+Elizabeth Jessup,2018,0,0,0,0,0,0,0,0,1
+Elizabeth Jessup,2019,0,0,0,0,0,0,0,0,1
+Elizabeth Jessup,2020,0,0,0,0,0,0,0,0,1
+Satoshi Matsuoka,2018,0,0,0,0,0,0,0,0,1
+Satoshi Matsuoka,2019,0,0,0,0,0,0,0,0,1
+Satoshi Matsuoka,2020,0,0,0,0,0,0,0,1,1
+Lois Curfman McInnes,2018,0,0,0,0,0,0,0,0,1
+Thomas C. Schulthess,2018,0,0,0,0,0,0,0,0,1
+Horst Simon,2018,0,0,0,0,0,0,0,0,1
+Kevin Huck,2018,0,0,0,0,0,0,0,0,1
+Kevin Huck,2019,0,0,0,0,0,0,0,0,1
+Katie Antypas,2018,0,0,0,0,0,0,0,0,1
+Katie Antypas,2019,0,0,0,0,0,0,0,0,1
+Roxana Bujack,2018,0,0,0,0,0,0,0,0,1
+Roxana Bujack,2019,0,0,0,0,0,0,0,0,1
+Ray S. Chen,2018,0,0,0,0,0,0,0,0,1
+Ray S. Chen,2019,0,0,0,0,0,0,0,0,1
+Olivia Choudhury,2018,0,0,0,0,0,0,0,0,1
+Lydia Duncan,2018,0,0,0,0,0,0,0,0,1
+Lydia Duncan,2019,0,0,0,0,0,0,0,0,1
+Evan Felix,2018,0,0,0,0,0,0,0,0,1
+Evan Felix,2019,0,0,0,0,0,0,0,0,1
+Bernd Hentschel,2018,0,0,0,0,0,0,0,0,1
+Takeshi Iwashita,2018,0,0,0,0,0,0,0,0,1
+Nalini Kumar,2018,0,0,0,0,0,0,0,0,1
+Matthew Larsen,2018,0,0,0,0,0,0,0,0,1
+Matthew Larsen,2019,0,0,0,0,0,0,0,0,1
+Stephen Leak,2018,0,0,0,0,0,0,0,0,1
+Stephen Leak,2019,0,0,0,0,0,0,0,0,1
+Stephen Leak,2020,0,0,0,0,0,0,0,0,1
+david lecomber,2018,0,0,0,0,0,0,0,0,1
+Samuel Li,2018,0,0,0,0,0,0,0,0,1
+Maxime Martinasso,2018,0,0,0,0,0,0,0,0,1
+Marta Mattoso,2018,0,0,0,0,0,0,0,0,1
+Marta Mattoso,2019,0,0,0,0,0,0,0,0,1
+Marta Mattoso,2020,0,0,0,0,0,0,0,0,1
+Andrey Ovsyannikov,2018,0,0,0,0,0,0,0,0,1
+Saba Sehrish,2018,0,0,0,0,0,0,0,0,1
+Hiroyuki Takizawa,2018,0,0,0,0,0,0,0,0,1
+Hiroyuki Takizawa,2019,0,0,0,0,0,0,0,0,1
+Hiroyuki Takizawa,2020,0,0,0,0,0,0,0,0,1
+Julien Tierny,2018,0,0,0,0,0,0,0,0,1
+Sean Treichler,2018,0,0,0,0,0,0,0,0,1
+Sean Treichler,2019,0,0,0,0,0,0,0,0,1
+Sandra Wienke,2018,0,0,0,0,0,0,0,0,1
+Sandra Wienke,2019,0,0,0,0,0,0,0,0,1
+Sandra Wienke,2020,0,0,0,0,0,0,0,0,1
+Brian J. N. Wylie,2018,0,0,0,0,0,0,0,0,1
+Brian J. N. Wylie,2020,0,0,0,0,0,0,0,0,1
+CJ Newburn,2018,0,0,0,0,0,0,0,0,1
+CJ Newburn,2019,0,0,0,0,0,0,0,0,1
+CJ Newburn,2020,0,0,0,0,0,0,0,0,1
+Richard Vuduc,2018,0,0,0,0,0,0,0,0,1
+Richard Vuduc,2019,0,0,0,0,0,0,0,0,1
+David Appelhans,2018,0,0,0,0,0,0,0,0,1
+James C. Brodman,2018,0,0,0,0,0,0,0,0,1
+Wendy Elasser,2018,0,0,0,0,0,0,0,0,1
+Omar Ghattas,2018,0,0,0,0,0,0,0,0,1
+Koji Inoue,2018,0,0,0,0,0,1,0,0,1
+Koji Inoue,2020,0,0,0,0,0,1,0,0,0
+Stephen,2018,0,0,0,0,0,0,0,0,1
+Graham Lopez,2018,0,0,0,0,0,0,0,0,1
+Simon McIntosh-Smith,2018,0,0,0,0,0,0,0,1,1
+Simon McIntosh-Smith,2019,0,0,0,0,0,0,0,1,1
+Simon McIntosh-Smith,2020,0,0,0,0,0,0,0,1,1
+Matthias Noack,2018,0,0,0,0,0,0,0,0,1
+ElMoustapha Ould-Ahmed-Vall,2018,0,0,0,0,0,0,0,0,1
+Robert Schreiber,2018,0,0,0,0,0,0,0,0,1
+Robert Schreiber,2019,0,0,0,0,0,0,0,0,1
+Lauren L. Smith,2018,0,0,0,0,0,0,0,0,1
+Lauren L. Smith,2019,0,0,0,0,0,0,0,0,1
+Didem Unat,2018,0,0,0,0,0,0,0,0,1
+Didem Unat,2019,0,0,0,0,0,0,0,1,1
+Didem Unat,2020,0,0,0,0,0,0,1,1,0
+Valerie Taylor,2018,0,0,0,0,0,0,0,0,1
+Valerie Taylor,2019,0,0,0,0,0,0,0,0,1
+Mary Hall,2018,0,0,0,0,0,0,0,0,1
+Mary Hall,2019,0,0,0,0,0,0,0,0,1
+Mary Hall,2020,0,0,0,0,0,0,0,0,1
+Jeanine Cook,2018,0,0,0,0,0,0,0,0,1
+Jeanine Cook,2019,0,0,0,0,0,0,0,0,1
+Jeanine Cook,2020,0,0,0,0,0,0,0,0,1
+Haohuan Fu,2018,0,0,0,0,0,0,0,0,1
+Haohuan Fu,2019,0,0,0,0,0,0,0,0,1
+William D. Gropp,2018,0,0,0,0,0,0,0,0,1
+William D. Gropp,2020,0,0,0,0,0,0,0,0,1
+Bruce Hendrickson,2018,0,0,0,0,0,0,0,0,1
+Bruce Hendrickson,2019,0,0,0,0,0,0,0,0,1
+Ron Perrott,2018,0,0,0,0,0,0,0,0,1
+Ron Perrott,2019,0,0,0,0,0,0,0,0,1
+Ron Perrott,2020,0,0,0,0,0,0,0,0,1
+Vivek Sarkar,2018,0,0,0,0,0,0,0,0,1
+Guillaume Pallez,2018,0,0,0,0,0,0,0,0,1
+Guillaume Pallez,2019,0,0,0,0,0,0,0,0,1
+Guillaume Pallez,2020,0,0,0,0,0,0,0,0,1
+Maryam Abdioskouei,2018,0,0,0,0,0,0,0,0,1
+Michael Brim,2018,0,0,0,0,0,0,0,0,1
+Michael Brim,2020,0,0,0,0,0,0,0,0,1
+Jed Brown,2018,0,0,0,0,0,0,0,0,1
+Jed Brown,2019,0,0,0,0,0,0,0,0,1
+Jed Brown,2020,0,0,0,0,0,0,0,0,1
+Toni Collis,2018,0,0,0,0,0,0,0,0,1
+Rich Graham,2018,0,0,0,0,0,0,0,0,1
+Rich Graham,2019,0,0,0,0,0,0,0,0,1
+Catherine E. Graves,2018,0,0,0,0,0,0,0,0,1
+Thomas Herault,2018,0,0,0,0,0,0,0,0,1
+Thomas Herault,2019,0,0,0,0,0,0,0,0,1
+Joshua Hursey,2018,0,0,0,0,0,0,0,0,1
+Latifa Jackson,2018,0,0,0,0,0,0,0,0,1
+Joanna Leng,2018,0,0,0,0,0,0,0,0,1
+Elisabeth (Lissa) Moore,2018,0,0,0,0,0,0,0,0,1
+Benoit Pelletier,2018,0,0,0,0,0,0,0,0,1
+Mr Prabhat,2018,0,0,0,0,0,0,0,0,1
+Katherine M. Riley,2018,0,0,0,0,0,0,0,0,1
+Katherine M. Riley,2020,0,0,0,0,0,0,0,0,1
+Emmanuelle Saillard,2018,0,0,0,0,0,0,0,0,1
+Emmanuelle Saillard,2020,0,0,0,0,0,0,0,0,1
+Jennifer M. Schopf,2018,0,0,0,0,0,0,0,0,1
+Karl W. Schulz,2018,0,0,0,0,0,0,0,0,1
+Jean-Thomas Acquaviva,2018,0,0,0,0,0,0,0,0,1
+Grey Ballard,2018,0,0,0,0,0,0,0,0,1
+Grey Ballard,2019,0,0,0,0,0,0,0,0,1
+Grey Ballard,2020,0,0,0,0,0,0,0,0,1
+Jon Calhoun,2018,0,0,0,0,0,0,0,0,1
+Jon Calhoun,2020,0,0,0,0,0,0,0,0,1
+Christophe Calvin,2018,0,0,0,0,0,0,0,0,1
+Frederic Desprez,2018,0,0,0,0,0,0,0,0,1
+James Dinan,2018,0,0,0,0,0,0,0,0,1
+James Dinan,2019,0,0,0,0,0,0,0,0,1
+Manisha Gajbe,2018,0,0,0,0,0,0,0,0,1
+Brice Goglin,2018,0,0,0,0,0,0,0,0,1
+Brice Goglin,2020,0,0,0,0,0,0,0,0,1
+Maya Gokhale,2018,0,0,0,0,0,0,0,0,1
+Maya Gokhale,2020,0,0,0,0,0,0,0,0,1
+Rinku Gupta,2018,0,0,0,0,0,0,0,0,1
+Khaled Hamidouche,2018,0,0,0,0,0,0,0,0,1
+Khaled Hamidouche,2020,0,0,0,0,0,0,0,0,1
+Katrin Heitmann,2018,0,0,0,0,0,0,0,0,1
+Nikhil Jain,2018,0,0,0,0,0,0,0,0,1
+Nikhil Jain,2019,0,0,0,0,0,0,0,0,1
+Nikhil Jain,2020,0,0,0,0,0,0,0,0,1
+William Kramer,2018,0,0,0,0,0,0,0,0,1
+William Kramer,2020,0,0,0,0,0,0,0,0,1
+Dieter A. Kranzlmueller,2018,0,0,0,0,0,0,0,0,1
+Dieter A. Kranzlmueller,2019,0,0,0,0,0,0,0,0,1
+Dieter A. Kranzlmueller,2020,0,0,0,0,0,0,0,0,1
+Jos� Moreira,2018,0,0,0,0,0,0,0,0,1
+Jos� Moreira,2020,0,0,0,0,0,0,0,0,1
+Kengo Nakajima,2018,0,0,0,0,0,0,0,1,1
+Kengo Nakajima,2019,0,0,0,0,0,0,0,0,1
+Kengo Nakajima,2020,0,0,0,0,0,0,0,0,1
+Hiroshi Nakashima,2018,0,0,0,0,0,0,0,0,1
+Luke Olson,2018,0,0,0,0,0,0,0,0,1
+Luke Olson,2020,0,0,0,0,0,0,0,0,1
+Ana-Maria Oprescu,2018,0,0,0,0,0,0,0,0,1
+Dhabaleswar K. (DK) Panda,2018,0,0,0,0,0,0,0,0,1
+Dhabaleswar K. (DK) Panda,2019,0,0,0,0,0,0,0,0,1
+Dhabaleswar K. (DK) Panda,2020,0,0,0,0,0,0,0,0,1
+Thomas Ropars,2018,0,0,0,0,0,0,0,0,1
+Mitsuhisa Sato,2018,0,0,0,0,0,0,0,0,1
+Mitsuhisa Sato,2020,0,0,0,0,0,0,0,0,1
+Robert Speck,2018,0,0,0,0,0,0,0,0,1
+Robert Speck,2020,0,0,0,0,0,0,0,0,1
+Hongyang Sun,2018,0,0,0,0,0,0,0,0,1
+Yanhua Sun,2018,0,0,0,0,0,0,0,0,1
+Keita Teranishi,2018,0,0,0,0,0,0,0,0,1
+Keita Teranishi,2019,0,0,0,0,0,0,0,0,1
+Keita Teranishi,2020,0,0,0,0,0,0,0,0,1
+Fr�d�ric Vivien,2018,0,0,0,0,0,0,0,0,1
+Ewa Deelman,2018,0,0,0,0,0,0,0,0,1
+Ewa Deelman,2019,0,0,0,0,0,0,0,0,1
+Ewa Deelman,2020,0,0,0,0,0,0,0,0,1
+Bartosz Balis,2018,0,0,0,0,0,0,0,0,1
+Wesley Bland,2018,0,0,0,0,0,0,0,0,1
+Wesley Bland,2019,0,0,0,0,0,0,0,0,1
+Wesley Bland,2020,0,0,0,0,0,0,0,0,1
+Claris Castillo,2018,0,0,0,0,0,0,0,0,1
+Almadena Chtchelkanova,2018,0,0,0,0,0,0,0,0,1
+Almadena Chtchelkanova,2019,0,0,0,0,0,0,0,0,1
+Almadena Chtchelkanova,2020,0,0,0,0,0,0,0,0,1
+Peter Coveney,2018,0,0,0,0,0,0,0,0,1
+Anne C. Elster,2018,0,0,0,0,0,0,0,0,1
+Anne C. Elster,2019,0,0,0,0,0,0,0,0,1
+Anne C. Elster,2020,0,0,0,0,0,0,0,1,1
+Thomas Fahringer,2018,0,0,0,0,0,0,0,0,1
+Rosa Filgueira,2018,0,0,0,0,0,0,0,0,1
+Lin Gan,2018,0,0,0,0,0,0,0,0,1
+Lin Gan,2019,0,0,0,0,0,0,0,0,1
+Lin Gan,2020,0,0,0,0,0,0,0,0,1
+Soonwook Hwang,2018,0,0,0,0,0,0,0,0,1
+Soonwook Hwang,2019,0,0,0,0,0,0,0,0,1
+Ming Jiang,2018,0,0,0,0,0,0,0,0,1
+Dalibor Klus�?ek,2018,0,0,0,0,0,0,0,0,1
+Che-Rung Lee,2018,0,0,0,0,0,0,0,0,1
+Young Choon Lee,2018,0,0,0,0,0,0,0,0,1
+Tim Mattson,2018,0,0,0,0,0,0,0,0,1
+Jarek Nabrzyski,2018,0,0,0,0,0,0,0,0,1
+Christian Perez,2018,0,0,0,0,0,0,0,0,1
+Christian Perez,2019,0,0,0,0,0,0,0,0,1
+Rizos Sakellariou,2018,0,0,0,0,0,0,0,0,1
+Rizos Sakellariou,2020,0,0,0,0,0,0,1,0,0
+Seetharami Seelam,2018,0,0,0,0,0,0,0,0,1
+Seetharami Seelam,2019,0,0,0,0,0,0,0,0,1
+Seetharami Seelam,2020,0,0,0,0,0,0,0,0,1
+James A. Ang,2018,0,0,0,0,0,0,0,0,1
+Neelofer Banglawala,2018,0,0,0,0,0,0,0,0,1
+David Donofrio,2018,0,0,0,0,0,0,0,0,1
+David Donofrio,2019,0,0,0,0,0,0,0,0,1
+David Donofrio,2020,0,0,0,0,0,0,0,0,1
+Wayne Gaudin,2018,0,0,0,0,0,0,0,0,1
+Adrian Jackson,2018,0,0,0,0,0,0,0,0,1
+Guido Juckeland,2018,0,0,0,0,0,0,0,1,1
+Guido Juckeland,2019,0,0,0,0,0,0,0,0,1
+Guido Juckeland,2020,0,0,0,0,0,0,0,0,1
+Thomas Ertl,2018,0,0,0,0,0,0,0,0,1
+Daniel Acevedo-Feliz,2018,0,0,0,0,0,0,0,0,1
+Vetria Byrd,2018,0,0,0,0,0,0,0,0,1
+Vetria Byrd,2019,0,0,0,0,0,0,0,0,1
+Jens Krueger,2018,0,0,0,0,0,0,0,0,1
+Jens Krueger,2019,0,0,0,0,0,0,0,0,1
+Torsten W. Kuhlen,2018,0,0,0,0,0,0,0,0,1
+Patric Ljung,2018,0,0,0,0,0,0,0,0,1
+Huamin Qu,2018,0,0,0,0,0,0,0,0,1
+Bruce Loftis,2018,0,0,0,0,0,0,0,0,1
+Kamesh Madduri,2018,0,0,0,0,0,0,0,0,1
+Kamesh Madduri,2019,0,0,0,0,0,0,0,0,1
+Kamesh Madduri,2020,0,0,0,0,0,0,0,0,1
+Yong Chen,2018,0,0,0,0,0,0,0,0,1
+Yong Chen,2020,0,0,0,0,0,0,0,1,1
+Mahantesh Halappanavar,2018,0,0,0,0,0,0,0,0,1
+Shad Kirmani,2018,0,0,0,0,0,0,0,0,1
+Eunjung Park,2018,0,0,0,0,0,0,0,0,1
+Brian Railing,2018,0,0,0,0,0,0,0,0,1
+Govindarajan Ramaswamy,2018,0,0,0,0,0,0,0,0,1
+George M. Slota,2018,0,0,0,0,0,0,0,0,1
+Bora UCAR,2018,0,0,0,0,0,0,0,0,1
+Na Zhang,2018,0,0,0,0,0,0,0,0,1
+Mary Ann Leung,2018,0,0,0,0,0,0,0,0,1
+Richard Coffey,2018,0,0,0,0,0,0,0,0,1
+Bert Debusschere,2018,0,0,0,0,0,0,0,0,1
+Sally Ellingson,2018,0,0,0,0,0,0,0,0,1
+Sally Ellingson,2020,0,0,0,0,0,0,0,0,1
+Kurt B. Ferreira,2018,0,0,0,0,0,0,0,0,1
+Kurt B. Ferreira,2019,0,0,0,0,0,0,0,0,1
+Yipkei Kwok,2018,0,0,0,0,0,0,0,0,1
+Olga Scrivner,2018,0,0,0,0,0,0,0,0,1
+Nitin Sukhija,2018,0,0,0,0,0,0,0,0,1
+Nitin Sukhija,2020,0,0,0,0,0,0,0,0,1
+Stefan Wild,2018,0,0,0,0,0,0,0,0,1
+Stefan Wild,2019,0,0,0,0,0,0,0,0,1
+Stefan Wild,2020,0,0,0,0,0,0,0,0,1
+Irene Qualters,2019,0,0,0,0,0,0,0,0,1
+Irene Qualters,2020,0,0,0,0,0,0,0,0,1
+Scott Pakin,2019,0,0,0,0,0,0,0,0,1
+X. Sherry Li,2019,0,0,0,0,0,0,0,0,1
+Ahmad Abdelfattah,2019,0,0,0,0,0,0,0,0,1
+Rached Abdelkhalak,2019,0,0,0,0,0,0,0,0,1
+Mark Adams,2019,0,0,0,0,0,0,0,0,1
+Emmanuel Agullo,2019,0,0,0,0,0,0,0,0,1
+Ioana Banicescu,2019,0,0,0,0,0,0,0,0,1
+Ioana Banicescu,2020,0,0,0,0,0,0,0,0,1
+Umit Catalyurek,2019,0,0,0,0,0,0,0,0,1
+Umit Catalyurek,2020,0,0,0,0,0,0,0,1,1
+Gustavo Chávez,2019,0,0,0,0,0,0,0,0,1
+Kate Clark,2019,0,0,0,0,0,0,0,0,1
+Kate Clark,2020,0,0,0,0,0,0,0,0,1
+James Elliott,2019,0,0,0,0,0,0,0,0,1
+Aniello Esposito,2019,0,0,0,0,0,0,0,0,1
+Aniello Esposito,2020,0,0,0,0,0,0,0,0,1
+Murat Guney,2019,0,0,0,0,0,0,0,0,1
+Gregory M. Henry,2019,0,0,0,0,0,0,0,0,1
+Christine Klymko,2019,0,0,0,0,0,0,0,0,1
+Ronald Kriemann,2019,0,0,0,0,0,0,0,0,1
+Ulrike Meier Yang,2019,0,0,0,0,0,0,0,0,1
+Ulrike Meier Yang,2020,0,0,0,0,0,0,0,0,1
+Jason Riedy,2019,0,0,0,0,0,0,0,0,1
+Krzysztof Rzadca,2019,0,0,0,0,0,0,0,0,1
+Erik Saule,2019,0,0,0,0,0,0,0,0,1
+Erik Saule,2020,0,0,0,0,0,0,0,0,1
+Harsh Vardhan,2019,0,0,0,0,0,0,0,0,1
+Chao Yang,2019,0,0,0,0,0,0,0,0,1
+Clint N. Dawson,2019,0,0,0,0,0,0,0,0,1
+Jeffrey A. F. Hittinger,2019,0,0,0,0,0,0,0,0,1
+Jesus A. Izaguirre,2019,0,0,0,0,0,0,0,0,1
+Peter Jimack,2019,0,0,0,0,0,0,0,0,1
+Harald Köstler,2019,0,0,0,0,0,0,0,0,1
+Harald Köstler,2018,0,0,0,0,0,0,0,1,0
+Chao-An Lin,2019,0,0,0,0,0,0,0,0,1
+A. Cristiano I. Malossi,2019,0,0,0,0,0,0,0,0,1
+A. Cristiano I. Malossi,2020,0,0,0,0,0,0,0,1,0
+Hai Ah Nam,2019,0,0,0,0,0,0,0,0,1
+Hai Ah Nam,2020,0,0,0,0,0,0,0,0,1
+Daniel Peter,2019,0,0,0,0,0,0,0,0,1
+Olaf Schenk,2019,0,0,0,0,0,0,0,0,1
+Brian Towles,2019,0,0,0,0,0,0,0,0,1
+Jung Ho Ahn,2019,0,0,0,0,0,0,0,0,1
+Giri Chukkapalli,2019,0,0,0,0,0,0,0,0,1
+Scott Hemmert,2019,0,0,0,0,0,0,0,0,1
+Robert Hoekstra,2019,0,0,0,0,0,0,0,0,1
+Akanksha Jain,2019,0,0,0,0,0,1,0,0,1
+Admela Jukan,2019,0,0,0,0,0,0,0,0,1
+Jon Masters,2019,0,0,0,0,0,0,0,0,1
+Andrew Putnam,2019,0,0,0,0,0,0,0,0,1
+Andrew Putnam,2018,0,0,0,0,0,1,0,0,0
+Kevin Rudd,2019,0,0,0,0,0,0,0,0,1
+Roxana Rusitoru,2019,0,0,0,0,0,0,0,0,1
+Xin Yuan,2019,0,0,0,0,0,0,0,0,1
+Goetz Brasche,2019,0,0,0,0,0,0,0,0,1
+Shava Smallen,2019,0,0,0,0,0,0,0,0,1
+Deborah Bard,2019,0,0,0,0,0,0,0,0,1
+Rita Borgo,2019,0,0,0,0,0,0,0,1,1
+Rita Borgo,2020,0,0,0,0,0,0,0,0,1
+Christine E. Harvey,2019,0,0,0,0,0,0,0,0,1
+Bingsheng He,2019,0,0,0,0,0,0,0,0,1
+Bingsheng He,2020,0,0,0,0,0,0,0,1,0
+Pamela Hill,2019,0,0,0,0,0,0,0,0,1
+Kristy Kallback-Rose,2019,0,0,0,0,0,0,0,0,1
+Dries Kimpe,2019,0,0,0,0,0,0,0,0,1
+Daniel Laney,2019,0,0,0,0,0,0,0,0,1
+Glenn K. Lockwood,2019,0,0,0,0,0,0,0,0,1
+Xiaoyi Lu,2019,0,0,0,0,0,0,0,0,1
+Xiaoyi Lu,2020,0,0,0,0,0,0,0,0,1
+Dominic A. Manno,2019,0,0,0,0,0,0,0,0,1
+Meghan McClelland,2019,0,0,0,0,0,0,0,0,1
+Verónica G. Melesse Vergara,2019,0,0,0,0,0,0,0,0,1
+Verónica G. Melesse Vergara,2020,0,0,0,0,0,0,0,0,1
+Raghunath Raja Chandrasekar,2019,0,0,0,0,0,0,0,0,1
+Raghunath Raja Chandrasekar,2020,0,0,0,0,0,0,0,0,1
+Brad Settlemyer,2019,0,0,0,0,0,0,0,0,1
+Zhiqi Tao,2019,0,0,0,0,0,0,0,0,1
+Venkatram Vishwanath,2019,0,0,0,0,0,0,0,0,1
+Venkatram Vishwanath,2020,0,0,0,0,0,0,0,1,1
+Venkatram Vishwanath,2018,0,0,0,0,0,0,0,1,0
+Mohamed Zahran,2019,0,0,0,0,0,0,0,0,1
+Robert Patton,2019,0,0,0,0,0,0,0,0,1
+Wahid Bhimji,2019,0,0,0,0,0,0,0,0,1
+Wahid Bhimji,2020,0,0,0,0,0,0,0,0,1
+Christopher Carothers,2019,0,0,0,0,0,0,0,0,1
+Guojing Cong,2019,0,0,0,0,0,0,0,0,1
+Kimon Fountoulakis,2019,0,0,0,0,0,0,0,0,1
+Alex Gittens,2019,0,0,0,0,0,0,0,0,1
+Chris Gottbrath,2019,0,0,0,0,0,0,0,0,1
+Coi-Jui Hseih,2019,0,0,0,0,0,0,0,0,1
+Eliu Huerta,2019,0,0,0,0,0,0,0,0,1
+Ramakrishnan Kannan,2019,0,0,0,0,0,0,0,0,1
+Janis Keuper,2019,0,0,0,0,0,0,0,0,1
+Janis Keuper,2018,0,0,0,0,0,0,0,1,0
+Misbah Mubarak,2019,0,0,0,0,0,0,0,1,1
+Misbah Mubarak,2020,0,0,0,0,0,0,0,0,1
+Catherine Schuman,2019,0,0,0,0,0,0,0,0,1
+Sreenivas Rangan Sukumar,2019,0,0,0,0,0,0,0,0,1
+Sreenivas Rangan Sukumar,2020,0,0,0,0,0,0,0,0,1
+Brian C. Van Essen,2019,0,0,0,0,0,0,0,0,1
+Brian C. Van Essen,2020,0,0,0,0,0,0,0,0,1
+Shusen Wang,2019,0,0,0,0,0,0,0,0,1
+Steven R. Young,2019,0,0,0,0,0,0,0,0,1
+Zoran Budimlic,2019,0,0,0,0,0,0,0,0,1
+Zoran Budimlic,2018,0,0,0,0,0,0,1,0,0
+Marc Casas Guix,2019,0,0,0,0,0,0,0,0,1
+Milind Chabbi,2019,0,0,0,0,0,0,0,0,1
+Chen Ding,2019,0,0,0,0,0,0,0,0,1
+Chen Ding,2018,0,0,0,0,0,0,1,0,0
+Stephane Eranian,2019,0,0,0,0,0,0,0,0,1
+Megan Grodowitz,2019,0,0,0,0,0,0,0,0,1
+Ulf Hanebutte,2019,0,0,0,0,0,0,0,0,1
+Karen L. Karavanic,2019,0,0,0,0,0,0,0,0,1
+Xu Liu,2019,0,0,0,0,0,0,0,0,1
+Xu Liu,2020,0,0,0,0,0,1,0,0,0
+Andrew Mallinson,2019,0,0,0,0,0,0,0,0,1
+Allen Malony,2019,0,0,0,0,0,0,1,1,1
+Allen Malony,2020,0,0,0,0,0,0,1,0,1
+Allen Malony,2018,0,0,0,0,0,0,0,1,0
+Philip C. Roth,2019,0,0,0,0,0,0,0,0,1
+Philip C. Roth,2020,0,0,0,0,0,0,0,0,1
+Liji Samuel,2019,0,0,0,0,0,0,0,0,1
+Xian-He Sun,2019,0,0,0,0,0,0,0,0,1
+Samuel W. Williams,2019,0,0,0,0,0,0,0,0,1
+Samuel W. Williams,2020,0,0,0,0,0,0,0,0,1
+Claudia Fohry,2019,0,0,0,0,0,0,0,0,1
+Claudia Fohry,2020,0,0,0,0,0,0,0,0,1
+Gokcen Kestor,2019,0,0,0,0,0,0,0,0,1
+Gokcen Kestor,2020,0,0,0,0,0,0,0,0,1
+Gokcen Kestor,2018,0,0,0,0,0,0,0,1,0
+Milind Kulkarni,2019,0,0,0,0,0,0,0,0,1
+Chunhua Liao,2019,0,0,0,0,0,0,0,0,1
+Jonathan Lifflander,2019,0,0,0,0,0,0,0,0,1
+Lei Liu,2019,0,0,0,0,0,0,0,0,1
+Lei Liu,2020,0,0,0,0,0,1,0,0,0
+Malavika Samak,2019,0,0,0,0,0,0,0,0,1
+Bo Wu,2019,0,0,0,0,0,0,1,0,1
+Jingling Xue,2019,0,0,0,0,0,0,0,0,1
+Qing Yi,2019,0,0,0,0,0,0,0,0,1
+Qing Yi,2018,0,0,0,0,0,0,1,0,0
+Qing Yi,2020,0,0,0,0,0,0,0,1,0
+Tomofumi Yuki,2019,0,0,0,0,0,0,0,0,1
+Roy Campbell,2019,0,0,0,0,0,0,0,0,1
+Candace Culhane,2019,0,0,0,0,0,0,0,0,1
+Candace Culhane,2020,0,0,0,0,0,0,0,0,1
+Thomas Eickermann,2019,0,0,0,0,0,0,0,0,1
+Toshio Endo,2019,0,0,0,0,0,0,0,0,1
+Diana Moise,2019,0,0,0,0,0,0,0,0,1
+Diana Moise,2020,0,0,0,0,0,0,0,0,1
+Mallikarjun (Arjun) Shankar,2019,0,0,0,0,0,0,0,0,1
+Melissa C. Smith,2019,0,0,0,0,0,0,0,0,1
+Melissa C. Smith,2020,0,0,0,0,0,0,0,0,1
+Gregory Stoner,2019,0,0,0,0,0,0,0,0,1
+Hari Subramoni,2019,0,0,0,0,0,0,0,0,1
+Ugo Varetto,2019,0,0,0,0,0,0,0,0,1
+Ahmad Afsahi,2019,0,0,0,0,0,0,0,0,1
+Nan Ding,2019,0,0,0,0,0,0,0,0,1
+Michael Lang,2019,0,0,0,0,0,0,0,0,1
+Robert W. Wisniewski,2019,0,0,0,0,0,0,0,0,1
+Sharon Broude Geva,2019,0,0,0,0,0,0,0,0,1
+Merle Giles,2019,0,0,0,0,0,0,0,0,1
+Chris Johnson,2019,0,0,0,0,0,0,0,0,1
+Satoshi Sekiguchi,2019,0,0,0,0,0,0,0,0,1
+David Walker,2019,0,0,0,0,0,0,0,0,1
+Damian Alvarez,2019,0,0,0,0,0,0,0,0,1
+Yun (Helen) He,2019,0,0,0,0,0,0,0,0,1
+Mark Parsons,2019,0,0,0,0,0,0,0,0,1
+Heidi Poxon,2019,0,0,0,0,0,0,0,0,1
+Eric Stotzer,2019,0,0,0,0,0,0,0,0,1
+Christian Terboven,2019,0,0,0,0,0,0,0,1,1
+Christian Terboven,2020,0,0,0,0,0,0,0,1,0
+Xavier Teruel,2019,0,0,0,0,0,0,0,0,1
+Xavier Teruel,2020,0,0,0,0,0,0,0,0,1
+Rajeev Thakur,2019,0,0,0,0,0,0,0,0,1
+Rajeev Thakur,2020,0,0,0,0,0,0,0,0,1
+Sandy Landsberg,2019,0,0,0,0,0,0,0,0,1
+Susan Gregurick,2019,0,0,0,0,0,0,0,0,1
+Kerstin Kleese van Dam,2019,0,0,0,0,0,0,0,0,1
+Kerstin Kleese van Dam,2020,0,0,0,0,0,0,0,0,1
+Tsengdar Lee,2019,0,0,0,0,0,0,0,0,1
+Yu David Liu,2019,0,0,0,0,0,0,0,0,1
+Jesper Larsson Tr�ff,2019,0,0,0,0,0,0,0,0,1
+David H Bailey,2019,0,0,0,0,0,0,0,0,1
+David H Bailey,2020,0,0,0,0,0,0,0,0,1
+Michael Wolfe,2019,0,0,0,0,0,0,0,0,1
+William (Bill) C. Brantley,2019,0,0,0,0,0,0,0,0,1
+Oscar Hernandez,2019,0,0,0,0,0,0,0,0,1
+Michael Klemm,2019,0,0,0,0,0,0,0,1,1
+Miriam Leeser,2019,0,0,0,0,0,0,0,0,1
+Miriam Leeser,2020,0,0,0,0,0,0,0,0,1
+Alba Cristina Magalhaes Alves de Melo,2019,0,0,0,0,0,0,0,0,1
+Alba Cristina Magalhaes Alves de Melo,2020,0,0,0,0,0,0,0,0,1
+Serge Petiton,2019,0,0,0,0,0,0,0,0,1
+Duncan Poole,2019,0,0,0,0,0,0,0,0,1
+Eric Stahlberg,2019,0,0,0,0,0,0,0,0,1
+Christian Trott,2019,0,0,0,0,0,0,0,0,1
+Nicholas D'Imperio,2019,0,0,0,0,0,0,0,0,1
+Karl Fuerlinger,2019,0,0,0,0,0,0,0,0,1
+Karl Fuerlinger,2020,0,0,0,0,0,0,0,0,1
+Jennifer Green,2019,0,0,0,0,0,0,0,0,1
+Jennifer Green,2020,0,0,0,0,0,0,0,0,1
+Rebecca Hartman-Baker,2019,0,0,0,0,0,0,0,0,1
+Marc-André Hermanns,2019,0,0,0,0,0,0,0,1,1
+Marc-André Hermanns,2020,0,0,0,0,0,0,0,0,1
+Kate Isaacs,2019,0,0,0,0,0,0,0,0,1
+Rashawn Knapp,2019,0,0,0,0,0,0,0,0,1
+Meifeng Lin,2019,0,0,0,0,0,0,0,0,1
+Monique Morin,2019,0,0,0,0,0,0,0,0,1
+Monique Morin,2020,0,0,0,0,0,0,0,0,1
+Jeff Schutkoske,2019,0,0,0,0,0,0,0,0,1
+John Shalf,2019,0,0,0,0,0,0,0,0,1
+John Shalf,2020,0,0,0,0,0,0,0,1,0
+Toyotaro Suzumura,2019,0,0,0,0,0,0,0,0,1
+Keith Underwood,2019,0,0,0,0,0,0,0,0,1
+Keith Underwood,2020,0,0,0,0,0,0,0,0,1
+Eddy Zheng Zhang,2019,0,0,0,0,0,0,0,0,1
+Xinghui Zhao,2019,0,0,0,0,0,0,0,0,1
+Kris Bubendorfer,2019,0,0,0,0,0,0,0,0,1
+Sandra Gesing,2019,0,0,0,0,0,0,0,0,1
+Sandra Gesing,2020,0,0,0,0,0,0,0,0,1
+Daniel S. Katz,2019,0,0,0,0,0,0,0,0,1
+Daniel S. Katz,2020,0,0,0,0,0,0,0,0,1
+Ehsan Totoni,2019,0,0,0,0,0,0,0,0,1
+Weichung Wang,2019,0,0,0,0,0,0,0,0,1
+Zhao Zhang,2019,0,0,0,0,0,0,0,0,1
+Zhao Zhang,2020,0,0,0,0,0,0,0,0,1
+Tobin Isaac,2019,0,0,0,0,0,0,0,1,1
+Stefano Markidis,2019,0,0,0,0,0,0,0,0,1
+Stefano Markidis,2020,0,0,0,0,0,0,0,0,1
+Valeria Bartsch,2019,0,0,0,0,0,0,0,0,1
+Valeria Bartsch,2020,0,0,0,0,0,0,0,0,1
+Vicenç Beltran,2019,0,0,0,0,0,0,0,0,1
+Keeran Brabazon,2019,0,0,0,0,0,0,0,0,1
+Keeran Brabazon,2020,0,0,0,0,0,0,0,0,1
+Ryan D. Friese,2019,0,0,0,0,0,0,0,0,1
+Ryan D. Friese,2020,0,0,0,0,0,0,0,0,1
+Elisabeth Larsson,2019,0,0,0,0,0,0,0,0,1
+Elisabeth Larsson,2020,0,0,0,0,0,0,0,0,1
+Vyacheslav Olshevsky,2019,0,0,0,0,0,0,0,0,1
+Ivy B. Peng,2019,0,0,0,0,0,0,0,0,1
+Ivy B. Peng,2020,0,0,0,0,0,0,0,0,1
+Lorna Smith,2019,0,0,0,0,0,0,0,0,1
+Lorna Smith,2020,0,0,0,0,0,0,0,0,1
+Louis Vernon,2019,0,0,0,0,0,0,0,0,1
+Patricia Crossno,2019,0,0,0,0,0,0,0,0,1
+Ingrid Hotz,2019,0,0,0,0,0,0,0,0,1
+Alejandro Ribes,2019,0,0,0,0,0,0,0,0,1
+David Thompson,2019,0,0,0,0,0,0,0,0,1
+Bei Wang,2019,0,0,0,0,0,0,0,0,1
+Yanjie Wei,2019,0,0,0,0,0,0,0,0,1
+Chongxiao Cao,2019,0,0,0,0,0,0,0,0,1
+Vincenzo De Maio,2019,0,0,0,0,0,0,0,0,1
+Vincenzo De Maio,2020,0,0,0,0,0,0,0,0,1
+Manjunath Gorentla Venkata,2019,0,0,0,0,0,0,0,0,1
+Nusrat Islam,2019,0,0,0,0,0,0,0,0,1
+Jakub Kurzak,2019,0,0,0,0,0,0,0,0,1
+Weiguo Liu,2019,0,0,0,0,0,0,0,0,1
+Jintao Meng,2019,0,0,0,0,0,0,0,0,1
+Jintao Meng,2020,0,0,0,0,0,0,0,0,1
+Tiffany M. Mintz,2019,0,0,0,0,0,0,0,0,1
+Enrique S. Quintana-Orti,2019,0,0,0,0,0,0,0,0,1
+Barbara Fossum,2019,0,0,0,0,0,0,0,0,1
+Lorena Barba,2019,0,0,0,0,0,0,0,0,1
+Grigori Fursin,2019,0,0,0,0,0,0,0,0,1
+Scott Michael,2019,0,0,0,0,0,0,0,0,1
+Scott Michael,2020,0,0,0,0,0,0,0,0,1
+John Cazes,2019,0,0,0,0,0,0,0,0,1
+John Cazes,2020,0,0,0,0,0,0,0,0,1
+Stephen Lien Harrell,2019,0,0,0,0,0,0,0,0,1
+Stephen Lien Harrell,2020,0,0,0,0,0,0,0,0,1
+Carla Osthoff,2019,0,0,0,0,0,0,0,0,1
+Le Mai Weakley,2019,0,0,0,0,0,0,0,0,1
+Le Mai Weakley,2020,0,0,0,0,0,0,0,0,1
+Xiao Zhu,2019,0,0,0,0,0,0,0,0,1
+Xiao Zhu,2020,0,0,0,0,0,0,0,0,1
+Michael Zingale,2019,0,0,0,0,0,0,0,0,1
+Christopher Bross,2019,0,0,0,0,0,0,0,0,1
+Ivo Jimenez,2019,0,0,0,0,0,0,0,0,1
+Ivo Jimenez,2020,0,0,0,0,0,0,0,0,1
+Catherine Jones,2019,0,0,0,0,0,0,0,0,1
+Samuel Khuvis,2019,0,0,0,0,0,0,0,0,1
+Samuel Khuvis,2020,0,0,0,0,0,0,0,0,1
+Alicia Klinvex,2019,0,0,0,0,0,0,0,0,1
+Reed M Milewicz,2019,0,0,0,0,0,0,0,0,1
+Elaine Raybourn,2019,0,0,0,0,0,0,0,0,1
+Elaine Raybourn,2020,0,0,0,0,0,0,0,0,1
+Tyler Simon,2019,0,0,0,0,0,0,0,0,1
+Patrick Wohlschlegel,2019,0,0,0,0,0,0,0,0,1
+Sergio Iserte,2019,0,0,0,0,0,0,0,0,1
+Danny Rorabaugh,2019,0,0,0,0,0,0,0,0,1
+Carsten Uphoff,2019,0,0,0,0,0,0,0,0,1
+David E. Bernholdt,2019,0,0,0,0,0,0,0,0,1
+David E. Bernholdt,2020,0,0,0,0,0,0,0,0,1
+Louise Brown,2019,0,0,0,0,0,0,0,0,1
+Carina Haupt,2019,0,0,0,0,0,0,0,0,1
+Kyle Niemeyer,2019,0,0,0,0,0,0,0,0,1
+Daniel A. Reed,2019,0,0,0,0,0,0,0,0,1
+Rudolf Eigenmann,2020,0,0,0,0,0,0,0,0,1
+Jee Choi,2020,0,0,0,0,0,0,0,0,1
+Fanny Dufoss�,2020,0,0,0,0,0,0,0,0,1
+Patrick Flick,2020,0,0,0,0,0,0,0,0,1
+Jianyu Huang,2020,0,0,0,0,0,0,0,0,1
+Ananth Kalyanaraman,2020,0,0,0,0,0,0,0,1,1
+Ananth Kalyanaraman,2019,0,0,0,0,0,0,0,1,0
+La�rcio Lima Pilla,2020,0,0,0,0,0,0,0,0,1
+Yves Robert,2020,0,0,0,0,0,0,0,0,1
+Daniel Ruprecht,2020,0,0,0,0,0,0,0,0,1
+Daniel Ruprecht,2018,0,0,0,0,0,0,0,1,0
+Piyush Sao,2020,0,0,0,0,0,0,0,0,1
+Christian Schulz,2020,0,0,0,0,0,0,0,0,1
+Christian Schulz,2019,0,0,0,0,0,0,0,1,0
+Srishti Srivastava,2020,0,0,0,0,0,0,0,0,1
+Erik Lindahl,2020,0,0,0,0,0,0,0,1,1
+Ritu Arora,2020,0,0,0,0,0,0,0,0,1
+Jay Bardhan,2020,0,0,0,0,0,0,0,0,1
+Anne Elster,2020,0,0,0,0,0,0,0,0,1
+Frank Jenko,2020,0,0,0,0,0,0,0,0,1
+Bálint Joó,2020,0,0,0,0,0,0,0,0,1
+Christoph Junghans,2020,0,0,0,0,0,0,0,0,1
+Paul Lin,2020,0,0,0,0,0,0,0,0,1
+Tania Lorido Botran,2020,0,0,0,0,0,0,0,0,1
+Takemasa Miyoshi,2020,0,0,0,0,0,0,0,0,1
+Susan Mniszewski,2020,0,0,0,0,0,0,0,0,1
+Eric Nielsen,2020,0,0,0,0,0,0,0,0,1
+Minna Palmroth,2020,0,0,0,0,0,0,0,0,1
+Kenneth Ruud,2020,0,0,0,0,0,0,0,0,1
+Sinead Ryan,2020,0,0,0,0,0,0,0,0,1
+Karl Schulz,2020,0,0,0,0,0,0,0,0,1
+Joost VandeVondele,2020,0,0,0,0,0,0,0,0,1
+Shugo Yasuda,2020,0,0,0,0,0,0,0,0,1
+Jason Bakos,2020,0,0,0,0,0,0,0,0,1
+Caroline Collange,2020,0,0,0,0,0,0,0,0,1
+Ryusuke Egawa,2020,0,0,0,0,0,0,0,0,1
+Vladimir Getov,2020,0,0,0,0,0,0,0,0,1
+Julien Jaeger,2020,0,0,0,0,0,0,0,0,1
+Ryohei Kobayashi,2020,0,0,0,0,0,0,0,0,1
+Christian Plessl,2020,0,0,0,0,0,0,0,0,1
+Suzanne Rivoire,2020,0,0,0,0,0,0,0,0,1
+Marc Sergent,2020,0,0,0,0,0,0,0,0,1
+Aaron Smith,2020,0,0,0,0,0,0,0,0,1
+Ayon Basumallik,2020,0,0,0,0,0,0,0,0,1
+Ayon Basumallik,2019,0,0,0,0,0,0,1,0,0
+Matthias A. Blumrich,2020,0,0,0,0,0,0,0,0,1
+Rajkumar Buyya,2020,0,0,0,0,0,0,0,0,1
+Nosayba El-Sayed,2020,0,0,0,0,0,0,0,0,1
+Andrzej Kochut,2020,0,0,0,0,0,0,0,0,1
+Xing Liu,2020,0,0,0,0,0,0,0,0,1
+M. Mustafa Rafique,2020,0,0,0,0,0,0,0,0,1
+Pasupathy Shankar,2020,0,0,0,0,0,0,0,0,1
+Vanish Talwar,2020,0,0,0,0,0,0,0,0,1
+Sura Zehra,2020,0,0,0,0,0,0,0,0,1
+Anthony Kougkas,2020,0,0,0,0,0,0,0,0,1
+Johann Lombardi,2020,0,0,0,0,0,0,0,0,1
+Dmitriy Morozov,2020,0,0,0,0,0,0,0,0,1
+Bing Xie,2020,0,0,0,0,0,0,0,0,1
+William Tang,2020,0,0,0,0,0,0,0,0,1
+Takuya Akiba,2020,0,0,0,0,0,0,0,0,1
+Svyatkovskiy Alexey,2020,0,0,0,0,0,0,0,0,1
+Prasanna Balaprakash,2020,0,0,0,0,0,0,0,0,1
+Ge Dong,2020,0,0,0,0,0,0,0,0,1
+Nikoli Dryden,2020,0,0,0,0,0,0,0,0,1
+Erich Elsen,2020,0,0,0,0,0,0,0,0,1
+Steven Farrell,2020,0,0,0,0,0,0,0,0,1
+Simon Garcia De Gonzalo,2020,0,0,0,0,0,0,0,0,1
+Tom Gibbs,2020,0,0,0,0,0,0,0,0,1
+Boris Ginsburg,2020,0,0,0,0,0,0,0,0,1
+Mike Houston,2020,0,0,0,0,0,0,0,0,1
+Zhengchun Liu,2020,0,0,0,0,0,0,0,0,1
+Maxim Naumov,2020,0,0,0,0,0,0,0,0,1
+Mai Nguyen,2020,0,0,0,0,0,0,0,0,1
+Damian Podareanu,2020,0,0,0,0,0,0,0,0,1
+Arvind Ramanathan,2020,0,0,0,0,0,0,0,0,1
+Brandon Reagen,2020,0,0,0,0,0,0,0,0,1
+Vikram A Saletore,2020,0,0,0,0,0,0,0,0,1
+Yohei Sawada,2020,0,0,0,0,0,0,0,0,1
+Mikhail Smorkalov,2020,0,0,0,0,0,0,0,0,1
+Fengguang Song,2020,0,0,0,0,0,0,0,0,1
+Taiji Suzuki,2020,0,0,0,0,0,0,0,0,1
+Christine Sweeney,2020,0,0,0,0,0,0,0,0,1
+Wei Tan,2020,0,0,0,0,0,0,0,0,1
+Wang Yangzihao,2020,0,0,0,0,0,0,0,0,1
+Wenlai Zhao,2020,0,0,0,0,0,0,0,0,1
+Patrick Carribault,2020,0,0,0,0,0,0,0,0,1
+Nicolas Dube,2020,0,0,0,0,0,0,0,0,1
+Robert Henschel,2020,0,0,0,0,0,0,0,0,1
+Andra-Ecaterina Hugo,2020,0,0,0,0,0,0,0,0,1
+Chao Jin,2020,0,0,0,0,0,0,0,0,1
+Sanyam Mehta,2020,0,0,0,0,0,0,0,0,1
+Pablo Reble,2020,0,0,0,0,0,0,0,0,1
+Dirk Schmidl,2020,0,0,0,0,0,0,0,0,1
+Alex Aiken,2020,0,0,0,0,0,0,0,0,1
+Cedric Augonnet,2020,0,0,0,0,0,0,0,0,1
+Abdou Guermouche,2020,0,0,0,0,0,0,0,0,1
+Jiajia Li,2020,0,0,0,0,0,0,0,0,1
+Joseph Schuchart,2020,0,0,0,0,0,0,0,0,1
+Samuel Thibault,2020,0,0,0,0,0,0,0,0,1
+Nicholas P. Cardo,2020,0,0,0,0,0,0,0,0,1
+Eric Cheng,2020,0,0,0,0,0,0,0,0,1
+Hans Eberle,2020,0,0,0,0,0,0,0,0,1
+Kartik Lakhotia,2020,0,0,0,0,0,0,0,0,1
+Tiziana Di Matteo,2020,0,0,0,0,0,0,0,0,1
+Maria Girone,2020,0,0,0,0,0,0,0,0,1
+Richard Murphy,2020,0,0,0,0,0,0,0,0,1
+Sean Smith,2020,0,0,0,0,0,0,0,0,1
+Jeffrey S. Vetter,2020,0,0,0,0,0,0,0,0,1
+Karen Willcox,2020,0,0,0,0,0,0,0,0,1
+Abdelhalim Amer,2020,0,0,0,0,0,0,0,0,1
+Julien Bigot,2020,0,0,0,0,0,0,0,0,1
+Joshua D. Booth,2020,0,0,0,0,0,0,0,0,1
+Kevin A. Brown,2020,0,0,0,0,0,0,0,0,1
+Irina Demeshko,2020,0,0,0,0,0,0,0,0,1
+Laércio Lima Pilla,2020,0,0,0,0,0,0,0,0,1
+Nuria Losada,2020,0,0,0,0,0,0,0,0,1
+Alexander Margolin,2020,0,0,0,0,0,0,0,0,1
+Burcu O. Mutlu,2020,0,0,0,0,0,0,0,0,1
+Erdal Mutlu,2020,0,0,0,0,0,0,0,0,1
+Konstantinos Parasyris,2020,0,0,0,0,0,0,0,0,1
+Swann Perarnau,2020,0,0,0,0,0,0,0,0,1
+Pavel Shamis,2020,0,0,0,0,0,0,0,0,1
+Anne Fitzpatrick,2020,0,0,0,0,0,0,0,0,1
+Jeffery Kuehn,2020,0,0,0,0,0,0,0,0,1
+Benjamin Parsons,2020,0,0,0,0,0,0,0,0,1
+Brad Spiers,2020,0,0,0,0,0,0,0,0,1
+Jesper Larsson Träff,2020,0,0,0,0,0,0,0,0,1
+Jim M. Brandt,2020,0,0,0,0,0,0,0,0,1
+Ralph A. McEldowney,2020,0,0,0,0,0,0,0,0,1
+John Gounley,2020,0,0,0,0,0,0,0,0,1
+Laura Schulz,2020,0,0,0,0,0,0,0,0,1
+Mehmet E Belviranli,2020,0,0,0,0,0,0,0,0,1
+Richard Shane Canon,2020,0,0,0,0,0,0,0,0,1
+Hank Childs,2020,0,0,0,0,0,0,0,0,1
+Valentin Churavy,2020,0,0,0,0,0,0,0,0,1
+Jenna DeLozier,2020,0,0,0,0,0,0,0,0,1
+Anja Gerbes,2020,0,0,0,0,0,0,0,0,1
+Paola Grosso,2020,0,0,0,0,0,0,0,0,1
+Toshiyuki Imamura,2020,0,0,0,0,0,0,0,0,1
+Patricia Kovatch,2020,0,0,0,0,0,0,0,0,1
+Martin Kronbichler,2020,0,0,0,0,0,0,0,0,1
+Helena Liebelt,2020,0,0,0,0,0,0,0,0,1
+Helena Liebelt,2019,0,0,0,0,0,0,0,1,0
+Srinivas Sridharan,2020,0,0,0,0,0,0,0,0,1
+Tim Yeager,2020,0,0,0,0,0,0,0,0,1
+Hamid Reza Zohouri,2020,0,0,0,0,0,0,0,0,1
+Cristina Beldica,2020,0,0,0,0,0,0,0,0,1
+Kaylea Nelson,2020,0,0,0,0,0,0,0,0,1
+Shaikh M. Arifuzzaman,2020,0,0,0,0,0,0,0,0,1
+Kaigui Bian,2020,0,0,0,0,0,0,0,0,1
+Robert Bjornson,2020,0,0,0,0,0,0,0,0,1
+Spyros Blanas,2020,0,0,0,0,0,0,0,0,1
+Mohamad Chaarawi,2020,0,0,0,0,0,0,0,0,1
+Jerry Chou,2020,0,0,0,0,0,0,0,0,1
+Dong Dai,2020,0,0,0,0,0,0,0,0,1
+William DF Dawson,2020,0,0,0,0,0,0,0,0,1
+Bin Dong,2020,0,0,0,0,0,0,0,0,1
+Zhihui Du,2020,0,0,0,0,0,0,0,0,1
+Benjamin Evans,2020,0,0,0,0,0,0,0,0,1
+Stephen Herbein,2020,0,0,0,0,0,0,0,0,1
+Surabhi Jain,2020,0,0,0,0,0,0,0,0,1
+Kadidia Konate,2020,0,0,0,0,0,0,0,0,1
+Quincey Koziol,2020,0,0,0,0,0,0,0,0,1
+Jinpil Lee,2020,0,0,0,0,0,0,0,0,1
+Fang Liu,2020,0,0,0,0,0,0,0,0,1
+Qing Liu,2020,0,0,0,0,0,0,0,0,1
+Ping Luo,2020,0,0,0,0,0,0,0,0,1
+Kshitij Mehta,2020,0,0,0,0,0,0,0,0,1
+Bashir Mohammed,2020,0,0,0,0,0,0,0,0,1
+Daichi Mukunoki,2020,0,0,0,0,0,0,0,0,1
+Shigenori Otsuka,2020,0,0,0,0,0,0,0,0,1
+Andrew Sherman,2020,0,0,0,0,0,0,0,0,1
+Yogesh Simmhan,2020,0,0,0,0,0,0,0,0,1
+Jerome Soumagne,2020,0,0,0,0,0,0,0,0,1
+Michael Strickler,2020,0,0,0,0,0,0,0,0,1
+Houjun Tang,2020,0,0,0,0,0,0,0,0,1
+Francois Tessier,2020,0,0,0,0,0,0,0,0,1
+Teng Wang,2020,0,0,0,0,0,0,0,0,1
+Yongwei Wu,2020,0,0,0,0,0,0,0,0,1
+Frederica Darema,2020,0,0,0,0,0,0,0,0,1
+Alex Aved,2020,0,0,0,0,0,0,0,0,1
+Erik Blasch,2020,0,0,0,0,0,0,0,0,1
+Aniruddha Gokhale,2020,0,0,0,0,0,0,0,0,1
+Sarvani Chadalapaka,2020,0,0,0,0,0,0,0,0,1
+Hussein Al-Azzawi,2020,0,0,0,0,0,0,0,0,1
+Khayam Anjam,2020,0,0,0,0,0,0,0,0,1
+Matthias Bussonnier,2020,0,0,0,0,0,0,0,0,1
+Kevin Clark,2020,0,0,0,0,0,0,0,0,1
+Bala Desinghu,2020,0,0,0,0,0,0,0,0,1
+Edward Evans,2020,0,0,0,0,0,0,0,0,1
+Weronika Filinger,2020,0,0,0,0,0,0,0,0,1
+Richard Gayler,2020,0,0,0,0,0,0,0,0,1
+Vikram Gazula,2020,0,0,0,0,0,0,0,0,1
+Luanzheng Guo,2020,0,0,0,0,0,0,0,0,1
+Mozhgan Kabiri Chimeh,2020,0,0,0,0,0,0,0,0,1
+Konstantinos Krommydas,2020,0,0,0,0,0,0,0,0,1
+Scott Lathrop,2020,0,0,0,0,0,0,0,0,1
+Junjie Li,2020,0,0,0,0,0,0,0,0,1
+Cristin Merritt,2020,0,0,0,0,0,0,0,0,1
+Dave Monismith,2020,0,0,0,0,0,0,0,0,1
+Amy Neeser,2020,0,0,0,0,0,0,0,0,1
+Semir Sarajlic,2020,0,0,0,0,0,0,0,0,1
+Tajendra Vir Singh,2020,0,0,0,0,0,0,0,0,1
+Dane Skow,2020,0,0,0,0,0,0,0,0,1
+Gil Speyer,2020,0,0,0,0,0,0,0,0,1
+Dinadayalane Tandabany,2020,0,0,0,0,0,0,0,0,1
+David Zeng,2020,0,0,0,0,0,0,0,0,1
+Jiyuan Zhang,2020,0,0,0,0,0,0,0,0,1
+Vincenç Beltran,2020,0,0,0,0,0,0,0,0,1
+Niclas Jansson,2020,0,0,0,0,0,0,0,0,1
+Artur Podobas,2020,0,0,0,0,0,0,0,0,1
+David Semeraro,2020,0,0,0,0,0,0,0,0,1
+Emma-Jane Alexander,2020,0,0,0,0,0,0,0,0,1
+David DeMarle,2020,0,0,0,0,0,0,0,0,1
+Johannes Günther,2020,0,0,0,0,0,0,0,0,1
+Randy Heiland,2020,0,0,0,0,0,0,0,0,1
+Jason Leigh,2020,0,0,0,0,0,0,0,0,1
+Peter Messmer,2020,0,0,0,0,0,0,0,0,1
+William Harrod,2020,0,0,0,0,0,0,0,0,1
+Angel Beltre,2020,0,0,0,0,0,0,0,0,1
+Joel Brogan,2020,0,0,0,0,0,0,0,0,1
+Maria Celis,2020,0,0,0,0,0,0,0,0,1
+Carolyn Devany,2020,0,0,0,0,0,0,0,0,1
+Blake Haugen,2020,0,0,0,0,0,0,0,0,1
+Todd Letsche,2020,0,0,0,0,0,0,0,0,1
+Xu Tony Liu,2020,0,0,0,0,0,0,0,0,1
+Dolores A. Shaffer,2020,0,0,0,0,0,0,0,0,1
+Masha Sosonkina,2020,0,0,0,0,0,0,0,0,1
+Thomas Lawrence Sterling,2020,0,0,0,0,0,0,0,0,1
+Daniel Norrison,2020,0,0,0,0,0,0,0,0,1
+Tara Crouch,2020,0,0,0,0,0,0,0,0,1
+Atiq Bajwa,2020,0,0,0,0,0,0,0,0,1
+Hal Finkel,2020,0,0,0,0,0,0,0,0,1
+Terri Quinn,2020,0,0,0,0,0,0,0,0,1
+H. Birali Runesha,2020,0,0,0,0,0,0,0,0,1
+Matthew Wolf,2020,0,0,0,0,0,0,0,0,1
+Beth Plale,2020,0,0,0,0,0,0,0,0,1
+Line Pouchard,2020,0,0,0,0,0,0,0,0,1
+Andrew Younge,2020,0,0,0,0,0,0,0,0,1
+Amiya K. Maji,2020,0,0,0,0,0,0,0,0,1
+Weicheng Huang,2020,0,0,0,0,0,0,0,0,1
+Tanu Malik,2020,0,0,0,0,0,0,0,0,1
+Timothy Randles,2020,0,0,0,0,0,0,0,0,1
+Silvina Caino-Lores,2020,0,0,0,0,0,0,0,0,1
+Dylan Chapp,2020,0,0,0,0,0,0,0,0,1
+Jia Shi,2020,0,0,0,0,0,0,0,0,1
+Brett M. Bode,2020,0,0,0,0,0,0,0,0,1
+David Halstead,2020,0,0,0,0,0,0,0,0,1
+David Martin,2020,0,0,0,0,0,0,0,0,1
+Tim F. Pugh,2020,0,0,0,0,0,0,0,0,1
+Joseph Tarango,2020,0,0,0,0,0,0,0,0,1
+Jenett Tillotson,2020,0,0,0,0,0,0,0,0,1
+George Tsouloupas,2020,0,0,0,0,0,0,0,0,1
+Michel Kinsy,2020,0,0,0,0,0,1,0,0,0
+Seunghee Shin,2020,0,0,0,0,0,1,0,0,0
+Lide Duan,2020,0,0,0,0,0,1,0,0,0
+Hung-Wei Tseng,2020,0,0,0,0,0,1,0,0,0
+Jun Yang,2020,0,0,0,0,0,1,0,0,0
+Jun Yang,2019,0,0,0,0,0,1,0,0,0
+Jun Yang,2018,0,0,0,0,0,1,0,0,0
+Guru Venkataramani,2020,0,0,0,0,0,1,0,0,0
+Omer Khan,2020,0,0,0,0,0,1,0,0,0
+Lu Peng,2020,0,0,0,0,0,1,0,0,0
+Lizy John,2020,0,0,0,0,0,1,0,0,0
+Lizy John,2018,0,0,0,0,0,1,0,0,0
+Ulya Karpuzcu,2020,0,0,0,0,0,1,0,0,0
+Ulya Karpuzcu,2019,0,0,0,0,0,1,0,0,0
+Antonio Gonzalez,2020,0,0,0,0,0,1,0,0,0
+Antonio Gonzalez,2019,0,0,0,0,0,1,0,0,0
+Antonio Gonzalez,2018,0,0,0,0,0,1,0,0,0
+Per Stenstrom,2020,0,0,0,0,0,1,1,0,0
+Chita Das,2020,0,0,0,0,0,1,0,0,0
+Chita Das,2018,0,0,0,0,0,1,0,0,0
+Pedro Trancoso,2020,0,0,0,0,0,1,0,0,0
+Hong Wang,2020,0,0,0,0,0,1,0,0,0
+Keiji Kimura,2020,0,0,0,0,0,1,0,0,0
+Keiji Kimura,2019,0,0,0,0,0,0,1,0,0
+Xiaochen Guo,2020,0,0,0,0,0,1,0,0,0
+Xiaochen Guo,2019,0,0,0,0,0,1,0,0,0
+Alaa Alameldeen,2020,0,0,0,0,0,1,0,0,0
+Alaa Alameldeen,2019,0,0,0,0,0,1,0,0,0
+Alaa Alameldeen,2018,0,0,0,0,0,1,0,0,0
+Ahmed Louri,2020,0,0,0,0,0,1,0,0,0
+Ahmed Louri,2018,0,0,0,0,0,1,0,0,0
+William Wang,2020,0,0,0,0,0,1,0,0,0
+Newsha Ardalani,2020,0,0,0,0,0,1,0,0,0
+Tosiron Adegbija,2020,0,0,0,0,0,1,0,0,0
+Daniel Jimenez,2020,0,0,0,0,0,1,1,0,0
+Daniel Jimenez,2018,0,0,0,0,0,1,0,0,0
+Tam Chantem,2020,0,0,0,0,0,1,0,0,0
+Wendy Elsasser,2020,0,0,0,0,0,1,0,0,0
+Julio Sahuquillo,2020,0,0,0,0,0,1,0,0,0
+Eric (Yun) Liang,2020,0,0,0,0,0,1,0,0,0
+Radu Teodorescu,2020,0,0,0,0,0,1,0,0,0
+Radu Teodorescu,2018,0,0,0,0,0,1,0,0,0
+Paul Gratz,2020,0,0,0,0,0,1,0,0,0
+Nael Abu-Ghazaleh,2020,0,0,0,0,0,1,0,0,0
+Ashish Venkat,2020,0,0,0,0,0,1,0,0,0
+Abdullah Muzahid,2020,0,0,0,0,0,1,0,0,0
+Abdullah Muzahid,2018,0,0,0,0,0,1,0,0,0
+Gautham Chinya,2020,0,0,0,0,0,1,0,0,0
+Jing Li,2020,0,0,0,0,0,1,0,0,0
+Russ Joseph,2020,0,0,0,0,0,1,0,0,0
+Karu Sankaralingam,2020,0,0,0,0,0,1,0,0,0
+Karu Sankaralingam,2018,0,0,0,0,0,1,0,0,0
+Chia-Lin Yang,2020,0,0,0,0,0,1,0,0,0
+Lizhong Chen,2020,0,0,0,0,0,1,0,0,0
+Arthur Perais,2020,0,0,0,0,0,1,0,0,0
+Fan Yao,2020,0,0,0,0,0,1,0,0,0
+Mahdi Nazm Bojnordi,2019,0,0,0,0,0,1,0,0,0
+Pradip Bose,2019,0,0,0,0,0,1,0,0,0
+Pradip Bose,2018,0,0,0,0,0,1,0,0,0
+David Brooks,2019,0,0,0,0,0,1,0,0,0
+Ramon Canal,2019,0,0,0,0,0,1,0,0,0
+Niladrish Chatterjee,2019,0,0,0,0,0,1,0,0,0
+Niladrish Chatterjee,2018,0,0,0,0,0,1,0,0,0
+Liqun Cheng,2019,0,0,0,0,0,1,0,0,0
+Jason Clemons,2019,0,0,0,0,0,1,0,0,0
+Jason Clemons,2018,0,0,0,0,0,1,0,0,0
+Lieven Eeckhout,2019,0,0,0,0,0,1,0,0,0
+Lieven Eeckhout,2018,0,0,0,0,0,1,0,0,0
+Jayneel Gandhi,2019,0,0,0,0,0,1,0,0,0
+R Govindarajan,2019,0,0,0,0,0,1,0,0,0
+Paul V. Gratz,2019,0,0,0,0,0,1,0,0,0
+James C. Hoe,2019,0,0,0,0,0,1,0,0,0
+Rui Hou,2019,0,0,0,0,0,1,0,0,0
+Rui Hou,2018,0,0,0,0,0,1,0,0,0
+Lisa Hsu,2019,0,0,0,0,0,1,0,0,0
+Jaehyuk Huh,2019,0,0,0,0,0,1,0,0,0
+Hillery Hunter,2019,0,0,0,0,0,1,0,0,0
+Nuwan Jayasena,2019,0,0,0,0,0,1,0,0,0
+Lizy Kurian John,2019,0,0,0,0,0,1,0,0,0
+Avinash Karanth,2019,0,0,0,0,0,1,0,0,0
+Benjamin Lee,2019,0,0,0,0,0,1,0,0,0
+Benjamin Lee,2018,0,0,0,0,0,1,0,0,0
+David Lo,2019,0,0,0,0,0,1,0,0,0
+Pierre Michaud,2019,0,0,0,0,0,1,0,0,0
+Andreas Moshovos,2019,0,0,0,0,0,1,0,0,0
+Vijayanand Nagarajan,2019,0,0,0,0,0,1,0,0,0
+Vijaykrishnan Narayanan,2019,0,0,0,0,0,1,0,0,0
+Shruti Padmanabha,2019,0,0,0,0,0,1,0,0,0
+Tom Pawlowski,2019,0,0,0,0,0,1,0,0,0
+Dmitry Ponomarev,2019,0,0,0,0,0,1,0,0,0
+Xuehai Qian,2019,0,0,0,0,0,1,0,0,0
+Xuehai Qian,2018,0,0,0,0,0,1,0,0,0
+Moinuddin Qureshi,2019,0,0,0,0,0,1,0,0,0
+Moinuddin Qureshi,2018,0,0,0,0,0,1,0,0,0
+Steve Reinhardt,2019,0,0,0,0,0,1,0,0,0
+Joshua San Miguel,2019,0,0,0,0,0,1,0,0,0
+Vivek Seshadri,2019,0,0,0,0,0,1,0,0,0
+Arrvindh Shriraman,2019,0,0,0,0,0,1,1,0,0
+Arrvindh Shriraman,2020,0,0,0,0,0,0,1,0,0
+Yan Solihin,2019,0,0,0,0,0,1,0,0,0
+Yan Solihin,2018,0,0,0,0,0,1,0,0,0
+Phillip Stanley-Marbell,2019,0,0,0,0,0,1,0,0,0
+Sreenivas Subramoney,2019,0,0,0,0,0,1,0,0,0
+Guangyu Sun,2019,0,0,0,0,0,1,0,0,0
+Guangyu Sun,2018,0,0,0,0,0,1,0,0,0
+Elvira Teran,2019,0,0,0,0,0,1,0,0,0
+Josep Torrellas,2019,0,0,0,0,0,1,0,0,0
+Josep Torrellas,2018,0,0,0,0,0,1,0,0,0
+Paul Whatmough,2019,0,0,0,0,0,1,0,0,0
+Lisa Wu,2019,0,0,0,0,0,1,0,0,0
+Cliff Young,2019,0,0,0,0,0,1,0,0,0
+Jason Zebchuk,2019,0,0,0,0,0,1,0,0,0
+Yuhao Zhu,2019,0,0,0,0,0,1,0,0,0
+Rajeev Balasubramonian,2018,0,0,0,0,0,1,0,0,0
+Brad Beckmann,2018,0,0,0,0,0,1,0,0,0
+Yunji Chen,2018,0,0,0,0,0,1,0,0,0
+Jason Cong,2018,0,0,0,0,0,1,0,0,0
+Reetuparna Das,2018,0,0,0,0,0,1,0,0,0
+Yasuko Eckert,2018,0,0,0,0,0,1,0,0,0
+Hadi Esmaeilzadeh,2018,0,0,0,0,0,1,0,0,0
+Yoav Etsion,2018,0,0,0,0,0,1,0,0,0
+Yunsi Fei,2018,0,0,0,0,0,1,0,0,0
+Siva Kumar Sastry Hari,2018,0,0,0,0,0,1,0,0,0
+Sudhanva Gurumurthi,2018,0,0,0,0,0,1,0,0,0
+Song Han,2018,0,0,0,0,0,1,0,0,0
+Kei Hiraki,2018,0,0,0,0,0,1,0,0,0
+Engin Ipek,2018,0,0,0,0,0,1,0,0,0
+David Kaeli,2018,0,0,0,0,0,1,1,0,0
+Nam Sung Kim,2018,0,0,0,0,0,1,0,0,0
+Sheng Li,2018,0,0,0,0,0,1,0,0,0
+Eric Liang,2018,0,0,0,0,0,1,0,0,0
+Gabriel Loh,2018,0,0,0,0,0,1,0,0,0
+Tim Sherwood,2018,0,0,0,0,0,1,0,0,0
+Lingjia Tang,2018,0,0,0,0,0,1,0,0,0
+Alba Cristina M. A. Melo,2020,0,0,0,0,0,0,1,0,0
+Carla Osthoff Barros,2020,0,0,0,0,0,0,1,0,0
+Clemens Grelck,2020,0,0,0,0,0,0,1,1,0
+Clemens Grelck,2018,0,0,0,0,0,0,0,1,0
+David Whalley,2020,0,0,0,0,0,0,1,0,0
+Dhabaleswar K. Panda,2020,0,0,0,0,0,0,1,0,0
+Dirk Pleiter,2020,0,0,0,0,0,0,1,1,0
+Dora B. Heras,2020,0,0,0,0,0,0,1,0,0
+Francisco D. Igual,2020,0,0,0,0,0,0,1,0,0
+Giacomo Gabrielli,2020,0,0,0,0,0,0,1,0,0
+Gregory T. Byrd,2020,0,0,0,0,0,0,1,0,0
+Jinjun Xiong,2020,0,0,0,0,0,0,1,0,0
+Jose Flich,2020,0,0,0,0,0,0,1,0,0
+Jose Moreira,2020,0,0,0,0,0,0,1,0,0
+Kaitlin Smith,2020,0,0,0,0,0,0,1,0,0
+Katzalin Olcoz,2020,0,0,0,0,0,0,1,0,0
+Lawrence Rauchwerger,2020,0,0,0,0,0,0,1,0,0
+Lawrence Rauchwerger,2019,0,0,0,0,0,0,1,0,0
+Lúcia Drummond,2020,0,0,0,0,0,0,1,0,0
+Marc Casas,2020,0,0,0,0,0,0,1,0,0
+Marc Casas,2018,0,0,0,0,0,0,1,0,0
+Marco Domenico Santambrogio,2020,0,0,0,0,0,0,1,0,0
+Minyi Guo,2020,0,0,0,0,0,0,1,0,0
+Minyi Guo,2018,0,0,0,0,0,0,1,0,0
+Miquel Moreto,2020,0,0,0,0,0,0,1,0,0
+Miquel Moreto,2019,0,0,0,0,0,0,0,1,0
+Ozcan Ozturk,2020,0,0,0,0,0,0,1,0,0
+Rosario Cammarota,2020,0,0,0,0,0,0,1,0,0
+Rosario Cammarota,2019,0,0,0,0,0,0,1,0,0
+Xiaoming Li,2020,0,0,0,0,0,0,1,0,0
+Akhil Arunkumar,2019,0,0,0,0,0,0,1,0,0
+Albert Cohen,2019,0,0,0,0,0,0,1,0,0
+Angelina Lee,2019,0,0,0,0,0,0,1,0,0
+Arun Kejariwal,2019,0,0,0,0,0,0,1,0,0
+Arun Kejariwal,2018,0,0,0,0,0,0,1,0,0
+Bronis de Supinski,2019,0,0,0,0,0,0,1,0,0
+Bruce Robert Childers,2019,0,0,0,0,0,0,1,0,0
+Jim Dehnert,2019,0,0,0,0,0,0,1,0,0
+Jon Cameron Calhoun,2019,0,0,0,0,0,0,1,0,0
+Robert Harrison,2019,0,0,0,0,0,0,1,0,0
+Onur Kayiran,2019,0,0,0,0,0,0,1,0,0
+Scott Lloyd,2019,0,0,0,0,0,0,1,0,0
+Sven-Bodo Scholz,2019,0,0,0,0,0,0,1,1,0
+Sven-Bodo Scholz,2020,0,0,0,0,0,0,0,1,0
+Sven-Bodo Scholz,2018,0,0,0,0,0,0,0,1,0
+Sreepathi Pai,2019,0,0,0,0,0,0,1,0,0
+Sreepathi Pai,2018,0,0,0,0,0,0,1,0,0
+Song Jiang,2019,0,0,0,0,0,0,1,0,0
+Vincent Weaver,2019,0,0,0,0,0,0,1,0,0
+Valentina Salapura,2019,0,0,0,0,0,0,1,0,0
+Toshi Sato,2019,0,0,0,0,0,0,1,0,0
+Zhiyi Huang,2019,0,0,0,0,0,0,1,0,0
+Tarek Abdelrahman,2018,0,0,0,0,0,0,1,0,0
+Hong An,2018,0,0,0,0,0,0,1,0,0
+Yaoqing Gao,2018,0,0,0,0,0,0,1,0,0
+Yaoqing Gao,2019,0,0,0,0,0,0,0,1,0
+Saugata Ghose,2018,0,0,0,0,0,0,1,0,0
+Maike Gilliot,2018,0,0,0,0,0,0,1,0,0
+Rajiv Gupta,2018,0,0,0,0,0,0,1,0,0
+Jose Joao,2018,0,0,0,0,0,0,1,0,0
+Yun (Eric) Liang,2018,0,0,0,0,0,0,1,0,0
+Chu-Cheow Lim,2018,0,0,0,0,0,0,1,0,0
+Mieszko Lis,2018,0,0,0,0,0,0,1,0,0
+David Liu,2018,0,0,0,0,0,0,1,0,0
+Sally McKee,2018,0,0,0,0,0,0,1,0,0
+Saurav Muralidharan,2018,0,0,0,0,0,0,1,0,0
+Dhabaleswar Panda,2018,0,0,0,0,0,0,1,0,0
+Dhabaleswar Panda,2020,0,0,0,0,0,0,0,1,0
+Dhabaleswar Panda,2019,0,0,0,0,0,0,0,1,0
+Gennady Pekhimenko,2018,0,0,0,0,0,0,1,0,0
+Lavanya Subramanian,2018,0,0,0,0,0,0,1,0,0
+Hans Vandierendonck,2018,0,0,0,0,0,0,1,1,0
+Anand Venkat,2018,0,0,0,0,0,0,1,0,0
+Hao Wang,2018,0,0,0,0,0,0,1,0,0
+Zhenlin Wang,2018,0,0,0,0,0,0,1,0,0
+Zane Wei,2018,0,0,0,0,0,0,1,0,0
+Guoqing Xu,2018,0,0,0,0,0,0,1,0,0
+Zhibin Yu,2018,0,0,0,0,0,0,1,0,0
+Eddy Zhang,2018,0,0,0,0,0,0,1,0,0
+Nectarios Koziris,2020,0,0,0,0,0,0,0,1,0
+Tor Skeie,2020,0,0,0,0,0,0,0,1,0
+Carsten Trinitis,2020,0,0,0,0,0,0,0,1,0
+Carsten Trinitis,2019,0,0,0,0,0,0,0,1,0
+Carsten Trinitis,2018,0,0,0,0,0,0,0,1,0
+Woongki Baek,2020,0,0,0,0,0,0,0,1,0
+Thomas Brettin,2020,0,0,0,0,0,0,0,1,0
+Xiaowen Chu,2020,0,0,0,0,0,0,0,1,0
+Mohammad Ghasemzadeh,2020,0,0,0,0,0,0,0,1,0
+David Gregg,2020,0,0,0,0,0,0,0,1,0
+Martin Schultz,2020,0,0,0,0,0,0,0,1,0
+Yu Wang,2020,0,0,0,0,0,0,0,1,0
+Yu Wang,2019,0,0,0,0,0,0,0,1,0
+Yu Wang,2018,0,0,0,0,0,0,0,1,0
+Zeyi Wen,2020,0,0,0,0,0,0,0,1,0
+Talita Perciano,2020,0,0,0,0,0,0,0,1,0
+Guang Hao Low,2020,0,0,0,0,0,0,0,1,0
+Mathias Soeken,2020,0,0,0,0,0,0,0,1,0
+Mathias Soeken,2019,0,0,0,0,0,0,0,1,0
+Robert Wille,2020,0,0,0,0,0,0,0,1,0
+Aurélien Cavelan,2020,0,0,0,0,0,0,0,1,0
+Veronika Sonigo,2020,0,0,0,0,0,0,0,1,0
+Edouard Audit,2020,0,0,0,0,0,0,0,1,0
+Xing Cai,2020,0,0,0,0,0,0,0,1,0
+Xing Cai,2019,0,0,0,0,0,0,0,1,0
+Carlo Cavazzoni,2020,0,0,0,0,0,0,0,1,0
+Erwin Laure,2020,0,0,0,0,0,0,0,1,0
+Gabriel Noaje,2020,0,0,0,0,0,0,0,1,0
+Gabriel Noaje,2019,0,0,0,0,0,0,0,1,0
+Gabriel Noaje,2018,0,0,0,0,0,0,0,1,0
+Filippo Spiga,2020,0,0,0,0,0,0,0,1,0
+Tjerk Straatsma,2020,0,0,0,0,0,0,0,1,0
+I-Hsin Chung,2020,0,0,0,0,0,0,0,1,0
+Florina Ciorba,2020,0,0,0,0,0,0,0,1,0
+Georg Hager,2020,0,0,0,0,0,0,0,1,0
+Angeles Gonzalez Navarro,2020,0,0,0,0,0,0,0,1,0
+Swaroop.S. Pophale,2020,0,0,0,0,0,0,0,1,0
+Swaroop.S. Pophale,2019,0,0,0,0,0,0,0,1,0
+Chenxi Wang,2020,0,0,0,0,0,0,0,1,0
+Saday Sadayappan,2019,0,0,0,0,0,0,0,1,0
+Anastasiia Butko,2019,0,0,0,0,0,0,0,1,0
+David D. Donofrio,2019,0,0,0,0,0,0,0,1,0
+Ivy Peng,2019,0,0,0,0,0,0,0,1,0
+Alejandro Rico,2019,0,0,0,0,0,0,0,1,0
+Gregg David,2019,0,0,0,0,0,0,0,1,0
+Seung-Hwan Lim,2019,0,0,0,0,0,0,0,1,0
+Jin Wang,2019,0,0,0,0,0,0,0,1,0
+Youngmin Yi,2019,0,0,0,0,0,0,0,1,0
+Elsa Gonsiorowski,2019,0,0,0,0,0,0,0,1,0
+Valerio Pascucci,2019,0,0,0,0,0,0,0,1,0
+Valerio Pascucci,2018,0,0,0,0,0,0,0,1,0
+Maria Perez,2019,0,0,0,0,0,0,0,1,0
+Tom Vierjahn,2019,0,0,0,0,0,0,0,1,0
+Mehmet E Belviranlı,2019,0,0,0,0,0,0,0,1,0
+Tan Nguyen,2019,0,0,0,0,0,0,0,1,0
+Lena Oden,2019,0,0,0,0,0,0,0,1,0
+Lena Oden,2018,0,0,0,0,0,0,0,1,0
+Alba Cristina Melo,2019,0,0,0,0,0,0,0,1,0
+Kengo Nakajima,2019,0,0,0,0,0,0,0,1,0
+Siva Rajamanickam,2019,0,0,0,0,0,0,0,1,0
+Sudip Seal,2019,0,0,0,0,0,0,0,1,0
+Bora Ucar,2019,0,0,0,0,0,0,0,1,0
+Sathish Vadhiyar,2019,0,0,0,0,0,0,0,1,0
+Alexandru Calotoiu,2019,0,0,0,0,0,0,0,1,0
+Alexandru Calotoiu,2018,0,0,0,0,0,0,0,1,0
+Jan Eitzinger,2019,0,0,0,0,0,0,0,1,0
+Jan Eitzinger,2018,0,0,0,0,0,0,0,1,0
+Marek Michalewicz,2019,0,0,0,0,0,0,0,1,0
+Marek Michalewicz,2018,0,0,0,0,0,0,0,1,0
+Josef Weidendorfer,2019,0,0,0,0,0,0,0,1,0
+Josef Weidendorfer,2018,0,0,0,0,0,0,0,1,0
+Maria Angeles Gonzalez Navarro,2019,0,0,0,0,0,0,0,1,0
+Jesús Labarta,2019,0,0,0,0,0,0,0,1,0
+Josh Milthorpe,2019,0,0,0,0,0,0,0,1,0
+Damian Steiger,2019,0,0,0,0,0,0,0,1,0
+Thomas Häner,2019,0,0,0,0,0,0,0,1,0
+Justin Hogaboam,2019,0,0,0,0,0,0,0,1,0
+Martin Roetteler,2019,0,0,0,0,0,0,0,1,0
+David Keyes,2018,0,0,0,0,0,0,0,1,0
+Pedro J. Garcia,2018,0,0,0,0,0,0,0,1,0
+Wolfgang Karl,2018,0,0,0,0,0,0,0,1,0
+Sébastien Rumley,2018,0,0,0,0,0,0,0,1,0
+Federico Silla,2018,0,0,0,0,0,0,0,1,0
+Peter Ziegenhein,2018,0,0,0,0,0,0,0,1,0
+Christoph Angerer,2018,0,0,0,0,0,0,0,1,0
+Gonzalo Hernandez,2018,0,0,0,0,0,0,0,1,0
+Romeo Kienzler,2018,0,0,0,0,0,0,0,1,0
+Chuan Lu,2018,0,0,0,0,0,0,0,1,0
+Lukas Lukas,2018,0,0,0,0,0,0,0,1,0
+Hayk Shoukourian,2018,0,0,0,0,0,0,0,1,0
+Michael Steyer,2018,0,0,0,0,0,0,0,1,0
+Johan Suykens,2018,0,0,0,0,0,0,0,1,0
+Marcel Tilly,2018,0,0,0,0,0,0,0,1,0
+Edward Zimmermann,2018,0,0,0,0,0,0,0,1,0
+Timo Bremer,2018,0,0,0,0,0,0,0,1,0
+Mahdi Bohlouli,2018,0,0,0,0,0,0,0,1,0
+Ryousei Takano,2018,0,0,0,0,0,0,0,1,0
+Yuefan Deng,2018,0,0,0,0,0,0,0,1,0
+Vassil Dimitrov,2018,0,0,0,0,0,0,0,1,0
+Hubertus Franke,2018,0,0,0,0,0,0,0,1,0
+Axel Klawonn,2018,0,0,0,0,0,0,0,1,0
+Miquel Moretó,2018,0,0,0,0,0,0,0,1,0
+Saday Sadayappan,2018,0,0,0,0,0,0,0,1,0
+Fabrice Rastello,2018,0,0,0,0,0,0,0,1,0
+Aravind Sukumaran-Rajam,2018,0,0,0,0,0,0,0,1,0
+Bradford L. Chamberlain,2018,0,0,0,0,0,0,0,1,0
+Christian Lengauer,2018,0,0,0,0,0,0,0,1,0
+Lawrence Mitchell,2018,0,0,0,0,0,0,0,1,0
+Antoniu Pop,2018,0,0,0,0,0,0,0,1,0
+Alex Shafarenko,2018,0,0,0,0,0,0,0,1,0
