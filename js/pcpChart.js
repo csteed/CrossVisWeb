@@ -26,19 +26,19 @@ var pcpChart = function () {
     let y = {};
     let canvasMargin = 6;
     let axisBarWidth = 16;
-    let selectedTuplesComponentHeight = 30;
+    let selectionIndicatorHeight = 40;
     let pcpHeight;
 
     function chart(selection, data) {
         tuples = data.tuples.slice();
         dimensions = data.dimensions.slice();
         
-        pcpHeight = height - selectedTuplesComponentHeight;
+        pcpHeight = height - selectionIndicatorHeight;
 
         const backgroundCanvas = selection.append('canvas')
             .attr('id', 'background')
             .attr('width', width + canvasMargin * 2)
-            .attr('height', height + canvasMargin * 2)
+            .attr('height', pcpHeight + canvasMargin * 2)
             .style('position', 'absolute')
             .style('top', `${margin.top - canvasMargin}px`)
             .style('left', `${margin.left - canvasMargin}px`)
@@ -53,7 +53,7 @@ var pcpChart = function () {
         const foregroundCanvas = selection.append('canvas')
             .attr('id', 'foreground')
             .attr('width', width + canvasMargin * 2)
-            .attr('height', height + canvasMargin * 2)
+            .attr('height', pcpHeight + canvasMargin * 2)
             .style('position', 'absolute')
             .style('top', `${margin.top - canvasMargin}px`)
             .style('left', `${margin.left - canvasMargin}px`)
@@ -81,7 +81,7 @@ var pcpChart = function () {
             .text(titleText);
 
         x = d3.scalePoint().range([0, width]).padding(.25);
-        
+                
         let dimensionNames = [];
         dimensions.map(dim => {
             dimensionNames.push(dim.name);
@@ -97,7 +97,7 @@ var pcpChart = function () {
             }
 
             if (y[dim.name]) {
-                y[dim.name].range([height, 0])
+                y[dim.name].range([pcpHeight, 0])
             }
 
             if (dim.type === 'categorical') {
@@ -114,6 +114,41 @@ var pcpChart = function () {
         });
         x.domain(dimensionNames);
         console.log(dimensions);
+
+        svg.append("rect")
+            .attr("y", pcpHeight)
+            .attr("height", selectionIndicatorHeight)
+            .attr("width", width)
+            .style("stroke", "#000")
+            .style("fill", "none");
+
+        svg.append("text")
+            .attr("class", "selection_indicator_label")
+            .attr("x", width - 2)
+            .attr("y", pcpHeight + 14 + selectionIndicatorHeight / 2)
+            .attr("text-anchor", "end")
+            .style("font-size", "12")
+            .style("font-family", "sans-serif")
+            .text(`0 / ${tuples.length} (0.0%) Tuples Selected`);
+        
+        svg.append("line")
+            .attr("x1", 0)
+            .attr("x2", width)
+            .attr("y1", pcpHeight + selectionIndicatorHeight / 2)
+            .attr("y2", pcpHeight + selectionIndicatorHeight / 2)
+            .style("stroke", unselectedLineColor)
+            .style("stroke-width", "2")
+            .style("stroke-linecap", "round");
+
+        svg.append("line")
+            .attr("class", "selection_indicator_line")
+            .attr("x1", 0)
+            .attr("x2", width)
+            .attr("y1", pcpHeight + selectionIndicatorHeight / 2)
+            .attr("y2", pcpHeight + selectionIndicatorHeight / 2)
+            .style("stroke", selectedLineColor)
+            .style("stroke-width", "4")
+            .style("stroke-linecap", "round");
 
         // Add a group element for each dimension.
         const g = svg.selectAll(".dimension")
@@ -164,7 +199,7 @@ var pcpChart = function () {
             .attr("class", "axis")
             .each(function (dim) {
                 if (dim.type === 'numerical' || dim.type === 'temporal') {
-                    d3.select(this).call(axis.scale(y[dim.name]).ticks(height / 20));
+                    d3.select(this).call(axis.scale(y[dim.name]).ticks(pcpHeight / 20));
                 } else {
                     let color = d3.scaleSequentialSqrt([0, 1], d3.interpolateBlues)
                     // let currentY = 0;
@@ -217,7 +252,7 @@ var pcpChart = function () {
                 d3.select(this).call(y[d.name].brush = d3.brushY()
                     .extent([
                         [-10, 0],
-                        [10, height]
+                        [10, pcpHeight]
                     ])
                     // .on("brush", brush)
                     .on("end", brush)
@@ -321,11 +356,19 @@ var pcpChart = function () {
     function drawLines() {
         drawBackgroundLines();
         drawForegroundLines();
+
+        const pctSelected = ((selected.length / tuples.length) * 100.).toFixed(1);
+        svg.select(".selection_indicator_label")
+            .text(`${selected.length} / ${tuples.length} (${pctSelected}%) Lines Selected`);
+        const selectionLineWidth = width * (selected.length / tuples.length);
+        svg.select(".selection_indicator_line")
+            .transition().duration(200).delay(100)
+            .attr("x2", selectionLineWidth);
     }
 
     function drawForegroundLines() {
         // foreground.clearRect(-canvasMargin, -canvasMargin, width + canvasMargin, height + canvasMargin);
-        foreground.clearRect(-canvasMargin, -canvasMargin, width + canvasMargin * 2, height + canvasMargin * 2);
+        foreground.clearRect(-canvasMargin, -canvasMargin, width + canvasMargin * 2, pcpHeight + canvasMargin * 2);
 
         if (showSelected) {
             selected.map(function (d) {
@@ -336,7 +379,7 @@ var pcpChart = function () {
 
     function drawBackgroundLines() {
         // background.clearRect(-canvasMargin, -canvasMargin, width + canvasMargin, height + canvasMargin);
-        background.clearRect(-canvasMargin, -canvasMargin, width + canvasMargin * 2, height + canvasMargin * 2);
+        background.clearRect(-canvasMargin, -canvasMargin, width + canvasMargin * 2, pcpHeight + canvasMargin * 2);
         if (showUnselected) {
             unselected.map(function (d) {
                 path(d, background);
