@@ -115,12 +115,12 @@ var pcpChart = function () {
         x.domain(dimensionNames);
         console.log(dimensions);
 
-        svg.append("rect")
-            .attr("y", pcpHeight)
-            .attr("height", selectionIndicatorHeight)
-            .attr("width", width)
-            .style("stroke", "#000")
-            .style("fill", "none");
+        // svg.append("rect")
+        //     .attr("y", pcpHeight)
+        //     .attr("height", selectionIndicatorHeight)
+        //     .attr("width", width)
+        //     .style("stroke", "#000")
+        //     .style("fill", "none");
 
         svg.append("text")
             .attr("class", "selection_indicator_label")
@@ -189,6 +189,41 @@ var pcpChart = function () {
         
     }
 
+    const drag = d3.drag()
+        .on("drag", function(d) {
+            draggingDimensionName = d3.select(this).attr("id");
+            console.log(`DRAG for ${draggingDimensionName}`)
+            d3.select(this).raise().attr("x", d3.event.x);
+            console.log(d3.event.x);
+        })
+        .on("end", function(d) {
+            draggingDimensionName = d3.select(this).attr("id");
+            console.log(`DRAG END for ${draggingDimensionName}`);
+            let srcIdx = dimensions.findIndex(d => d.name === draggingDimensionName);
+            let dstIdx = d3.event.x > 0 ? Math.floor(d3.event.x / x.step()) : Math.ceil(d3.event.x / x.step());
+            console.log(`src: ${srcIdx}  dst: ${dstIdx}`);
+
+            d3.select(this).attr('x', 0);
+            if (dstIdx != 0) {
+                const moveDimension = dimensions[srcIdx];
+                dimensions.splice(srcIdx, 1);
+                dimensions.splice(srcIdx + dstIdx, 0, moveDimension);
+
+                const dimensionNames = dimensions.map(d => d.name);
+                x.domain(dimensionNames);
+                svg.selectAll('.dimension')
+                    .each(function(dim) {
+                        console.log(d3.select(this).attr("transform"));
+                        d3.select(this)
+                            .attr("transform", function(d) {
+                                return `translate(${x(d.name)})`;
+                            });
+                    });
+                
+                drawLines();
+            }
+        })
+
     function drawDimensions () {
         const axis = d3.axisLeft();
 
@@ -243,7 +278,15 @@ var pcpChart = function () {
                 .style("font-family", "sans-serif")
                 .style("font-size", 11)
                 .attr("y", -9)
-            .text(d => d.name);
+            .text(d => d.name)
+            .call(drag)
+            .on("mouseover", function(d) {
+                d3.select(this).style("cursor", "pointer");
+            })
+            .on("mouseout", function(d) {
+                d3.select(this).style("cursor", "default");
+            });
+
         
         // Add and store a brush for each axis.
         g.append("g")

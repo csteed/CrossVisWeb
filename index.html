@@ -305,13 +305,13 @@
         'Machine Type': d['Machine Type'],
         'Material': d['Material'],
         'Material Grade': d['Material Grade'],
-        'Number of Edges per Insert': +d['Number of Edges per Insert'],
-        'Number of Parts Per Insert Edge': +d['Number of Parts Per Insert Edge'],
+        'Num Edges per Insert': +d['Number of Edges per Insert'],
+        'Num Parts per Insert Edge': +d['Number of Parts Per Insert Edge'],
         'Surface Feet Per Minute': +d['Surface Feet Per Minute'],
         Tab: d.Tab,
         'Ticket #': d['Ticket #'],
         'Tool Life': +d['Tool Life'],
-        'Total Depth of Cut in Inches': +d['Total Depth of Cut in Inches'],
+        'Total Depth of Cut': +d['Total Depth of Cut in Inches'],
         Vendor: d.Vendor
       };
     };
@@ -328,7 +328,18 @@
             {name: 'Index Time in Seconds', type: 'numerical'},
             {name: 'Insert Cost Per Each Insert', type: 'numerical'},
             {name: 'Coolant', type: 'categorical'},
-            {name: 'Interrupted Cut', type: 'categorical'}
+            {name: 'Interrupted Cut', type: 'categorical'},
+            {name: 'Insert Grade', type: 'categorical'},
+            {name: 'Insert Number', type: 'categorical'},
+            {name: 'MSC Part #', type: 'categorical'},
+            {name: 'Machine Type', type: 'categorical'},
+            {name: 'Material', type: 'categorical'},
+            {name: 'Material Grade', type: 'categorical'},
+            {name: 'Num Edges per Insert', type: 'numerical'},
+            {name: 'Num Parts per Insert Edge', type: 'numerical'},
+            {name: 'Surface Feet Per Minute', type: 'numerical'},
+            {name: 'Tool Life', type: 'numerical'},
+            {name: 'Total Depth of Cut', type: 'numerical'},
           ],
           tuples: data.map(d => {
             return {
@@ -339,7 +350,18 @@
               'Index Time in Seconds': d['Index Time in Seconds'],
               'Insert Cost Per Each Insert': d['Insert Cost Per Each Insert'],
               'Coolant': d['Coolant'],
-              'Interrupted Cut': d['Interrupted Cut']
+              'Interrupted Cut': d['Interrupted Cut'],
+              'Insert Grade': d['Insert Grade'],
+              'Insert Number': d['Insert Number'],
+              'MSC Part #': d['MSC Part #'],
+              'Machine Type': d['Machine Type'],
+              'Material': d['Material'],
+              'Material Grade': d['Material Grade'],
+              'Num Edges per Insert': d['Num Edges per Insert'],
+              'Num Parts per Insert Edge': d['Num Parts per Insert Edge'],
+              'Surface Feet Per Minute': d['Surface Feet Per Minute'],
+              'Tool Life': d['Tool Life'],
+              'Total Depth of Cut': d['Total Depth of Cut']
             }
           })
         };
