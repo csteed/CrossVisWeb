@@ -49,10 +49,10 @@
           shape-rendering: crispEdges;
       }
 
-      .axis text {
+      /* .axis text {
           fill: #646464;
           text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-      }
+      } */
     </style>
   </head>
   <body>
@@ -68,6 +68,9 @@
       </tr>
     </table>
 
+    <!-- <label for="fileInput">Files: </label>
+    <input type="file" id="fileInput" onchange="loadFile()"><br/><br/> -->
+
     <label for="dataSelect">Dataset: </label>
     <select id="dataSelect" onchange="dataSelectChanged()">
       <option selected>ASA Cars</option>
@@ -76,12 +79,13 @@
       <option>MSC Data</option>
     </select><br/><br/>
 
-    <label for="opacityRange">Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="opacityRange" onchange="opacityRangeChanged()" text="Line Opacity Slider"><br/>
+    <label for="selectedLineOpacityRange">Selected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="selectedLineOpacityRange" onchange="selectedLineOpacityRangeChanged()">
+
+    <label for="unselectedLineOpacityRange">Unselected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="unselectedLineOpacityRange" onchange="unselectedLineOpacityRangeChanged()">
 
     <input type="checkbox" id="showUnselectedCheck" checked />
     <label for="showUnselectedCheck">Show Unselected Lines</label>
     
-
     <div id="chart" style="position: relative;"></div>
 
     <center>
@@ -142,15 +146,26 @@
       return document.getElementById('showUnselectedCheck').checked;
     }
 
-    const opacityRangeChanged = () => {
-        const opacity = getOpacityRange();
+    const unselectedLineOpacityRangeChanged = () => {
+        const opacity = getUnselectedLineOpacityRange();
+        if (chart) {
+            chart.unselectedLineOpacity(opacity);
+        }
+    }
+
+    const getUnselectedLineOpacityRange = () => {
+      return document.getElementById('unselectedLineOpacityRange').value / 100.;
+    }
+
+    const selectedLineOpacityRangeChanged = () => {
+        const opacity = getSelectedLineOpacityRange();
         if (chart) {
             chart.selectedLineOpacity(opacity);
         }
     }
 
-    const getOpacityRange = () => {
-      return document.getElementById('opacityRange').value / 100.;
+    const getSelectedLineOpacityRange = () => {
+      return document.getElementById('selectedLineOpacityRange').value / 100.;
     }
 
     const createChart = () => {
@@ -165,8 +180,9 @@
         chart = pcpChart()
           .width(divWidth)
           .height(chartHeight)
-          .showUnselectedLines(true)
-          .selectedLineOpacity(getOpacityRange())
+          .showUnselectedLines(showUnselectedLines())
+          .selectedLineOpacity(getSelectedLineOpacityRange())
+          .unselectedLineOpacity(getUnselectedLineOpacityRange())
           .margin(margin);
         d3.select('#chart').call(chart, chartData);
       }

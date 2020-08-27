@@ -283,7 +283,13 @@ var pcpChart = function () {
             .attr('y', y[dim.name].range()[0] + correlationRectPadding + correlationRectSize + correlationLabelHeight)
             .text("r");
 
-          d3.select(this).call(axis.scale(y[dim.name]).ticks(pcpHeight / 20));
+          d3.select(this)
+            .call(axis.scale(y[dim.name]).ticks(pcpHeight / 20))
+          
+          d3.select(this).selectAll('.axis text')
+            .attr('fill', '#646464')
+            .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff');
+
         } else {
           let grpHeight = y[dim.name].bandwidth();
           // console.log(dim.groups);
@@ -349,7 +355,9 @@ var pcpChart = function () {
             // .data(dim.categories)
             .join("text")
               .attr("class", "categoryRectLabel")
-              .attr("fill", "#000")
+              // .attr("fill", "#000")
+              .attr('fill', '#000')
+              .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff')
               .attr("y", c => c.center)
               .attr("text-anchor", "middle")
               .attr("font-size", 10)
