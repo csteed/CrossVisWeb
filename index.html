@@ -70,7 +70,8 @@
 
     <label for="dataSelect">Dataset: </label>
     <select id="dataSelect" onchange="dataSelectChanged()">
-      <option selected>Top500 List</option>
+      <option selected>ASA Cars</option>
+      <option>Top500 List</option>
       <option>HPC Conference PCs</option>
       <option>MSC Data</option>
     </select><br/><br/>
@@ -182,8 +183,46 @@
         loadConfPC();
       } else if (selectedDataset === 'MSC Data') {
         loadMSC();
+      } else if (selectedDataset === 'ASA Cars') {
+        loadCars();
       }
     }
+
+    const loadCars = () => {
+      d3.csv("data/cars-cat.csv", d3.autoType)
+        .then(data => {
+          console.log(data);
+          chartData = {
+            dimensions: [
+              {name: 'MPG', type: 'numerical'},
+              {name: 'Cylinders', type: 'categorical'},
+              {name: 'Origin', type: 'categorical'},
+              {name: 'Displacement', type: 'numerical'},
+              {name: 'HP', type: 'numerical'},
+              {name: 'Weight', type: 'numerical'},
+              {name: 'Acceleration', type: 'numerical'},
+              {name: 'Year', type: 'numerical'}
+              
+            ],
+            tuples: data.map(d => {
+              return {
+                MPG: Math.random() > 0.5 ? d.MPG : NaN,
+                Cylinders: d.Cylinders,
+                Displacement: d.Displacement,
+                HP: d.HP,
+                Weight: d.Weight,
+                Acceleration: d.Acceleration,
+                Year: d.Year,
+                Origin: d.Origin
+              }
+            })
+          }
+          createChart();
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    };
 
     const loadConfPC = () => {
       d3.csv("data/confPC_v5.csv", d3.autoType)
@@ -373,6 +412,6 @@
       });
   }
     
-    loadTop500();
+    loadCars();
   </script>
 </html>

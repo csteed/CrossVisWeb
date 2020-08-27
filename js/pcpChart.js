@@ -116,7 +116,7 @@ var pcpChart = function () {
       if (dim.type === "categorical") {
         dim.categories = Array.from(d3.group(tuples, (d) => d[dim.name]), ([key,value],i) => ({name: key, id: i, values: value}));
         dim.categories.sort((a,b) => d3.descending(a.values.length, b.values.length));
-        console.log(dim.categories);
+        // console.log(dim.categories);
         dim.selectedCategories = new Set();
       } else {
         dim.bins = d3.bin().value((d) => d[dim.name])(tuples);
@@ -333,7 +333,6 @@ var pcpChart = function () {
                 }
                 console.log(dim.selectedCategories);
                 brush();
-                updateCorrelationGraphics();
               })
               .on("mouseover", function (d) {
                 d3.select(this).style("cursor", "pointer");
@@ -343,6 +342,19 @@ var pcpChart = function () {
               })
               .append("title")
                 .text(c => `${c.name}: ${c.values.length} tuples`);
+
+          d3.select(this).append("g")
+            .selectAll("text")
+            .data(dim.categories.filter(c => c.height > 14))
+            // .data(dim.categories)
+            .join("text")
+              .attr("class", "categoryRectLabel")
+              .attr("fill", "#000")
+              .attr("y", c => c.center)
+              .attr("text-anchor", "middle")
+              .attr("font-size", 10)
+              .attr("pointer-events", "none")
+              .text(c => c.name);
 
           /*
                 
@@ -564,8 +576,15 @@ var pcpChart = function () {
         dimensions.forEach(dim2 => {
           if (dim2.type === 'numerical') {
             d2 = data.map(d => d[dim2.name]);
-            r = corr(d1, d2);
-            console.log(`${dim1.name}:${dim2.name} = ${r}`);
+            let d1_filtered = [], d2_filtered = [];
+            for (let i = 0; i < d1.length; i++) {
+              if (!isNaN(d1[i]) && !isNaN(d2[i])) {
+                d1_filtered.push(d1[i]);
+                d2_filtered.push(d2[i]);
+              }
+            }
+            r = corr(d1_filtered, d2_filtered);
+            // console.log(`${dim1.name}:${dim2.name} = ${r}`);
             dim1.correlationMap.set(dim2.name, r);
           }
         });
@@ -614,8 +633,9 @@ var pcpChart = function () {
     } else {
       selected = tuples;
     }
-
+    // console.log(selected);
     calculateDimensionCorrelations();
+    updateCorrelationGraphics();
   }
 
   function computeTupleLines() {
@@ -628,34 +648,67 @@ var pcpChart = function () {
           const yPos = cat.center + jitter;
           return yPos;
         } else {
-          return y[dim.name](t[dim.name]);
+          return isNaN(t[dim.name]) ? NaN : y[dim.name](t[dim.name]);
         }
       });
       tupleLines.set(t, yCoordinates);
     });
-    console.log(tupleLines);
+    // console.log(tupleLines);
   }
 
   function path(tuple, ctx) {
     let yCoordinates = tupleLines.get(tuple);
-    ctx.beginPath();
+    // console.log(tuple);
+    // console.log(yCoordinates);
     dimensions.map(function (dim, i) {
-      if (dim.type === 'categorical') {
-        if (i === 0) {
-          ctx.moveTo(x(dim.name) - axisBarWidth / 2, yCoordinates[i]);
-          ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
-        } else {
-          ctx.lineTo(x(dim.name) - axisBarWidth / 2, yCoordinates[i]);
-          ctx.lineTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
-        }
-      } else {
-        if (i === 0) {
-          ctx.moveTo(x(dim.name), yCoordinates[i]);
-        } else {
-          ctx.lineTo(x(dim.name), yCoordinates[i]);
+      if (i < dimensions.length - 1) {
+        const nextDim = dimensions[i + 1];
+
+        if (!isNaN(yCoordinates[i]) && !isNaN(yCoordinates[i+1])) {
+          if (dim.type === 'categorical') {
+            ctx.beginPath();
+            ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
+            if (nextDim.type === 'categorical') {
+              ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
+            } else {
+              ctx.lineTo(x(nextDim.name), yCoordinates[i + 1]);
+            }
+            ctx.stroke();
+          } else {
+            ctx.beginPath();
+            ctx.moveTo(x(dim.name), yCoordinates[i]);
+            if (nextDim.type === 'categorical') {
+              ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
+            } else {
+              ctx.lineTo(x(nextDim.name), yCoordinates[i + 1]);
+            }
+            ctx.stroke();
+          }
         }
       }
     });
+  }
+  // function path(tuple, ctx) {
+  //   let yCoordinates = tupleLines.get(tuple);
+  //   ctx.beginPath();
+  //   dimensions.map(function (dim, i) {
+  //     if (dim.type === 'categorical') {
+  //       if (i === 0) {
+  //         ctx.moveTo(x(dim.name) - axisBarWidth / 2, yCoordinates[i]);
+  //         ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
+  //       } else {
+  //         ctx.lineTo(x(dim.name) - axisBarWidth / 2, yCoordinates[i]);
+  //         ctx.lineTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
+  //       }
+  //     } else {
+  //       if (i === 0) {
+  //         ctx.moveTo(x(dim.name), yCoordinates[i]);
+  //       } else {
+  //         ctx.lineTo(x(dim.name), yCoordinates[i]);
+  //       }
+  //     }
+  //   });
+
     /*
     dimensions.map(function (dim, i) {
       if (i == 0) {
@@ -690,8 +743,8 @@ var pcpChart = function () {
       }
     });
     */
-    ctx.stroke();
-  }
+  //   ctx.stroke();
+  // }
 
   function drawLines() {
     drawBackgroundLines();
