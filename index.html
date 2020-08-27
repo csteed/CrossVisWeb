@@ -165,7 +165,7 @@
           .width(divWidth)
           .height(chartHeight)
           .showUnselectedLines(true)
-          .selectedLineOpacity(getOpacityRange)
+          .selectedLineOpacity(getOpacityRange())
           .margin(margin);
         d3.select('#chart').call(chart, chartData);
       }
@@ -329,10 +329,10 @@
             {name: 'Insert Cost Per Each Insert', type: 'numerical'},
             {name: 'Coolant', type: 'categorical'},
             {name: 'Interrupted Cut', type: 'categorical'},
-            {name: 'Insert Grade', type: 'categorical'},
-            {name: 'Insert Number', type: 'categorical'},
-            {name: 'MSC Part #', type: 'categorical'},
-            {name: 'Machine Type', type: 'categorical'},
+            // {name: 'Insert Grade', type: 'categorical'},
+            // {name: 'Insert Number', type: 'categorical'},
+            // {name: 'MSC Part #', type: 'categorical'},
+            // {name: 'Machine Type', type: 'categorical'},
             {name: 'Material', type: 'categorical'},
             {name: 'Material Grade', type: 'categorical'},
             {name: 'Num Edges per Insert', type: 'numerical'},
@@ -351,10 +351,10 @@
               'Insert Cost Per Each Insert': d['Insert Cost Per Each Insert'],
               'Coolant': d['Coolant'],
               'Interrupted Cut': d['Interrupted Cut'],
-              'Insert Grade': d['Insert Grade'],
-              'Insert Number': d['Insert Number'],
-              'MSC Part #': d['MSC Part #'],
-              'Machine Type': d['Machine Type'],
+              // 'Insert Grade': d['Insert Grade'],
+              // 'Insert Number': d['Insert Number'],
+              // 'MSC Part #': d['MSC Part #'],
+              // 'Machine Type': d['Machine Type'],
               'Material': d['Material'],
               'Material Grade': d['Material Grade'],
               'Num Edges per Insert': d['Num Edges per Insert'],
