@@ -35,6 +35,12 @@
         text-align: right;
       }
 
+      .brush .extent {
+            fill-opacity: .1;
+            stroke: yellow;
+            shape-rendering: crispEdges;
+        }
+
       .axis line,
       .axis path {
           fill: none;
@@ -71,7 +77,6 @@
       <option>Top500 List</option>
       <option>HPC Conference PCs</option>
       <option>MSC Data</option>
-      <option>Sensor Data</option>
     </select><br/><br/>
 
     <label for="selectedLineOpacityRange">Selected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="selectedLineOpacityRange" onchange="selectedLineOpacityRangeChanged()">
@@ -196,54 +201,8 @@
         loadMSC();
       } else if (selectedDataset === 'ASA Cars') {
         loadCars();
-      } else if (selectedDataset === 'Sensor Data') {
-        loadSensorData();
       }
     }
-
-    const loadSensorData = () => {
-      let lod_level = 1;
-      let filenames = [`test_data/lod/0/${lod_level}.json`, `test_data/lod/1/${lod_level}.json`, `test_data/lod/2/${lod_level}.json`, `test_data/lod/3/${lod_level}.json`, `test_data/lod/4/${lod_level}.json`,];
-
-      Promise.all(filenames.map(f => d3.json(f)))
-        .then(function (filesData) {
-          console.log(filesData);
-          
-          let tuples = filesData[0].bins.map((d,binIdx) => {
-            let tuple = {Record: binIdx};
-            for (let i = 0; i < filesData.length; i++) {
-              tuple[`Sensor${i + 1}`] = filesData[i].bins[binIdx].median;
-            }
-            return tuple;
-          });
-          // let tuples = filesData.map(data => {
-          //   console.log(data);
-          //   return data.bins.map(bin => bin.median);
-          // });
-          console.log(tuples);
-
-          chartData = {
-            dimensions: [
-              {name: "Record", type: 'numerical'},
-              {name: "Sensor1", type: 'numerical'},
-              {name: "Sensor2", type: 'numerical'},
-              {name: "Sensor3", type: 'numerical'},
-              {name: "Sensor4", type: 'numerical'},
-              {name: "Sensor5", type: 'numerical'}
-            ],
-            tuples: tuples
-          };
-
-          createChart();
-        })
-        .catch(error => {
-          console.log(error);
-        });
-      // d3.json("test-data/lod/0/0.json")
-      //   .then(data => {
-      //     console.log(data);
-      //   });
-    };
 
     const loadCars = () => {
       d3.csv("data/cars-cat.csv", d3.autoType)
@@ -263,8 +222,7 @@
             ],
             tuples: data.map(d => {
               return {
-                // MPG: Math.random() > 0.5 ? d.MPG : NaN,
-                MPG: d.MPG,
+                MPG: Math.random() > 0.5 ? d.MPG : NaN,
                 Cylinders: d.Cylinders,
                 Displacement: d.Displacement,
                 HP: d.HP,

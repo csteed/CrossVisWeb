@@ -479,8 +479,15 @@ var pcpChart = function () {
         }
       })
       .selectAll("rect")
-      .attr("x", -8)
-      .attr("width", 16);
+        .attr("x", -8)
+        .attr("width", 16);
+        // .attr("fill", "yellow");
+      // .selectAll(".selection")
+      //   .attr("fill", "yellow");
+    
+    g.selectAll(".brush rect.selection")
+      .attr("fill", "yellow")
+      .attr('fill-opacity', .25);
   }
 
   // Handles a brush event, toggling the display of foreground lines.
