@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-array.min.js"></script>
+    <script src="js/pcpChart.js"></script>
+
+    <style>
+      body {
+        font: 12px sans-serif;
+        /* margin: 4px 20px 0px 20px; */
+        /* background: gray; */
+        background-color: whitesmoke;
+      }
+
+      .top {
+        background-color: whitesmoke;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .main {
+        margin-top: 400px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      #logo {
+        text-align: right;
+      }
+
+      .axis line,
+      .axis path {
+          fill: none;
+          stroke: rgb(51, 51, 51);
+          stroke-width: 1.5;
+          shape-rendering: crispEdges;
+      }
+
+      /* .axis text {
+          fill: #646464;
+          text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+      } */
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <h2>CrossVis Web</h2>
+          <strong>Author:</strong> <a href="https://csteed.com" target="_blank">Chad A. Steed</a>, <a href="https://vis.ornl.gov" target="_blank">VISTA Lab</a>, <a href="https://www.ornl.gov/division/csmd" target="_blank">Computer Science and Mathematics Division</a>, <a href="https://ornl.gov" target="_blank">Oak Ridge National Laboratory</a>
+          <br/><br/>
+        </td>
+
+        <td id="logo"><a href="https://vis.ornl.gov/" target="_blank"><img src="img/vista-logo.png" height=70 alt="ORNL VISTA Vis Lab"></img></a></td>
+      </tr>
+    </table>
+
+    <!-- <label for="fileInput">Files: </label>
+    <input type="file" id="fileInput" onchange="loadFile()"><br/><br/> -->
+
+    <label for="dataSelect">Dataset: </label>
+    <select id="dataSelect" onchange="dataSelectChanged()">
+      <option selected>ASA Cars</option>
+      <option>Top500 List</option>
+      <option>HPC Conference PCs</option>
+      <option>MSC Data</option>
+      <option>Sensor Data</option>
+    </select><br/><br/>
+
+    <label for="selectedLineOpacityRange">Selected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="selectedLineOpacityRange" onchange="selectedLineOpacityRangeChanged()">
+
+    <label for="unselectedLineOpacityRange">Unselected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="unselectedLineOpacityRange" onchange="unselectedLineOpacityRangeChanged()">
+
+    <input type="checkbox" id="showUnselectedCheck" checked />
+    <label for="showUnselectedCheck">Show Unselected Lines</label>
+    
+    <div id="chart" style="position: relative;"></div>
+
+    <center>
+      <h4>&copy; <a href="https://www.ornl.gov">Oak Ridge National Laboratory</a>
+          <script type="text/javascript">
+              document.write(new Date().getFullYear());
+          </script>
+      </h4>
+    </center>
+  </body>
+
+  <script>
+    let parseTime = d3.timeParse("%Y-%m");
+    let chartData;
+    let chart;
+    const margin = {top: 40, right: 30, bottom: 20, left: 30};
+
+
+    // const loadData = () => {
+    //   console.log(fileData);
+
+    //   chartData = {
+    //     dimensions: [
+    //       {name: 'date', type: 'temporal'},
+    //       {name: 'country', type: 'categorical'},
+    //       {name: 'rank', type: 'numerical'},
+    //       {name: 'rmax', type: 'numerical'},
+    //       {name: 'site', type: 'categorical'},
+    //       {name: 'rpeak', type: 'numerical'},
+    //       {name: 'manufacturer', type: 'categorical'},
+    //       {name: 'power', type: 'numerical'}
+    //     ],
+    //     tuples: fileData.map(d => {
+    //       return {
+    //         date: d.date,
+    //         country: d.country,
+    //         rank: d.rank,
+    //         rmax: d.rmax,
+    //         rpeak: d.rpeak,
+    //         site: d.site,
+    //         manufacturer: d.manufacturer,
+    //         // segment: d.segment,
+    //         power: d.power
+    //       };
+    //     })
+    //   }
+    //   console.log(chartData);
+    // };
+
+    const showUnselectedCheck = document.getElementById('showUnselectedCheck');
+    showUnselectedCheck.addEventListener('change', () => {
+      if (chart) {
+        chart.showUnselectedLines(showUnselectedCheck.checked);
+      }
+    });
+
+    const showUnselectedLines = () => {
+      return document.getElementById('showUnselectedCheck').checked;
+    }
+
+    const unselectedLineOpacityRangeChanged = () => {
+        const opacity = getUnselectedLineOpacityRange();
+        if (chart) {
+          console.log(opacity);
+            chart.unselectedLineOpacity(opacity);
+        }
+    }
+
+    const getUnselectedLineOpacityRange = () => {
+      return document.getElementById('unselectedLineOpacityRange').value / 100.;
+    }
+
+    const selectedLineOpacityRangeChanged = () => {
+        const opacity = getSelectedLineOpacityRange();
+        if (chart) {
+          console.log(opacity);
+            chart.selectedLineOpacity(opacity);
+        }
+    }
+
+    const getSelectedLineOpacityRange = () => {
+      return document.getElementById('selectedLineOpacityRange').value / 100.;
+    }
+
+    const createChart = () => {
+      d3.select('#chart').selectAll('*').remove();
+      if (chartData) {
+        console.log(chartData);
+        const divWidth = document.getElementById('chart').clientWidth;
+        const chartHeight = 500;
+
+        document.getElementById('chart').style.height = `${chartHeight}px`;
+
+        chart = pcpChart()
+          .width(divWidth)
+          .height(chartHeight)
+          .showUnselectedLines(showUnselectedLines())
+          .selectedLineOpacity(getSelectedLineOpacityRange())
+          .unselectedLineOpacity(getUnselectedLineOpacityRange())
+          .margin(margin);
+        d3.select('#chart').call(chart, chartData);
+      }
+    };
+
+    const dataSelectChanged = () => {
+      const select = document.getElementById('dataSelect');
+      const selectedDataset = select.options[select.selectedIndex].text;
+      console.log(`selected dataset is ${selectedDataset}`);
+
+      if (selectedDataset === 'Top500 List') {
+        loadTop500();
+      } else if (selectedDataset === 'HPC Conference PCs') {
+        loadConfPC();
+      } else if (selectedDataset === 'MSC Data') {
+        loadMSC();
+      } else if (selectedDataset === 'ASA Cars') {
+        loadCars();
+      } else if (selectedDataset === 'Sensor Data') {
+        loadSensorData();
+      }
+    }
+
+    const loadSensorData = () => {
+      let lod_level = 1;
+      let filenames = [`test_data/lod/0/${lod_level}.json`, `test_data/lod/1/${lod_level}.json`, `test_data/lod/2/${lod_level}.json`, `test_data/lod/3/${lod_level}.json`, `test_data/lod/4/${lod_level}.json`,];
+
+      Promise.all(filenames.map(f => d3.json(f)))
+        .then(function (filesData) {
+          console.log(filesData);
+          
+          let tuples = filesData[0].bins.map((d,binIdx) => {
+            let tuple = {Record: binIdx};
+            for (let i = 0; i < filesData.length; i++) {
+              tuple[`Sensor${i + 1}`] = filesData[i].bins[binIdx].median;
+            }
+            return tuple;
+          });
+          // let tuples = filesData.map(data => {
+          //   console.log(data);
+          //   return data.bins.map(bin => bin.median);
+          // });
+          console.log(tuples);
+
+          chartData = {
+            dimensions: [
+              {name: "Record", type: 'numerical'},
+              {name: "Sensor1", type: 'numerical'},
+              {name: "Sensor2", type: 'numerical'},
+              {name: "Sensor3", type: 'numerical'},
+              {name: "Sensor4", type: 'numerical'},
+              {name: "Sensor5", type: 'numerical'}
+            ],
+            tuples: tuples
+          };
+
+          createChart();
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      // d3.json("test-data/lod/0/0.json")
+      //   .then(data => {
+      //     console.log(data);
+      //   });
+    };
+
+    const loadCars = () => {
+      d3.csv("data/cars-cat.csv", d3.autoType)
+        .then(data => {
+          chartData = {
+            dimensions: [
+              {name: 'MPG', type: 'numerical'},
+              {name: 'Cylinders', type: 'categorical'},
+              {name: 'Origin', type: 'categorical'},
+              {name: 'Displacement', type: 'numerical'},
+              {name: 'HP', type: 'numerical'},
+              {name: 'Weight', type: 'numerical'},
+              {name: 'Acceleration', type: 'numerical'},
+              {name: 'Year', type: 'numerical'}
+            ],
+            tuples: data.map(d => {
+              return {
+                // MPG: Math.random() > 0.5 ? d.MPG : NaN,
+                MPG: d.MPG,
+                Cylinders: d.Cylinders,
+                Displacement: d.Displacement,
+                HP: d.HP,
+                Weight: d.Weight,
+                Acceleration: d.Acceleration,
+                Year: d.Year,
+                Origin: d.Origin
+              }
+            })
+          }
+          createChart();
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    };
+
+    const loadConfPC = () => {
+      d3.csv("data/confPC_v5.csv", d3.autoType)
+        .then(data => {
+          console.log(data);
+          chartData = {
+            dimensions: [
+              {name: "Name", type: "categorical"},
+              {name: "Year", type: "categorical"},
+              {name: "DSN", type: "categorical"},
+              {name: "SC", type: "categorical"},
+              {name: "HPCA", type: "categorical"},
+              {name: "HPDC", type: "categorical"},
+              {name: "ICS", type: "categorical"},
+              {name: "IEEECluster", type: "categorical"},
+              {name: "ISC", type: "categorical"},
+              {name: "USENIX_ATC", type: "categorical"},
+              {name: "USENIX_FAST", type: "categorical"},
+            ],
+            tuples: data.map(d => {
+              return {
+                Year: d.Year,
+                Name: d.Name,
+                DSN: d.DSN ? "True" : "False",
+                SC: d.SC ? "True" : "False",
+                HPCA: d.HPCA ? "True" : "False",
+                HPDC: d.HPDC ? "True" : "False",
+                ICS: d.ICS ? "True" : "False",
+                IEEECluster: d.IEEECluster ? "True" : "False",
+                ISC: d.ISC ? "True" : "False",
+                USENIX_ATC: d.USENIX_ATC ? "True" : "False",
+                USENIX_FAST: d.USENIX_FAST ? "True" : "False"
+              };
+            })
+          }
+          createChart();
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+
+    const loadTop500 = () => {
+      d3.csv(
+        "data/top500.csv",
+        ({
+          date, rank, computer, site, rmax, rpeak, manufacturer, name, segment, country, continent, power, region, interconnect_family, operating_system, system_family
+        }) => ({
+          date: parseTime(date),
+          // date,
+          rank: +rank,
+          computer: computer,
+          site: site.trim(),
+          rmax: +rmax,
+          rpeak: +rpeak,
+          manufacturer: manufacturer,
+          name: name,
+          segment: segment,
+          country: country,
+          continent: continent,
+          region: region,
+          power: +power,
+          interconnect_family,
+          operating_system,
+          system_family
+        })
+      )
+        .then(function(data) {        
+          chartData = {
+            dimensions: [
+              {name: 'date', type: 'temporal'},
+              {name: 'country', type: 'categorical'},
+              {name: 'rank', type: 'numerical'},
+              {name: 'rmax', type: 'numerical'},
+              {name: 'site', type: 'categorical'},
+              {name: 'rpeak', type: 'numerical'},
+              {name: 'manufacturer', type: 'categorical'},
+              {name: 'system_family', type: 'categorical'},
+              {name: 'power', type: 'numerical'},
+              {name: 'operating_system', type: 'categorical'}
+            ],
+            tuples: data.map(d => {
+              return {
+                date: d.date,
+                country: d.country,
+                rank: d.rank,
+                rmax: d.rmax,
+                rpeak: d.rpeak,
+                site: d.site,
+                manufacturer: d.manufacturer,
+                // segment: d.segment,
+                power: d.power,
+                system_family: d.system_family,
+                operating_system: d.operating_system
+              };
+            })
+          }
+          
+          createChart();
+        })
+        .catch(function(error) {
+          console.log(error);
+      });
+    };
+
+    function typeMSCData(d) {
+      return {
+        'Annual Part Production': +d['Annual Part Production'].replace(/,/g, ''),
+        'Burden Rate Per Hour': +d['Burden Rate Per Hour'],
+        Coolant: d.Coolant,
+        'Cycle Time Per Part in Seconds': +d['Cycle Time Per Part in Seconds'],
+        'Inches Per Revolution': +d['Inches Per Revolution'],
+        'Index Time in Seconds': +d['Index Time in Seconds'],
+        'Insert Cost Per Each Insert': +d['Insert Cost Per Each Insert'],
+        'Insert Grade': d['Insert Grade'],
+        'Insert Number': d['Insert Number'],
+        'Interrupted Cut': d['Interrupted Cut'],
+        'MSC Part #': d['MSC Part #'],
+        'Machine Type': d['Machine Type'],
+        'Material': d['Material'],
+        'Material Grade': d['Material Grade'],
+        'Num Edges per Insert': +d['Number of Edges per Insert'],
+        'Num Parts per Insert Edge': +d['Number of Parts Per Insert Edge'],
+        'Surface Feet Per Minute': +d['Surface Feet Per Minute'],
+        Tab: d.Tab,
+        'Ticket #': d['Ticket #'],
+        'Tool Life': +d['Tool Life'],
+        'Total Depth of Cut': +d['Total Depth of Cut in Inches'],
+        Vendor: d.Vendor
+      };
+    };
+
+  const loadMSC = () => {
+    d3.csv("data/Turning_data.csv", typeMSCData)
+      .then(data => {
+        chartData = {
+          dimensions: [
+            {name: 'Annual Part Production', type: 'numerical'},
+            {name: 'Burden Rate Per Hour', type: 'numerical'},
+            {name: 'Cycle Time Per Part in Seconds', type: 'numerical'},
+            {name: 'Inches Per Revolution', type: 'numerical'},
+            {name: 'Index Time in Seconds', type: 'numerical'},
+            {name: 'Insert Cost Per Each Insert', type: 'numerical'},
+            {name: 'Coolant', type: 'categorical'},
+            {name: 'Interrupted Cut', type: 'categorical'},
+            // {name: 'Insert Grade', type: 'categorical'},
+            // {name: 'Insert Number', type: 'categorical'},
+            // {name: 'MSC Part #', type: 'categorical'},
+            // {name: 'Machine Type', type: 'categorical'},
+            {name: 'Material', type: 'categorical'},
+            {name: 'Material Grade', type: 'categorical'},
+            {name: 'Num Edges per Insert', type: 'numerical'},
+            {name: 'Num Parts per Insert Edge', type: 'numerical'},
+            {name: 'Surface Feet Per Minute', type: 'numerical'},
+            {name: 'Tool Life', type: 'numerical'},
+            {name: 'Total Depth of Cut', type: 'numerical'},
+          ],
+          tuples: data.map(d => {
+            return {
+              'Annual Part Production': d['Annual Part Production'],
+              'Burden Rate Per Hour': d['Burden Rate Per Hour'],
+              'Cycle Time Per Part in Seconds': d['Cycle Time Per Part in Seconds'],
+              'Inches Per Revolution': d['Inches Per Revolution'],
+              'Index Time in Seconds': d['Index Time in Seconds'],
+              'Insert Cost Per Each Insert': d['Insert Cost Per Each Insert'],
+              'Coolant': d['Coolant'],
+              'Interrupted Cut': d['Interrupted Cut'],
+              // 'Insert Grade': d['Insert Grade'],
+              // 'Insert Number': d['Insert Number'],
+              // 'MSC Part #': d['MSC Part #'],
+              // 'Machine Type': d['Machine Type'],
+              'Material': d['Material'],
+              'Material Grade': d['Material Grade'],
+              'Num Edges per Insert': d['Num Edges per Insert'],
+              'Num Parts per Insert Edge': d['Num Parts per Insert Edge'],
+              'Surface Feet Per Minute': d['Surface Feet Per Minute'],
+              'Tool Life': d['Tool Life'],
+              'Total Depth of Cut': d['Total Depth of Cut']
+            }
+          })
+        };
+
+        createChart();
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+    
+    loadCars();
+  </script>
+</html>

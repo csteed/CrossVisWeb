@@ -1,254 +1,332 @@
-<!DOCTYPE html>
-<meta charset="utf-8" />
-<html>
-  <head>
-    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
-    <script src="js/d3.min.js"></script>
-    <script src="js/d3-array.min.js"></script>
-    <script src="js/pcpChart.js"></script>
+<!doctype html>
+<html lang="en">
 
-    <style>
-      body {
-        font: 12px sans-serif;
-        /* margin: 4px 20px 0px 20px; */
-        /* background: gray; */
-        background-color: whitesmoke;
-      }
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta author="Chad A. Steed">
+  <meta description="CrossVis: A multivariate visual analytics tool for data exploration.">
 
-      .top {
-        background-color: whitesmoke;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
+  <link rel="stylesheet" href="js/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet"> -->
+  <style>
 
-      .main {
-        margin-top: 400px;
-      }
+    @font-face {
+        font-family: "Rammetto One";
+        src: url("./fonts/Rammetto_One/RammettoOne-Regular.ttf");
+    }
 
-      table {
-        width: 100%;
-      }
+    main>.container {
+      padding: 100px 15px 0;
+    }
 
-      #logo {
-        text-align: right;
-      }
+    .navbar-brand {
+      padding-top: .3rem;
+      padding-bottom: .4rem;
+      font-size: 1.8rem;
+      color: whitesmoke;
+      font-family: 'Rammetto One', cursive;
+      /* font-family: 'Saira Stencil One', cursive; */
+      float: none;
+    }
+  </style>
 
-      .axis line,
-      .axis path {
-          fill: none;
-          stroke: rgb(51, 51, 51);
-          stroke-width: 1.5;
-          shape-rendering: crispEdges;
-      }
+  <title>CrossVis Web</title>
+</head>
 
-      /* .axis text {
-          fill: #646464;
-          text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-      } */
-    </style>
-  </head>
-  <body>
-    <table>
-      <tr>
-        <td>
-          <h2>CrossVis Web</h2>
-          <strong>Author:</strong> <a href="https://csteed.com" target="_blank">Chad A. Steed</a>, <a href="https://vis.ornl.gov" target="_blank">VISTA Lab</a>, <a href="https://www.ornl.gov/division/csmd" target="_blank">Computer Science and Mathematics Division</a>, <a href="https://ornl.gov" target="_blank">Oak Ridge National Laboratory</a>
-          <br/><br/>
-        </td>
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg shadow navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="color: whitesmoke;">
+      <!-- <img src="./img/vista-logo.png" height="38" class="d-inline-block align-top" alt="VISTA"> -->
+      CrossVis
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav mr-auto">
+        <div class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#settingsModal">Settings</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#" id="redrawButton">Redraw</a>
+        </div>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Load Sample Data
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" id="loadCarsButton">'83 ASA Cars</a>
+            <a class="dropdown-item" href="#" id="loadAAPLButton">S&P 500 Sample (Apple)</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#helpModal">Help</a>
+        </div>
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <img src="./img/vista-logo.png" height="48" class="d-inline-block align-top" alt="VISTA">
+        <!-- <div class="custom-file w-100">
+          <input type="file" class="custom-file-input mr-sm-2" id="fileInput">
+          <label id="fileLabel" class="custom-file-label my-2 my-sm-0" for="fileInput">Open CSV File</label>
+        </div> -->
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+      </form>
+    </div>
+  </nav>
 
-        <td id="logo"><a href="https://vis.ornl.gov/" target="_blank"><img src="img/vista-logo.png" height=70 alt="ORNL VISTA Vis Lab"></img></a></td>
-      </tr>
-    </table>
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="settingsModalLabel">Usage Instructions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>This page shows an interactive parallel coordinate plot for exploring multivariate data. It uses a combination of SVG elements and HTML Canvas via the d3.js library to support larger files than SVG graphics can support alone.</p>
+          <p>Use the 'Choose CSV File' button to open a local CSV formatted text file. Columns are automatically parsed using d3.js auto typing. Date, numeric, and Boolean data types are shown as axes in the parallel coordinate plot. Columns of other data types are ignored.</p>
+          <p>Sample files can be shown from the 'Load Sample Data' button.</p>
+          <p>Lines in the plot can be selected by dragging ranges on any of the axes.</p>
+          <p>The 'Redraw' button can be used to regenerate the plot. If the window is resized, regenerating the plot will adjust the chart widths to fill the available space.</p>
+          <p>The 'Settings' button can be used to control several visual parameters of the charts.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="settingsModalLabel">View Settings</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="showSelectedCheck" checked>
+                          <label class="form-check-label" for="showSelectedCheck">
+                              Show Selected Lines
+                          </label>
+                      </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="showUnselectedCheck" checked>
+                          <label class="form-check-label" for="showUnselectedCheck">
+                              Show Unselected Lines
+                          </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <label for="heightRange">Selected Line Opacity:</label>
+                      <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="selectedLineOpacityRange">
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="heightRange">Unselected Line Opacity:</label>
+                      <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="unselectedLineOpacityRange">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-12">
+                      <label for="heightRange">Chart Height:</label>
+                      <input type="range" class="custom-range" min="200" max="800" value="350" id="heightRange">
+                  </div>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- <label for="fileInput">Files: </label>
-    <input type="file" id="fileInput" onchange="loadFile()"><br/><br/> -->
+  <!-- <nav class="navbar fixed-top navbar-expand-lg p-0 shadow" style="background-color: black;">
+    <div class="navbar-brand mx-auto" href="#">
+      CrossVis
+    </div>
+  </nav> -->
 
-    <label for="dataSelect">Dataset: </label>
-    <select id="dataSelect" onchange="dataSelectChanged()">
-      <option selected>ASA Cars</option>
-      <option>Top500 List</option>
-      <option>HPC Conference PCs</option>
-      <option>MSC Data</option>
-      <option>Sensor Data</option>
-    </select><br/><br/>
+  <!-- Begin page content -->
+  <main role="main" class="flex-shrink-0">
+    <!-- <div class="container w-100 mb-4">
+      <form class="md-form d-flex justify-content-center w-100">
+        <div class="row">
+          <div class="col-5">
+            <div class="custom-file w-100">
+              <input type="file" class="custom-file-input" id="fileInput">
+              <label id="fileLabel" class="custom-file-label" for="fileInput">Choose CSV File</label>
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <div class="btn-group" role="group">
+                <button id="sampleDataDropdown" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Load Sample Data
+                </button>
+                <div class="dropdown-menu" id="sampleDataDropdownMenu" aria-labelledby="sampleDataDropdown">
+                  <a class="dropdown-item" href="#" id="loadAAPLButton">S&P 500 Sample (Apple)</a>
+                  <a class="dropdown-item" href="#" id="loadCarsButton">'83 ASA Cars</a>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary" id="redrawButton">
+                Redraw
+              </button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#settingsModal">
+                Settings
+              </button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#helpModal">
+                Help
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+    </div> -->
+    <div class="container">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input mr-sm-2" id="fileInput">
+        <label id="fileLabel" class="custom-file-label my-2 my-sm-0" for="fileInput">Open CSV File</label>
+      </div>
+    </div>
 
-    <label for="selectedLineOpacityRange">Selected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="selectedLineOpacityRange" onchange="selectedLineOpacityRangeChanged()">
+    <div class="container-fluid pt-3">
+      <div id="chart" style="position: relative;" class="mx-4"></div>
+      <hr>
 
-    <label for="unselectedLineOpacityRange">Unselected Line Opacity: </label><input type="range" min="1" max="100" value="20" class="slider" id="unselectedLineOpacityRange" onchange="unselectedLineOpacityRangeChanged()">
+      <center>
+          <p>&copy; <a href="https://vis.ornl.gov">Oak Ridge National Laboratory</a>
+              <script type="text/javascript">
+                  document.write(new Date().getFullYear());
+              </script>
+          </p>
+      </center>
+    </div>
+  </main>
 
-    <input type="checkbox" id="showUnselectedCheck" checked />
-    <label for="showUnselectedCheck">Show Unselected Lines</label>
-    
-    <div id="chart" style="position: relative;"></div>
-
-    <center>
-      <h4>&copy; <a href="https://www.ornl.gov">Oak Ridge National Laboratory</a>
-          <script type="text/javascript">
-              document.write(new Date().getFullYear());
-          </script>
-      </h4>
-    </center>
-  </body>
+  <script src="js/d3.min.js"></script>
+  <script src="js/d3-array.min.js"></script>
+  <script src="js/pcpChart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="js/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script> -->
 
   <script>
-    let parseTime = d3.timeParse("%Y-%m");
-    let chartData;
-    let chart;
-    const margin = {top: 40, right: 30, bottom: 20, left: 30};
-
-
-    // const loadData = () => {
-    //   console.log(fileData);
-
-    //   chartData = {
-    //     dimensions: [
-    //       {name: 'date', type: 'temporal'},
-    //       {name: 'country', type: 'categorical'},
-    //       {name: 'rank', type: 'numerical'},
-    //       {name: 'rmax', type: 'numerical'},
-    //       {name: 'site', type: 'categorical'},
-    //       {name: 'rpeak', type: 'numerical'},
-    //       {name: 'manufacturer', type: 'categorical'},
-    //       {name: 'power', type: 'numerical'}
-    //     ],
-    //     tuples: fileData.map(d => {
-    //       return {
-    //         date: d.date,
-    //         country: d.country,
-    //         rank: d.rank,
-    //         rmax: d.rmax,
-    //         rpeak: d.rpeak,
-    //         site: d.site,
-    //         manufacturer: d.manufacturer,
-    //         // segment: d.segment,
-    //         power: d.power
-    //       };
-    //     })
-    //   }
-    //   console.log(chartData);
-    // };
-
+    const chartMargin = {top: 20, right: 30, bottom: 20, left: 30};
+    var reader;
+    var chart;
+    var chartData;
+    const redrawButton = document.getElementById('redrawButton');
+    const fileInput = document.getElementById('fileInput');
+    const heightRange = document.getElementById('heightRange');
     const showUnselectedCheck = document.getElementById('showUnselectedCheck');
+    const showSelectedCheck = document.getElementById('showSelectedCheck');
+    const selectedLineOpacityRange = document.getElementById('selectedLineOpacityRange');
+    const unselectedLineOpacityRange = document.getElementById('unselectedLineOpacityRange');
+    const loadCarsButton = document.getElementById('loadCarsButton');
+    const loadAAPLButton = document.getElementById('loadAAPLButton');
+    const loadSampleDataDropdown = document.getElementById('sampleDataDropdown');
+
+    loadCarsButton.addEventListener('click', () => loadCarsData());
+    loadAAPLButton.addEventListener('click', () => loadAAPLData());
+
+    redrawButton.addEventListener('click', createChart());
+
+    selectedLineOpacityRange.addEventListener('change', () => {
+      if (chart) {
+        // console.log(selectedLineOpacityRange.value);
+        chart.selectedLineOpacity(selectedLineOpacityRange.value);
+      }
+    });
+
+    unselectedLineOpacityRange.addEventListener('change', () => {
+      if (chart) {
+        chart.unselectedLineOpacity(unselectedLineOpacityRange.value);
+      }
+    });    
+
     showUnselectedCheck.addEventListener('change', () => {
       if (chart) {
         chart.showUnselectedLines(showUnselectedCheck.checked);
       }
     });
 
-    const showUnselectedLines = () => {
-      return document.getElementById('showUnselectedCheck').checked;
-    }
-
-    const unselectedLineOpacityRangeChanged = () => {
-        const opacity = getUnselectedLineOpacityRange();
-        if (chart) {
-            chart.unselectedLineOpacity(opacity);
-        }
-    }
-
-    const getUnselectedLineOpacityRange = () => {
-      return document.getElementById('unselectedLineOpacityRange').value / 100.;
-    }
-
-    const selectedLineOpacityRangeChanged = () => {
-        const opacity = getSelectedLineOpacityRange();
-        if (chart) {
-            chart.selectedLineOpacity(opacity);
-        }
-    }
-
-    const getSelectedLineOpacityRange = () => {
-      return document.getElementById('selectedLineOpacityRange').value / 100.;
-    }
-
-    const createChart = () => {
-      d3.select('#chart').selectAll('*').remove();
-      if (chartData) {
-        console.log(chartData);
-        const divWidth = document.getElementById('chart').clientWidth;
-        const chartHeight = 500;
-
-        document.getElementById('chart').style.height = `${chartHeight}px`;
-
-        chart = pcpChart()
-          .width(divWidth)
-          .height(chartHeight)
-          .showUnselectedLines(showUnselectedLines())
-          .selectedLineOpacity(getSelectedLineOpacityRange())
-          .unselectedLineOpacity(getUnselectedLineOpacityRange())
-          .margin(margin);
-        d3.select('#chart').call(chart, chartData);
+    showSelectedCheck.addEventListener('change', () => {
+      if (chart) {
+        chart.showSelectedLines(showSelectedCheck.checked);
       }
+    });
+
+    heightRange.addEventListener('change', () => {
+      // console.log('height changed');
+      // TODO: add height change capablity to pcpChart so that recreating change isn't required
+      createChart();
+    });
+
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      reader = new FileReader();
+      reader.addEventListener('load', parseFile, false);
+      if (file) {
+        reader.readAsText(file);
+        $('#fileLabel').html(file.name);
+      }
+    });
+
+    const parseFile = () => {
+      data = d3.csvParse(reader.result, d3.autoType);
+
+      // console.log(data);
+      let dimensions = data.columns.map(c => {
+        if (data[0][c] instanceof Date) return {name: c, type: 'temporal'};
+        else if (data[0][c] instanceof Boolean) return {name: c, type: 'categorical'};
+        else if (typeof data[0][c] === 'string') return {name: c, type: 'categorical'};
+        else if (typeof data[0][c] === 'number') return {name: c, type: 'numerical'};
+        else return {name: c, type: 'unknown'};
+      });
+      // console.log(dimensions.length);
+      dimensions = dimensions.filter(d => d.type !== 'unknown');
+      // console.log(dimensions.length);
+
+      const tuples = data.map(d => {
+        let tuple = {};
+        dimensions.map(dim => tuple[dim.name] = d[dim.name]);
+        return tuple;
+      });
+      // console.log(tuples);
+
+      chartData = {dimensions: dimensions, tuples: tuples};
+      createChart();
     };
 
-    const dataSelectChanged = () => {
-      const select = document.getElementById('dataSelect');
-      const selectedDataset = select.options[select.selectedIndex].text;
-      console.log(`selected dataset is ${selectedDataset}`);
-
-      if (selectedDataset === 'Top500 List') {
-        loadTop500();
-      } else if (selectedDataset === 'HPC Conference PCs') {
-        loadConfPC();
-      } else if (selectedDataset === 'MSC Data') {
-        loadMSC();
-      } else if (selectedDataset === 'ASA Cars') {
-        loadCars();
-      } else if (selectedDataset === 'Sensor Data') {
-        loadSensorData();
-      }
-    }
-
-    const loadSensorData = () => {
-      let lod_level = 1;
-      let filenames = [`test_data/lod/0/${lod_level}.json`, `test_data/lod/1/${lod_level}.json`, `test_data/lod/2/${lod_level}.json`, `test_data/lod/3/${lod_level}.json`, `test_data/lod/4/${lod_level}.json`,];
-
-      Promise.all(filenames.map(f => d3.json(f)))
-        .then(function (filesData) {
-          console.log(filesData);
-          
-          let tuples = filesData[0].bins.map((d,binIdx) => {
-            let tuple = {Record: binIdx};
-            for (let i = 0; i < filesData.length; i++) {
-              tuple[`Sensor${i + 1}`] = filesData[i].bins[binIdx].median;
-            }
-            return tuple;
-          });
-          // let tuples = filesData.map(data => {
-          //   console.log(data);
-          //   return data.bins.map(bin => bin.median);
-          // });
-          console.log(tuples);
-
-          chartData = {
-            dimensions: [
-              {name: "Record", type: 'numerical'},
-              {name: "Sensor1", type: 'numerical'},
-              {name: "Sensor2", type: 'numerical'},
-              {name: "Sensor3", type: 'numerical'},
-              {name: "Sensor4", type: 'numerical'},
-              {name: "Sensor5", type: 'numerical'}
-            ],
-            tuples: tuples
-          };
-
-          createChart();
-        })
-        .catch(error => {
-          console.log(error);
-        });
-      // d3.json("test-data/lod/0/0.json")
-      //   .then(data => {
-      //     console.log(data);
-      //   });
-    };
-
-    const loadCars = () => {
+    function loadCarsData() {
+      // console.log('loading cars data');
       d3.csv("data/cars-cat.csv", d3.autoType)
         .then(data => {
-          console.log(data);
           chartData = {
             dimensions: [
               {name: 'MPG', type: 'numerical'},
@@ -259,7 +337,6 @@
               {name: 'Weight', type: 'numerical'},
               {name: 'Acceleration', type: 'numerical'},
               {name: 'Year', type: 'numerical'}
-              
             ],
             tuples: data.map(d => {
               return {
@@ -274,7 +351,7 @@
                 Origin: d.Origin
               }
             })
-          }
+          };
           createChart();
         })
         .catch(error => {
@@ -282,194 +359,61 @@
         });
     };
 
-    const loadConfPC = () => {
-      d3.csv("data/confPC_v5.csv", d3.autoType)
+    function loadAAPLData() {
+      // console.log('loading AAPL data');
+      d3.csv("data/AAPL_data.csv", d3.autoType)
         .then(data => {
-          console.log(data);
           chartData = {
             dimensions: [
-              {name: "Name", type: "categorical"},
-              {name: "Year", type: "categorical"},
-              {name: "DSN", type: "categorical"},
-              {name: "SC", type: "categorical"},
-              {name: "HPCA", type: "categorical"},
-              {name: "HPDC", type: "categorical"},
-              {name: "ICS", type: "categorical"},
-              {name: "IEEECluster", type: "categorical"},
-              {name: "ISC", type: "categorical"},
-              {name: "USENIX_ATC", type: "categorical"},
-              {name: "USENIX_FAST", type: "categorical"},
+              {name: 'Date', type: 'temporal'},
+              {name: 'Open', type: 'numerical'},
+              {name: 'High', type: 'numerical'},
+              {name: 'Low', type: 'numerical'},
+              {name: 'Close', type: 'numerical'},
+              {name: 'Volume', type: 'numerical'},
             ],
             tuples: data.map(d => {
               return {
-                Year: d.Year,
-                Name: d.Name,
-                DSN: d.DSN ? "True" : "False",
-                SC: d.SC ? "True" : "False",
-                HPCA: d.HPCA ? "True" : "False",
-                HPDC: d.HPDC ? "True" : "False",
-                ICS: d.ICS ? "True" : "False",
-                IEEECluster: d.IEEECluster ? "True" : "False",
-                ISC: d.ISC ? "True" : "False",
-                USENIX_ATC: d.USENIX_ATC ? "True" : "False",
-                USENIX_FAST: d.USENIX_FAST ? "True" : "False"
-              };
+                Date: d.date,
+                Open: d.open,
+                High: d.high,
+                Low: d.low,
+                Close: d.close,
+                Volume: d.volume
+              }
             })
-          }
+          };
           createChart();
         })
-        .catch(error => {
-          console.log(error);
-        });
+        .catch(error => { console.log(error); });
+    };
+
+    function createChart() {
+      d3.select('#chart').selectAll('*').remove();
+      if (chartData) {
+        const chartWidth = document.getElementById('chart').clientWidth;
+        const chartHeight = heightRange.value;
+
+        document.getElementById('chart').style.height = `${chartHeight}px`;
+
+        let opacity = chartData.tuples.length > 2000 ? 0.1 : chartData.tuples.length < 500 ? 0.7 : 1 - chartData.tuples.length / 2500;
+        // console.log(opacity);
+        selectedLineOpacityRange.value = opacity;
+        unselectedLineOpacityRange.value = opacity;
+
+        chart = pcpChart()
+          .width(chartWidth)
+          .height(chartHeight)
+          .showUnselectedLines(showUnselectedCheck.checked)
+          .showSelectedLines(showSelectedCheck.checked)
+          .selectedLineOpacity(opacity)
+          .unselectedLineOpacity(unselectedLineOpacityRange.value)
+          .margin(chartMargin);
+        d3.select('#chart').call(chart, chartData);
+      }
     }
 
-    const loadTop500 = () => {
-      d3.csv(
-        "data/top500.csv",
-        ({
-          date, rank, computer, site, rmax, rpeak, manufacturer, name, segment, country, continent, power, region, interconnect_family, operating_system, system_family
-        }) => ({
-          date: parseTime(date),
-          // date,
-          rank: +rank,
-          computer: computer,
-          site: site.trim(),
-          rmax: +rmax,
-          rpeak: +rpeak,
-          manufacturer: manufacturer,
-          name: name,
-          segment: segment,
-          country: country,
-          continent: continent,
-          region: region,
-          power: +power,
-          interconnect_family,
-          operating_system,
-          system_family
-        })
-      )
-        .then(function(data) {        
-          chartData = {
-            dimensions: [
-              {name: 'date', type: 'temporal'},
-              {name: 'country', type: 'categorical'},
-              {name: 'rank', type: 'numerical'},
-              {name: 'rmax', type: 'numerical'},
-              {name: 'site', type: 'categorical'},
-              {name: 'rpeak', type: 'numerical'},
-              {name: 'manufacturer', type: 'categorical'},
-              {name: 'system_family', type: 'categorical'},
-              {name: 'power', type: 'numerical'},
-              {name: 'operating_system', type: 'categorical'}
-            ],
-            tuples: data.map(d => {
-              return {
-                date: d.date,
-                country: d.country,
-                rank: d.rank,
-                rmax: d.rmax,
-                rpeak: d.rpeak,
-                site: d.site,
-                manufacturer: d.manufacturer,
-                // segment: d.segment,
-                power: d.power,
-                system_family: d.system_family,
-                operating_system: d.operating_system
-              };
-            })
-          }
-          
-          createChart();
-        })
-        .catch(function(error) {
-          console.log(error);
-      });
-    };
-
-    function typeMSCData(d) {
-      return {
-        'Annual Part Production': +d['Annual Part Production'].replace(/,/g, ''),
-        'Burden Rate Per Hour': +d['Burden Rate Per Hour'],
-        Coolant: d.Coolant,
-        'Cycle Time Per Part in Seconds': +d['Cycle Time Per Part in Seconds'],
-        'Inches Per Revolution': +d['Inches Per Revolution'],
-        'Index Time in Seconds': +d['Index Time in Seconds'],
-        'Insert Cost Per Each Insert': +d['Insert Cost Per Each Insert'],
-        'Insert Grade': d['Insert Grade'],
-        'Insert Number': d['Insert Number'],
-        'Interrupted Cut': d['Interrupted Cut'],
-        'MSC Part #': d['MSC Part #'],
-        'Machine Type': d['Machine Type'],
-        'Material': d['Material'],
-        'Material Grade': d['Material Grade'],
-        'Num Edges per Insert': +d['Number of Edges per Insert'],
-        'Num Parts per Insert Edge': +d['Number of Parts Per Insert Edge'],
-        'Surface Feet Per Minute': +d['Surface Feet Per Minute'],
-        Tab: d.Tab,
-        'Ticket #': d['Ticket #'],
-        'Tool Life': +d['Tool Life'],
-        'Total Depth of Cut': +d['Total Depth of Cut in Inches'],
-        Vendor: d.Vendor
-      };
-    };
-
-  const loadMSC = () => {
-    d3.csv("data/Turning_data.csv", typeMSCData)
-      .then(data => {
-        chartData = {
-          dimensions: [
-            {name: 'Annual Part Production', type: 'numerical'},
-            {name: 'Burden Rate Per Hour', type: 'numerical'},
-            {name: 'Cycle Time Per Part in Seconds', type: 'numerical'},
-            {name: 'Inches Per Revolution', type: 'numerical'},
-            {name: 'Index Time in Seconds', type: 'numerical'},
-            {name: 'Insert Cost Per Each Insert', type: 'numerical'},
-            {name: 'Coolant', type: 'categorical'},
-            {name: 'Interrupted Cut', type: 'categorical'},
-            // {name: 'Insert Grade', type: 'categorical'},
-            // {name: 'Insert Number', type: 'categorical'},
-            // {name: 'MSC Part #', type: 'categorical'},
-            // {name: 'Machine Type', type: 'categorical'},
-            {name: 'Material', type: 'categorical'},
-            {name: 'Material Grade', type: 'categorical'},
-            {name: 'Num Edges per Insert', type: 'numerical'},
-            {name: 'Num Parts per Insert Edge', type: 'numerical'},
-            {name: 'Surface Feet Per Minute', type: 'numerical'},
-            {name: 'Tool Life', type: 'numerical'},
-            {name: 'Total Depth of Cut', type: 'numerical'},
-          ],
-          tuples: data.map(d => {
-            return {
-              'Annual Part Production': d['Annual Part Production'],
-              'Burden Rate Per Hour': d['Burden Rate Per Hour'],
-              'Cycle Time Per Part in Seconds': d['Cycle Time Per Part in Seconds'],
-              'Inches Per Revolution': d['Inches Per Revolution'],
-              'Index Time in Seconds': d['Index Time in Seconds'],
-              'Insert Cost Per Each Insert': d['Insert Cost Per Each Insert'],
-              'Coolant': d['Coolant'],
-              'Interrupted Cut': d['Interrupted Cut'],
-              // 'Insert Grade': d['Insert Grade'],
-              // 'Insert Number': d['Insert Number'],
-              // 'MSC Part #': d['MSC Part #'],
-              // 'Machine Type': d['Machine Type'],
-              'Material': d['Material'],
-              'Material Grade': d['Material Grade'],
-              'Num Edges per Insert': d['Num Edges per Insert'],
-              'Num Parts per Insert Edge': d['Num Parts per Insert Edge'],
-              'Surface Feet Per Minute': d['Surface Feet Per Minute'],
-              'Tool Life': d['Tool Life'],
-              'Total Depth of Cut': d['Total Depth of Cut']
-            }
-          })
-        };
-
-        createChart();
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }
-    
-    loadCars();
   </script>
+</body>
+
 </html>

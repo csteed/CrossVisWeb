@@ -34,6 +34,7 @@ var pcpChart = function () {
   let correlationRectSize = 20;
   let correlationLabelHeight = 12;
   let correlationColorScale = d3.scaleSequential(d3.interpolateRdBu).domain([-1, 1]);
+  let highlightColor = "orange";
 
   function chart(selection, data) {
     tuples = data.tuples.slice();
@@ -213,7 +214,6 @@ var pcpChart = function () {
         const dimensionNames = dimensions.map((d) => d.name);
         x.domain(dimensionNames);
         svg.selectAll(".dimension").each(function (dim) {
-          console.log(d3.select(this).attr("transform"));
           d3.select(this).attr("transform", function (d) {
             return `translate(${x(d.name)})`;
           });
@@ -324,20 +324,24 @@ var pcpChart = function () {
               .attr("width", axisBarWidth)
               .attr("height", cat => cat.height)
               .on("click", function(cat) {
-                console.log(`${cat.name} of ${dim.name} clicked`);
+                // console.log(`${cat.name} of ${dim.name} clicked`);
                 if (dim.selectedCategories.has(cat.id)) {
                   dim.selectedCategories.delete(cat.id);
                   d3.select(this)
                     .attr("stroke", null)
-                    .attr("stroke-width", null);
+                    .attr("stroke-width", null)
+                    .attr("fill", null)
+                    .attr("fill-opacity", null);
                 } else {
                   dim.selectedCategories.add(cat.id);
                   d3.select(this)
                     .raise()
+                    .attr("fill", highlightColor)
+                    .attr("fill-opacity", 0.3)
                     .attr("stroke", '#000')
                     .attr("stroke-width", 1.2);
                 }
-                console.log(dim.selectedCategories);
+                // console.log(dim.selectedCategories);
                 brush();
               })
               .on("mouseover", function (d) {
@@ -486,8 +490,9 @@ var pcpChart = function () {
       //   .attr("fill", "yellow");
     
     g.selectAll(".brush rect.selection")
-      .attr("fill", "yellow")
-      .attr('fill-opacity', .25);
+      .attr("stroke", "#000")
+      .attr("fill", highlightColor)
+      .attr('fill-opacity', .3);
   }
 
   // Handles a brush event, toggling the display of foreground lines.
@@ -818,6 +823,7 @@ var pcpChart = function () {
       return height;
     }
     height = value - margin.top - margin.bottom;
+    
     return chart;
   };
 
