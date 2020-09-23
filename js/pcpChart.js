@@ -34,7 +34,8 @@ var pcpChart = function () {
   let correlationRectSize = 20;
   let correlationLabelHeight = 12;
   let correlationColorScale = d3.scaleSequential(d3.interpolateRdBu).domain([-1, 1]);
-  let highlightColor = "orange";
+  let highlightColor = "yellow";
+  let dimensionSelectionChangeHandler = null;
 
   function chart(selection, data) {
     tuples = data.tuples.slice();
@@ -91,8 +92,9 @@ var pcpChart = function () {
     x = d3.scalePoint().range([0, width]).padding(0.25);
 
     let dimensionNames = [];
-    dimensions.map((dim) => {
+    dimensions.map((dim, i) => {
       dimensionNames.push(dim.name);
+      dim.id = i;
       if (dim.type === "numerical") {
         y[dim.name] = d3
           .scaleLinear()
@@ -171,6 +173,7 @@ var pcpChart = function () {
       .enter()
       .append("g")
       .attr("class", "dimension")
+      .attr("id", d => `dim_${d.id}`)
       .attr("transform", function (d) {
         return `translate(${x(d.name)})`;
       });
@@ -299,14 +302,14 @@ var pcpChart = function () {
             cat.center = cat.y + (cat.height / 2);
           });
 
-          d3.select(this).append("line")
-            .attr("x1", 0)
-            .attr("y1", -4)
-            .attr("x2", 0)
-            .attr("y2", pcpHeight + 4)
-            .attr("stroke", "#AAA")
-            .attr("stroke-width", 3)
-            .attr("stroke-linecap", "round");
+          // d3.select(this).append("line")
+          //   .attr("x1", 0)
+          //   .attr("y1", -4)
+          //   .attr("x2", 0)
+          //   .attr("y2", pcpHeight + 4)
+          //   .attr("stroke", "#AAA")
+          //   .attr("stroke-width", 3)
+          //   .attr("stroke-linecap", "round");
 
           d3.select(this).append("g")
             .attr("fill", "#DDD")
@@ -324,9 +327,11 @@ var pcpChart = function () {
               .attr("width", axisBarWidth)
               .attr("height", cat => cat.height)
               .on("click", function(cat) {
-                // console.log(`${cat.name} of ${dim.name} clicked`);
+                console.log(`${cat.name} of ${dim.name} clicked`);
+                console.log(dim.selectedCategories);
                 if (dim.selectedCategories.has(cat.id)) {
                   dim.selectedCategories.delete(cat.id);
+                  // console.log(dim.selectedCategories);
                   d3.select(this)
                     .attr("stroke", null)
                     .attr("stroke-width", null)
@@ -334,6 +339,7 @@ var pcpChart = function () {
                     .attr("fill-opacity", null);
                 } else {
                   dim.selectedCategories.add(cat.id);
+                  // console.log(dim.selectedCategories);
                   d3.select(this)
                     .raise()
                     .attr("fill", highlightColor)
@@ -341,8 +347,11 @@ var pcpChart = function () {
                     .attr("stroke", '#000')
                     .attr("stroke-width", 1.2);
                 }
-                // console.log(dim.selectedCategories);
+                console.log(dim.selectedCategories);
                 brush();
+                if (dimensionSelectionChangeHandler) {
+                  dimensionSelectionChangeHandler(dim.name, [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name));
+                }
               })
               .on("mouseover", function (d) {
                 d3.select(this).style("cursor", "pointer");
@@ -540,6 +549,7 @@ var pcpChart = function () {
     dimensions.forEach(dim => {
       if (dim.type === 'categorical') {
         if (dim.selectedCategories.size > 0) {
+          console.log(dim);
           actives.push({
             dimension: dim,
             extent: [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name)
@@ -808,6 +818,49 @@ var pcpChart = function () {
         path(d, background);
       });
     }
+  }
+
+  chart.setDimensionSelection = function(dimensionName, selection) {
+    const dim = dimensions.find(d => d.name === dimensionName);
+    if (dim) {
+      if (dim.type === 'categorical') {
+        var selectedCategories = new Set();
+        dim.categories.map(cat => {
+          selection.map(s => {
+            if (s === cat.name) { selectedCategories.add(cat); }
+          });
+        });
+
+        dim.selectedCategories.clear();
+        selectedCategories.forEach(c => dim.selectedCategories.add(c.id));
+
+        svg.selectAll(`#dim_${dim.id}.dimension`).selectAll('rect')
+          .each(function(cat) {
+            if (selectedCategories.has(cat)) {
+              d3.select(this)
+                .attr('fill', highlightColor)
+                .attr('fill-opacity', 0.3)
+                .attr('stroke', '#000')
+                .attr('stroke-width', 1.2);
+            } else {
+              d3.select(this)
+                .attr("stroke", null)
+                .attr("stroke-width", null)
+                .attr("fill", null)
+                .attr("fill-opacity", null);
+            }
+          });
+        brush();
+      }
+    }
+  }
+
+  chart.selectionChangeHandler = function(value) {
+    if (!arguments.length) {
+      return dimensionSelectionChangeHandler;
+    }
+    dimensionSelectionChangeHandler = value;
+    return chart;
   }
 
   chart.width = function (value) {

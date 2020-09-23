@@ -254,7 +254,7 @@
     loadCarsButton.addEventListener('click', () => loadCarsData());
     loadAAPLButton.addEventListener('click', () => loadAAPLData());
 
-    redrawButton.addEventListener('click', createChart());
+    redrawButton.addEventListener('click', () => createChart());
 
     selectedLineOpacityRange.addEventListener('change', () => {
       if (chart) {
