@@ -40,6 +40,7 @@ var pcpChart = function () {
   function chart(selection, data) {
     tuples = data.tuples.slice();
     dimensions = data.dimensions.slice();
+    // console.log(data);
 
     pcpHeight = height - selectionIndicatorHeight - correlationRectPadding - correlationRectSize;
 
@@ -124,11 +125,6 @@ var pcpChart = function () {
       } else {
         dim.bins = d3.bin().value((d) => d[dim.name])(tuples);
       }
-      // dim.bins = d3.histogram()
-      //     .value(d => d[dim.name])
-      //     .domain(y[dim.name].domain())
-      //     (tuples);
-      // dim.selected = new Set();
     });
     x.domain(dimensionNames);
 
@@ -177,7 +173,6 @@ var pcpChart = function () {
       .attr("transform", function (d) {
         return `translate(${x(d.name)})`;
       });
-
     
     // drawHistogramBins();
     calculateDimensionCorrelations();
@@ -678,7 +673,7 @@ var pcpChart = function () {
           const yPos = cat.center + jitter;
           return yPos;
         } else {
-          return isNaN(t[dim.name]) ? NaN : y[dim.name](t[dim.name]);
+          return isNaN(t[dim.name]) || (!t[dim.name]) ? NaN : y[dim.name](t[dim.name]);
         }
       });
       tupleLines.set(t, yCoordinates);

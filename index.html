@@ -9,11 +9,8 @@
   <meta description="CrossVis: A multivariate visual analytics tool for data exploration.">
 
   <link rel="stylesheet" href="js/bootstrap-4.5.2-dist/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet"> -->
-  <style>
 
+  <style>
     @font-face {
         font-family: "Rammetto One";
         src: url("./fonts/Rammetto_One/RammettoOne-Regular.ttf");
@@ -29,18 +26,16 @@
       font-size: 1.8rem;
       color: whitesmoke;
       font-family: 'Rammetto One', cursive;
-      /* font-family: 'Saira Stencil One', cursive; */
       float: none;
     }
   </style>
 
-  <title>CrossVis Web</title>
+  <title>CrossVis Web - ORNL VISTA Lab</title>
 </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg shadow navbar-dark bg-dark">
     <a class="navbar-brand" href="#" style="color: whitesmoke;">
-      <!-- <img src="./img/vista-logo.png" height="38" class="d-inline-block align-top" alt="VISTA"> -->
       CrossVis
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,15 +43,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav mr-auto">
-        <div class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#settingsModal">Settings</a>
-        </div>
-        <div class="nav-item">
-          <a class="nav-link" href="#" id="redrawButton">Redraw</a>
-        </div>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Load Sample Data
+            View Sample Data
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#" id="loadCarsButton">'83 ASA Cars</a>
@@ -64,17 +53,17 @@
           </div>
         </div>
         <div class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#settingsModal">Settings</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#" id="redrawButton">Redraw Chart</a>
+        </div>
+        <div class="nav-item">
           <a class="nav-link" href="#" data-toggle="modal" data-target="#helpModal">Help</a>
         </div>
       </div>
       <form class="form-inline my-2 my-lg-0">
         <img src="./img/vista-logo.png" height="48" class="d-inline-block align-top" alt="VISTA">
-        <!-- <div class="custom-file w-100">
-          <input type="file" class="custom-file-input mr-sm-2" id="fileInput">
-          <label id="fileLabel" class="custom-file-label my-2 my-sm-0" for="fileInput">Open CSV File</label>
-        </div> -->
-        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
     </div>
   </nav>
@@ -300,6 +289,9 @@
     const parseFile = () => {
       data = d3.csvParse(reader.result, d3.autoType);
 
+      // console.log(data[0]['CollectionTime']);
+      // console.log(new Date(data[0]['CollectionTime']));
+
       // console.log(data);
       let dimensions = data.columns.map(c => {
         if (data[0][c] instanceof Date) return {name: c, type: 'temporal'};
@@ -340,8 +332,8 @@
             ],
             tuples: data.map(d => {
               return {
-                // MPG: Math.random() > 0.5 ? d.MPG : NaN,
-                MPG: d.MPG,
+                MPG: Math.random() > 0.5 ? d.MPG : NaN,
+                // MPG: d.MPG,
                 Cylinders: d.Cylinders,
                 Displacement: d.Displacement,
                 HP: d.HP,
