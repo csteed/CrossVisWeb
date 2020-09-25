@@ -24,7 +24,7 @@
       padding-top: .3rem;
       padding-bottom: .4rem;
       font-size: 1.8rem;
-      color: whitesmoke;
+      /* color: silver; */
       font-family: 'Rammetto One', cursive;
       float: none;
     }
@@ -35,7 +35,7 @@
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg shadow navbar-dark bg-dark">
-    <a class="navbar-brand" href="#" style="color: whitesmoke;">
+    <a class="navbar-brand" href="#" style="color: #DCDCDC;">
       CrossVis
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,40 +102,58 @@
         </div>
         <div class="modal-body">
           <form>
-              <div class="form-row">
-                  <div class="form-group col-md-6">
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="showSelectedCheck" checked>
-                          <label class="form-check-label" for="showSelectedCheck">
-                              Show Selected Lines
-                          </label>
-                      </div>
-                  </div>
-                  <div class="form-group col-md-6">
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="showUnselectedCheck" checked>
-                          <label class="form-check-label" for="showUnselectedCheck">
-                              Show Unselected Lines
-                          </label>
-                      </div>
-                  </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="showAxisTicksCheck" checked>
+                  <label class="form-check-label" for="showAxisTicksCheck">
+                    Show Axis Ticks
+                  </label>
+                </div>
               </div>
-              <div class="form-row">
-                  <div class="form-group col-md-6">
-                      <label for="heightRange">Selected Line Opacity:</label>
-                      <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="selectedLineOpacityRange">
-                  </div>
-                  <div class="form-group col-md-6">
-                      <label for="heightRange">Unselected Line Opacity:</label>
-                      <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="unselectedLineOpacityRange">
-                  </div>
+              <div class="form-group col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="showAxisLabelsCheck" checked>
+                  <label class="form-check-label" for="showAxisLabelsCheck">
+                    Show Axis Labels
+                  </label>
+                </div>
               </div>
-              <div class="form-row">
-                  <div class="form-group col-md-12">
-                      <label for="heightRange">Chart Height:</label>
-                      <input type="range" class="custom-range" min="200" max="800" value="350" id="heightRange">
-                  </div>
-              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="showSelectedCheck" checked>
+                        <label class="form-check-label" for="showSelectedCheck">
+                            Show Selected Lines
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="showUnselectedCheck" checked>
+                        <label class="form-check-label" for="showUnselectedCheck">
+                            Show Unselected Lines
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="heightRange">Selected Line Opacity:</label>
+                    <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="selectedLineOpacityRange">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="heightRange">Unselected Line Opacity:</label>
+                    <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="unselectedLineOpacityRange">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="heightRange">Chart Height:</label>
+                    <input type="range" class="custom-range" min="200" max="800" value="350" id="heightRange">
+                </div>
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -190,6 +208,8 @@
     const heightRange = document.getElementById('heightRange');
     const showUnselectedCheck = document.getElementById('showUnselectedCheck');
     const showSelectedCheck = document.getElementById('showSelectedCheck');
+    const showAxisTicksCheck = document.getElementById('showAxisTicksCheck');
+    const showAxisLabelsCheck = document.getElementById('showAxisLabelsCheck');
     const selectedLineOpacityRange = document.getElementById('selectedLineOpacityRange');
     const unselectedLineOpacityRange = document.getElementById('unselectedLineOpacityRange');
     const loadCarsButton = document.getElementById('loadCarsButton');
@@ -201,6 +221,16 @@
 
     redrawButton.addEventListener('click', () => createChart());
 
+    showAxisLabelsCheck.addEventListener('change', () => {
+      if (chart) {
+        chart.showAxisTickLabels(showAxisLabelsCheck.checked);
+      }
+    });
+    showAxisTicksCheck.addEventListener('change', () => {
+      if (chart) {
+        chart.showAxisTicks(showAxisTicksCheck.checked);
+      }
+    });
     selectedLineOpacityRange.addEventListener('change', () => {
       if (chart) {
         // console.log(selectedLineOpacityRange.value);
@@ -245,6 +275,8 @@
     const parseFile = () => {
       data = d3.csvParse(reader.result, d3.autoType);
 
+      // console.log(data);
+
       let dimensions = data.columns.map(c => {
         if (data[0][c] instanceof Date) return {name: c, type: 'temporal'};
         else if (data[0][c] instanceof Boolean) return {name: c, type: 'categorical'};
@@ -280,8 +312,8 @@
             ],
             tuples: data.map(d => {
               return {
-                MPG: Math.random() > 0.5 ? d.MPG : NaN,
-                // MPG: d.MPG,
+                // MPG: Math.random() > 0.5 ? d.MPG : NaN,
+                MPG: d.MPG,
                 Cylinders: d.Cylinders,
                 Displacement: d.Displacement,
                 HP: d.HP,
@@ -347,6 +379,8 @@
           .showUnselectedLines(showUnselectedCheck.checked)
           .showSelectedLines(showSelectedCheck.checked)
           .selectedLineOpacity(opacity)
+          .showAxisTicks(showAxisTicksCheck.checked)
+          .showAxisTickLabels(showAxisLabelsCheck.checked)
           .unselectedLineOpacity(unselectedLineOpacityRange.value)
           .margin(chartMargin);
         d3.select('#chart').call(chart, chartData);
