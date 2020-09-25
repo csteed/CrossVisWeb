@@ -27,20 +27,20 @@ var pcpChart = function () {
   let x;
   let y = {};
   let canvasMargin = 6;
-  let axisBarWidth = 16;
+  let axisBarWidth = 24;
   let selectionIndicatorHeight = 40;
   let pcpHeight;
   let correlationRectPadding = 8;
   let correlationRectSize = 20;
   let correlationLabelHeight = 12;
   let correlationColorScale = d3.scaleSequential(d3.interpolateRdBu).domain([-1, 1]);
-  let highlightColor = "yellow";
+  let highlightColor = "gold";
   let dimensionSelectionChangeHandler = null;
 
   function chart(selection, data) {
     tuples = data.tuples.slice();
     dimensions = data.dimensions.slice();
-    // console.log(data);
+    console.log(data);
 
     pcpHeight = height - selectionIndicatorHeight - correlationRectPadding - correlationRectSize;
 
@@ -120,10 +120,25 @@ var pcpChart = function () {
       if (dim.type === "categorical") {
         dim.categories = Array.from(d3.group(tuples, (d) => d[dim.name]), ([key,value],i) => ({name: key, id: i, values: value}));
         dim.categories.sort((a,b) => d3.descending(a.values.length, b.values.length));
-        // console.log(dim.categories);
         dim.selectedCategories = new Set();
       } else {
+        let values = tuples.map(d => d[dim.name])
+          .filter(d => d !== null && !isNaN(d))
+          .sort(d3.ascending);
+        dim.count = values.length;
         dim.bins = d3.bin().value((d) => d[dim.name])(tuples);
+        if (dim.type === "numerical") {
+          dim.stats = {
+            mean: d3.mean(values),
+            median: d3.median(values),
+            count: d3.count(values),
+            extent: d3.extent(values),
+            stdev: d3.deviation(values),
+            q1: d3.quantileSorted(values, 0.25),
+            q3: d3.quantileSorted(values, 0.75)
+          }
+        }
+        console.log(dim);
       }
     });
     x.domain(dimensionNames);
@@ -254,7 +269,6 @@ var pcpChart = function () {
 
   function drawDimensions() {
     const axis = d3.axisLeft();
-
     const g = svg.selectAll(".dimension");
 
     // Add an axis and title.
@@ -262,6 +276,35 @@ var pcpChart = function () {
       .attr("class", "axis")
       .each(function (dim) {
         if (dim.type === "numerical" || dim.type === "temporal") {
+          if (dim.type === "numerical") {
+            d3.select(this)
+              .append("rect")
+                .attr('x', -axisBarWidth / 2)
+                .attr('width', axisBarWidth)
+                .attr('height', pcpHeight)
+                .attr('rx', 3)
+                .attr('ry', 3)
+                .attr('stroke', 'gray')
+                .attr('fill', 'whitesmoke');
+            d3.select(this)
+              .append("rect")
+                .attr("x", -axisBarWidth / 2)
+                .attr("width", axisBarWidth)
+                .attr("y", y[dim.name](dim.stats.q3))
+                .attr("height", y[dim.name](dim.stats.q1) - y[dim.name](dim.stats.q3))
+                .attr("stroke", "gray")
+                .attr("stroke-width", 1)
+                .attr('fill', 'lightgray');
+            d3.select(this)
+              .append("line")
+                .attr("x1", -axisBarWidth / 2)
+                .attr("x2", axisBarWidth / 2)
+                .attr("y1", y[dim.name](dim.stats.median))
+                .attr("y2", y[dim.name](dim.stats.median))
+                .attr("stroke", "#00008B")
+                .attr("stroke-width", 2);
+          }
+
           d3.select(this).append("rect")
             .attr('class', 'correlationRect')
             .attr('x', -(correlationRectSize / 2.))
@@ -287,10 +330,10 @@ var pcpChart = function () {
           d3.select(this).selectAll('.axis text')
             .attr('fill', '#646464')
             .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff');
+            
 
         } else {
           let grpHeight = y[dim.name].bandwidth();
-          // console.log(dim.groups);
           dim.categories.map((cat,i) => {
             i === 0 ? cat.y = 0 : cat.y = dim.categories[i-1].y + dim.categories[i-1].height;
             cat.height = (cat.values.length / tuples.length) * pcpHeight;
@@ -371,62 +414,6 @@ var pcpChart = function () {
               .attr("font-size", 10)
               .attr("pointer-events", "none")
               .text(c => c.name);
-
-          /*
-                
-                  let color = d3.scaleSequentialSqrt([0, 1], d3.interpolateBlues)
-                  // let currentY = 0;
-                  // d3.select(this).call(axis.scale(y[dim.name]));
-                  // const categoryRectHeight = y[dim.name].bandwidth();
-                  // console.log(`${dim.groups.size} ${pcpHeight / 14}`);
-                  dim.groups.forEach((grp, key) => {
-                    //   let grpHeight = (grp.length / tuples.length) * height;
-                      grp.center = y[dim.name](key) + (y[dim.name].bandwidth() / 2);
-                      let categoryRect = d3.select(this).append("rect")
-                          .attr("class", "categoryRect")
-                          // .attr("fill", "lightgray")
-                          .attr("fill", color(grp.length / tuples.length))
-                          .attr("stroke", "gray")
-                          .attr("stroke-width", 0.7)
-                          // .attr("fill-opacity", 0.7)
-                          .attr("x", -(axisBarWidth / 2))
-                          .attr("width", axisBarWidth)
-                          // .attr("y", currentY)
-                          .attr("y", y[dim.name](key))
-                          .attr("rx", 2)
-                          .attr("ry", 2)
-                          // .attr("height", grpHeight);
-                          .attr("height", y[dim.name].bandwidth())
-                          // .on("click", function(d) {
-                          //     console.log(d);
-                          //     if (d.selected.has(key)) {
-                          //         d.seleccted.delete(key);
-                          //         categoryRect.attr("stroke", "gray");
-                          //         categoryRect.attr("stroke-width", 1);
-                          //     } else {
-                          //         d.selected.add(key);
-                          //         categoryRect.attr("stroke", "black");
-                          //         categoryRect.attr("stroke-width", 2);
-                          //     }
-                          //     brush();
-                          // })
-                          .append('title')
-                              .text(`${key}, n = ${grp.length} / ${tuples.length}`);
-                      
-                      if (dim.groups.size < (pcpHeight / 14)) {
-                          d3.select(this).append("text")
-                              .attr("class", "categoryRectLabel")
-                              // .attr("stroke", "#000")
-                              .attr("y", grp.center)
-                              .attr("text-anchor", "middle")
-                              .attr("font-size", 10)
-                              .text(key);
-                      }
-
-                      // grp.center = currentY + (grpHeight / 2);
-                      // currentY = currentY + grpHeight;
-                  })
-                */
         }
       })
       .append("text")
@@ -478,8 +465,8 @@ var pcpChart = function () {
             (y[dim.name].brush = d3
               .brushY()
               .extent([
-                [-10, 0],
-                [10, pcpHeight],
+                [-axisBarWidth/2, 0],
+                [axisBarWidth/2, pcpHeight],
               ])
               // .on("brush", brush)
               .on("end", brush))
@@ -690,25 +677,29 @@ var pcpChart = function () {
         const nextDim = dimensions[i + 1];
 
         if (!isNaN(yCoordinates[i]) && !isNaN(yCoordinates[i+1])) {
-          if (dim.type === 'categorical') {
-            ctx.beginPath();
-            ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
-            if (nextDim.type === 'categorical') {
-              ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
-            } else {
-              ctx.lineTo(x(nextDim.name), yCoordinates[i + 1]);
-            }
-            ctx.stroke();
-          } else {
-            ctx.beginPath();
-            ctx.moveTo(x(dim.name), yCoordinates[i]);
-            if (nextDim.type === 'categorical') {
-              ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
-            } else {
-              ctx.lineTo(x(nextDim.name), yCoordinates[i + 1]);
-            }
-            ctx.stroke();
-          }
+          ctx.beginPath();
+          ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
+          ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
+          ctx.stroke();
+          // if (dim.type === 'categorical') {
+          //   ctx.beginPath();
+          //   ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
+          //   if (nextDim.type === 'categorical') {
+          //     ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
+          //   } else {
+          //     ctx.lineTo(x(nextDim.name), yCoordinates[i + 1]);
+          //   }
+          //   ctx.stroke();
+          // } else {
+          //   ctx.beginPath();
+          //   ctx.moveTo(x(dim.name), yCoordinates[i]);
+          //   if (nextDim.type === 'categorical') {
+          //     ctx.lineTo(x(nextDim.name) - axisBarWidth / 2, yCoordinates[i + 1]);
+          //   } else {
+          //     ctx.lineTo(x(nextDim.name), yCoordinates[i + 1]);
+          //   }
+          //   ctx.stroke();
+          // }
         }
       }
     });
