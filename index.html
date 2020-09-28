@@ -8,273 +8,192 @@
   <meta author="Chad A. Steed">
   <meta description="CrossVis: A multivariate visual analytics tool for data exploration.">
 
-  <link rel="stylesheet" href="js/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./js/Semantic-UI/semantic.min.css">
+
+  <title>CrossVis - ORNL VISTA Lab</title>
 
   <style>
     @font-face {
-        font-family: "Rammetto One";
-        src: url("./fonts/Rammetto_One/RammettoOne-Regular.ttf");
-    }
-
-    main>.container {
-      padding: 100px 15px 0;
-    }
-
-    .navbar-brand {
-      padding-top: .3rem;
-      padding-bottom: .4rem;
-      font-size: 1.8rem;
-      /* color: silver; */
-      font-family: 'Rammetto One', cursive;
-      float: none;
+      font-family: "Rammetto One";
+      src: url("./fonts/Rammetto_One/RammettoOne-Regular.ttf");
     }
   </style>
-
-  <title>CrossVis Web - ORNL VISTA Lab</title>
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg shadow navbar-dark bg-dark">
-    <a class="navbar-brand" href="#" style="color: #DCDCDC;">
+  <input id="fileInput" type="file" style="display: none;">
+        
+  <div class="ui inverted fixed borderless menu">
+    <div class="ui medium header item" style="font-family: 'Rammetto One', cursive; font-size: 1.6rem;">
       CrossVis
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto">
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            View Sample Data
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#" id="loadCarsButton">'83 ASA Cars</a>
-            <a class="dropdown-item" href="#" id="loadAAPLButton">S&P 500 Sample (Apple)</a>
+    </div>
+    <div class="ui dropdown item">
+      Load Data
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item loadLocalFileItem">Load Local CSV File</a>
+        <div class="item">
+          <i class="dropdown icon"></i>
+          <div class="header">Load Sample Data</div>
+          <div class="menu">
+            <a class="item loadCarsDataItem">'83 ASA Cars Dataset</a>
+            <a class="item loadAAPLDataItem">S&amp;P500 Stock Data (AAPL)</a>
+            <a class="item loadTop500DataItem">Top500 SuperComputing List</a>
           </div>
         </div>
-        <div class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#settingsModal">Settings</a>
-        </div>
-        <div class="nav-item">
-          <a class="nav-link" href="#" id="redrawButton">Redraw Chart</a>
-        </div>
-        <div class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#helpModal">Help</a>
-        </div>
       </div>
-      <form class="form-inline my-2 my-lg-0">
-        <img src="./img/vista-logo.png" height="48" class="d-inline-block align-top" alt="VISTA">
+    </div>
+    <a class="ui item settingsItem">
+      Plot Settings
+    </a>
+    <a class="ui item redrawItem">
+      Redraw
+    </a>
+    <a class="ui item helpItem">
+      Help
+    </a>
+    <div class="right menu">
+      <div class="ui item">
+        <img class="ui image" src="./img/vista-logo.png" height="34px">
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 90px 15px 0px;">
+    <div class="ui segment">
+      <div id="pcpChart" style="position: relative;">
+        <img class="ui fluid rounded image" id="placeholder" src="./img/bridge.jpg"></img>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui divider"></div>
+    <center>
+      <h4>&copy; <a href="https://www.ornl.gov">Oak Ridge National Laboratory</a>
+          <script type="text/javascript">
+              document.write(new Date().getFullYear());
+          </script>
+      </h4>
+    </center>
+    <br/><br/><br/>
+  
+  <div class="ui tiny modal settingsModal">
+    <i class="close icon"></i>
+    <div class="header">
+      Plot Settings
+    </div>
+    <div class="content">
+      <form class="ui form plotSettingsForm">
+        <h4 class="ui dividing header">Display Settings</h4>
+        <div class="two fields">
+          <div class="inline field">
+            <div class="ui checked checkbox showAxisTicks">
+              <input type="checkbox" checked="">
+              <label>Show Axis Ticks</label>
+            </div>
+          </div>
+          <div class="inline field">
+            <div class="ui checked checkbox showAxisLabels">
+              <input type="checkbox" checked="">
+              <label>Show Axis Labels</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Chart Height</label>
+          <input type="range" class="ui fluid range" id="chartHeightRange" min="200" max="1000" value="350" style="width: 100%;">
+        </div>
+        <h4 class="ui dividing header">Polyline Settings</h4>
+        <div class="two fields">
+          <div class="inline field">
+            <div class="ui checked checkbox showSelectedLines">
+              <input type="checkbox" checked="">
+              <label>Show Selected Lines</label>
+            </div>
+          </div>
+          <div class="inline field">
+            <div class="ui checked checkbox showUnselectedLines">
+              <input type="checkbox" checked="">
+              <label>Show Unselected Lines</label>
+            </div>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Selected Line Opacity</label>
+            <input type="range" class="ui fluid range" id="selectedLineOpacityRange" min="5" max="100" value="20" style="width: 100%;">
+          </div>
+          <div class="field">
+            <label>Unselected Line Opacity</label>
+            <input type="range" class="ui fluid range" id="unselectedLineOpacityRange" min="5" max="100" value="10" style="width: 100%;">
+          </div>
+        </div>
       </form>
     </div>
-  </nav>
-
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="settingsModalLabel">Usage Instructions</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>This page shows an interactive parallel coordinate plot for exploring multivariate data. It uses a combination of SVG elements and HTML Canvas via the d3.js library to support larger files than SVG graphics can support alone.</p>
-          <p>Use the 'Choose CSV File' button to open a local CSV formatted text file. Columns are automatically parsed using d3.js auto typing. Date, numeric, and Boolean data types are shown as axes in the parallel coordinate plot. Columns of other data types are ignored.</p>
-          <p>Sample files can be shown from the 'Load Sample Data' button.</p>
-          <p>Lines in the plot can be selected by dragging ranges on any of the axes.</p>
-          <p>The 'Redraw' button can be used to regenerate the plot. If the window is resized, regenerating the plot will adjust the chart widths to fill the available space.</p>
-          <p>The 'Settings' button can be used to control several visual parameters of the charts.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-        </div>
+    <div class="actions">
+      <div class="ui positive left labeled icon button">
+        <i class="close icon"></i>
+        Close
       </div>
     </div>
   </div>
-  <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="settingsModalLabel">View Settings</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="showAxisTicksCheck" checked>
-                  <label class="form-check-label" for="showAxisTicksCheck">
-                    Show Axis Ticks
-                  </label>
-                </div>
-              </div>
-              <div class="form-group col-md-6">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="showAxisLabelsCheck" checked>
-                  <label class="form-check-label" for="showAxisLabelsCheck">
-                    Show Axis Labels
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="showSelectedCheck" checked>
-                        <label class="form-check-label" for="showSelectedCheck">
-                            Show Selected Lines
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group col-md-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="showUnselectedCheck" checked>
-                        <label class="form-check-label" for="showUnselectedCheck">
-                            Show Unselected Lines
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="heightRange">Selected Line Opacity:</label>
-                    <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="selectedLineOpacityRange">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="heightRange">Unselected Line Opacity:</label>
-                    <input type="range" class="custom-range" step="0.01" min="0" max="1" value=".15" id="unselectedLineOpacityRange">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="heightRange">Chart Height:</label>
-                    <input type="range" class="custom-range" min="200" max="800" value="350" id="heightRange">
-                </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Begin page content -->
-  <main role="main" class="flex-shrink-0">
-    <div class="container">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input mr-sm-2" id="fileInput">
-        <label id="fileLabel" class="custom-file-label my-2 my-sm-0" for="fileInput">Open CSV File</label>
-      </div>
-    </div>
-    <br/>
-
-    <div class="container-fluid pt-3">
-      <div id="chart" style="position: relative;" class="mx-4"></div>
-      <hr>
-      <center>
-          <p>&copy; <a href="https://vis.ornl.gov">Oak Ridge National Laboratory</a>
-              <script type="text/javascript">
-                  document.write(new Date().getFullYear());
-              </script>
-          </p>
-      </center>
-    </div>
-  </main>
-
+  
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+  </script>
+  <script src="./js/Semantic-UI/semantic.min.js"></script>
   <script src="js/d3.min.js"></script>
   <script src="js/d3-array.min.js"></script>
   <script src="js/pcpChart.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="js/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 
   <script>
     const chartMargin = {top: 20, right: 30, bottom: 20, left: 30};
     var reader;
     var chart;
     var chartData;
-    const redrawButton = document.getElementById('redrawButton');
-    const fileInput = document.getElementById('fileInput');
-    const heightRange = document.getElementById('heightRange');
-    const showUnselectedCheck = document.getElementById('showUnselectedCheck');
-    const showSelectedCheck = document.getElementById('showSelectedCheck');
-    const showAxisTicksCheck = document.getElementById('showAxisTicksCheck');
-    const showAxisLabelsCheck = document.getElementById('showAxisLabelsCheck');
+
     const selectedLineOpacityRange = document.getElementById('selectedLineOpacityRange');
+    const getSelectedLineOpacity = () => {
+      return selectedLineOpacityRange.value / 100.;
+    };
+
     const unselectedLineOpacityRange = document.getElementById('unselectedLineOpacityRange');
-    const loadCarsButton = document.getElementById('loadCarsButton');
-    const loadAAPLButton = document.getElementById('loadAAPLButton');
-    const loadSampleDataDropdown = document.getElementById('sampleDataDropdown');
+    const getUnselectedLineOpacity = () => {
+      return unselectedLineOpacityRange.value / 100.;
+    };
 
-    loadCarsButton.addEventListener('click', () => loadCarsData());
-    loadAAPLButton.addEventListener('click', () => loadAAPLData());
+    const getChartHeight = () => {
+      return document.getElementById('chartHeightRange').value;
+    };
 
-    redrawButton.addEventListener('click', () => createChart());
+    const getShowAxisTicks = () => {
+      return $('.showAxisTicks').checkbox('is checked');
+    };
 
-    showAxisLabelsCheck.addEventListener('change', () => {
-      if (chart) {
-        chart.showAxisTickLabels(showAxisLabelsCheck.checked);
-      }
-    });
-    showAxisTicksCheck.addEventListener('change', () => {
-      if (chart) {
-        chart.showAxisTicks(showAxisTicksCheck.checked);
-      }
-    });
-    selectedLineOpacityRange.addEventListener('change', () => {
-      if (chart) {
-        // console.log(selectedLineOpacityRange.value);
-        chart.selectedLineOpacity(selectedLineOpacityRange.value);
-      }
-    });
+    const getShowAxisLabels = () => {
+      return $('.showAxisLabels').checkbox('is checked');
+    };
 
-    unselectedLineOpacityRange.addEventListener('change', () => {
-      if (chart) {
-        chart.unselectedLineOpacity(unselectedLineOpacityRange.value);
-      }
-    });    
+    const getShowSelectedLines = () => {
+      return $('#showSelectedLinesCheck').checkbox('is checked');
+    };
 
-    showUnselectedCheck.addEventListener('change', () => {
-      if (chart) {
-        chart.showUnselectedLines(showUnselectedCheck.checked);
-      }
-    });
+    const getShowUnselectedLines = () => {
+      return $('#showUnselectedLinesCheck').checkbox('is checked');
+    };
 
-    showSelectedCheck.addEventListener('change', () => {
-      if (chart) {
-        chart.showSelectedLines(showSelectedCheck.checked);
-      }
-    });
-
-    heightRange.addEventListener('change', () => {
-      // console.log('height changed');
-      // TODO: add height change capablity to pcpChart so that recreating change isn't required
-      createChart();
-    });
-
-    fileInput.addEventListener('change', () => {
-      const file = fileInput.files[0];
-      reader = new FileReader();
-      reader.addEventListener('load', parseFile, false);
+    const loadFile = (file) => {
       if (file) {
+        reader = new FileReader();
+        reader.addEventListener('load', parseFile, false);
         reader.readAsText(file);
-        $('#fileLabel').html(file.name);
       }
-    });
+    }
 
     const parseFile = () => {
       data = d3.csvParse(reader.result, d3.autoType);
-
       console.log(data);
 
       let dimensions = data.columns.map(c => {
@@ -293,11 +212,12 @@
       });
 
       chartData = {dimensions: dimensions, tuples: tuples};
+
       createChart();
     };
 
     function loadCarsData() {
-      d3.csv("data/cars-cat.csv", d3.autoType)
+      d3.csv("data/cars-cat.csv")
         .then(data => {
           chartData = {
             dimensions: [
@@ -308,22 +228,23 @@
               {name: 'HP', type: 'numerical'},
               {name: 'Weight', type: 'numerical'},
               {name: 'Acceleration', type: 'numerical'},
-              {name: 'Year', type: 'numerical'}
+              {name: 'Year', type: 'temporal'}
             ],
             tuples: data.map(d => {
               return {
                 // MPG: Math.random() > 0.5 ? d.MPG : NaN,
-                MPG: d.MPG,
-                Cylinders: d.Cylinders,
-                Displacement: d.Displacement,
-                HP: d.HP,
-                Weight: d.Weight,
-                Acceleration: d.Acceleration,
-                Year: d.Year,
+                MPG: +d.MPG,
+                Cylinders: +d.Cylinders,
+                Displacement: +d.Displacement,
+                HP: +d.HP,
+                Weight: +d.Weight,
+                Acceleration: +d.Acceleration,
+                Year: new Date(1900 + (+d.Year), 0),
                 Origin: d.Origin
               }
             })
           };
+          d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => {
@@ -331,9 +252,49 @@
         });
     };
 
+    function loadTop500Data() {
+      d3.csv("./data/top500.csv")
+        .then(data => {
+          chartData = {
+            dimensions: [
+              {name: 'Date', type: 'temporal'},
+              {name: 'Rank', type: 'numerical'},
+              {name: 'Computer', type: 'categorical'},
+              {name: 'Site', type: 'categorical'},
+              {name: 'RMax', type: 'numerical'},
+              {name: 'RPeak', type: 'numerical'},
+              {name: 'Segment', type: 'categorical'},
+              {name: 'Country', type: 'categorical'},
+              {name: 'Power', type: 'numerical'},
+              {name: 'Interconnect', type: 'categorical'},
+              {name: 'OperatingSystem', type: 'categorical'},
+              {name: 'SystemFamily', type: 'categorical'}
+            ],
+            tuples: data.map(d => {
+              return {
+                Date: new Date(d.date),
+                Rank: +d.rank,
+                Computer: d.computer,
+                Site: d.site,
+                RMax: +d.rmax,
+                RPeak: +d.rpeak,
+                Segment: d.segment,
+                Country: d.country,
+                Power: +d.power,
+                Interconnect: d.interconnect_family,
+                OperatingSystem: d.operating_system,
+                SystemFamily: d.system_family
+              };
+            })
+          };
+          d3.select('#placeholder').remove();
+          createChart();
+        })
+        .catch(error => { console.log(error); });
+    }
+
     function loadAAPLData() {
-      // console.log('loading AAPL data');
-      d3.csv("data/AAPL_data.csv", d3.autoType)
+      d3.csv("data/AAPL_data.csv")
         .then(data => {
           chartData = {
             dimensions: [
@@ -346,15 +307,16 @@
             ],
             tuples: data.map(d => {
               return {
-                Date: d.date,
-                Open: d.open,
-                High: d.high,
-                Low: d.low,
-                Close: d.close,
-                Volume: d.volume
+                Date: new Date(d.date),
+                Open: +d.open,
+                High: +d.high,
+                Low: +d.low,
+                Close: +d.close,
+                Volume: +d.volume
               }
             })
           };
+          d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => { console.log(error); });
@@ -363,30 +325,148 @@
     function createChart() {
       d3.select('#chart').selectAll('*').remove();
       if (chartData) {
-        const chartWidth = document.getElementById('chart').clientWidth;
-        const chartHeight = heightRange.value;
+        const chartWidth = document.getElementById('pcpChart').clientWidth;
+        const chartHeight = getChartHeight();
+        console.log(`chartHeight is ${chartHeight}`);
+     
+        document.getElementById('pcpChart').style.height = `${chartHeight}px`;
 
-        document.getElementById('chart').style.height = `${chartHeight}px`;
-
-        let opacity = chartData.tuples.length > 2000 ? 0.1 : chartData.tuples.length < 500 ? 0.7 : 1 - chartData.tuples.length / 2500;
+        // let opacity = chartData.tuples.length > 2000 ? 0.1 : chartData.tuples.length < 500 ? 0.7 : 1 - chartData.tuples.length / 2500;
         // console.log(opacity);
-        selectedLineOpacityRange.value = opacity;
-        unselectedLineOpacityRange.value = opacity;
+        // selectedLineOpacityRange.value = opacity;
+        // unselectedLineOpacityRange.value = opacity;
 
+        console.log('showAxisTicks = ' + getShowAxisTicks());
+        console.log(getShowAxisLabels());
         chart = pcpChart()
           .width(chartWidth)
           .height(chartHeight)
-          .showUnselectedLines(showUnselectedCheck.checked)
-          .showSelectedLines(showSelectedCheck.checked)
-          .selectedLineOpacity(opacity)
-          .showAxisTicks(showAxisTicksCheck.checked)
-          .showAxisTickLabels(showAxisLabelsCheck.checked)
-          .unselectedLineOpacity(unselectedLineOpacityRange.value)
+          .showUnselectedLines(getShowUnselectedLines())
+          .showSelectedLines(getShowSelectedLines())
+          .unselectedLineOpacity(getUnselectedLineOpacity())
+          .selectedLineOpacity(getUnselectedLineOpacity())
+          .showAxisTicks(getShowAxisTicks())
+          .showAxisTickLabels(getShowAxisLabels())
           .margin(chartMargin);
-        d3.select('#chart').call(chart, chartData);
+        d3.select('#pcpChart').call(chart, chartData);
       }
     }
 
+    document.getElementById('selectedLineOpacityRange').addEventListener('change', () => {
+      console.log(`selected line opacity range is now ${getSelectedLineOpacity()}`);
+      chart ? chart.selectedLineOpacity(getSelectedLineOpacity()) : null;
+    });
+      
+    document.getElementById('unselectedLineOpacityRange').addEventListener('change', () => {
+      console.log(`unselected line opacity range is now ${getUnselectedLineOpacity()}`);
+      chart ? chart.unselectedLineOpacity(getUnselectedLineOpacity()) : null;
+    });
+
+    document.getElementById('chartHeightRange').addEventListener('change', () => {
+      // TODO: Replace with call to chart to recreate chart elements without recreating the whole chart and losing selections
+      chart ? createChart() : null;
+    });
+
+    $('.ui.checkbox.showSelectedLines').checkbox({
+      onChecked: function() {
+        console.log('checked');
+        chart ? chart.showSelectedLines(true) : null;
+      },
+      onUnchecked: function() {
+        console.log('unchecked');
+        chart ? chart.showSelectedLines(false) : null;
+      }
+    });
+
+    $('.ui.checkbox.showUnselectedLines').checkbox({
+      onChecked: function() {
+        console.log('checked');
+        chart ? chart.showUnselectedLines(true) : null;
+      },
+      onUnchecked: function() {
+        console.log('unchecked');
+        chart ? chart.showUnselectedLines(false) : null;
+      }
+    });
+
+    $('.ui.checkbox.showAxisTicks').checkbox({
+      onChecked: function() {
+        console.log('checked');
+        chart ? chart.showAxisTicks(true) : null;
+      },
+      onUnchecked: function() {
+        console.log('unchecked');
+        chart ? chart.showAxisTicks(false) : null;
+      }
+    });
+
+    $('.ui.checkbox.showAxisLabels').checkbox({
+      onChecked: function() {
+        console.log('checked');
+        chart ? chart.showAxisTickLabels(true) : null;
+      },
+      onUnchecked: function() {
+        console.log('unchecked');
+        chart ? chart.showAxisTickLabels(false) : null;
+      }
+    });
+
+    $('.ui.modal.settingsModal')
+      .modal('attach events', '.settingsItem', 'show')
+    ;
+
+    $('.ui.dropdown')
+      .dropdown()
+    ;
+
+    $('.loadLocalFileItem')
+      .on('click', function(e) {
+        console.log('clicked loadLocalFileItem');
+        $('#fileInput').click();
+        // $(this).parent().find('input:file').click();
+      });
+
+    $('#fileInput')
+      .on('change', function(e) {
+        console.log(e.target.files[0]);
+        if (e.target.files) {
+          d3.select('#placeholder').remove();
+          loadFile(e.target.files[0]);
+        }
+      });
+    
+    $('.loadCarsDataItem')
+      .on('click', () => {
+        console.log('loading cars data');
+        loadCarsData();
+      });
+    $('.loadTop500DataItem')
+      .on('click', () => {
+        console.log('loading top500 data');
+        loadTop500Data();
+      });
+    $('.loadAAPLDataItem')
+      .on('click', () => {
+        console.log('loading stock data');
+        loadAAPLData();
+      });
+
+    // $("input:text").click(function() {
+    //   $(this).parent().find('input:file').click();
+    // });
+
+    // $('input:file', '.ui.action.input')
+    //   .on('change', function(e) {
+    //     if (e.target.files) {
+    //       loadFile(e.target.files[0]);
+    //       $('input:text', $(e.target).parent()).val(e.target.files[0].name);
+    //     } else {
+    //       $('input:text', $(e.target).parent()).val('');
+    //     }
+    //   });
+
+    $('.redrawItem')
+      .on('click', () => createChart());
   </script>
 </body>
 
