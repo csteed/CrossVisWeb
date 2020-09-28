@@ -46,6 +46,8 @@ var pcpChart = function () {
 
     pcpHeight = height - selectionIndicatorHeight - correlationRectPadding - correlationRectSize;
 
+    selection.selectAll('*').remove();
+
     const backgroundCanvas = selection
       .append("canvas")
       .attr("id", "background")
