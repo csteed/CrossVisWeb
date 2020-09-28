@@ -61,8 +61,11 @@
 
   <div style="padding: 90px 15px 0px;">
     <div class="ui segment">
+      <!-- <img class="ui fluid rounded image" id="placeholder" src="./img/bridge.jpg"></img> -->
+      <a class="ui fluid rounded image" id="placeholderImage">
+        <img src="./img/bridge.jpg"></img>
+      </a>
       <div id="pcpChart" style="position: relative;">
-        <img class="ui fluid rounded image" id="placeholder" src="./img/bridge.jpg"></img>
       </div>
     </div>
   </div>
@@ -244,7 +247,7 @@
               }
             })
           };
-          d3.select('#placeholder').remove();
+          // d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => {
@@ -287,7 +290,7 @@
               };
             })
           };
-          d3.select('#placeholder').remove();
+          // d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => { console.log(error); });
@@ -316,15 +319,15 @@
               }
             })
           };
-          d3.select('#placeholder').remove();
+          // d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => { console.log(error); });
     };
 
     function createChart() {
-      d3.select('#chart').selectAll('*').remove();
       if (chartData) {
+        d3.select('#placeholderImage').remove();
         const chartWidth = document.getElementById('pcpChart').clientWidth;
         const chartHeight = getChartHeight();
         console.log(`chartHeight is ${chartHeight}`);
@@ -426,11 +429,17 @@
         // $(this).parent().find('input:file').click();
       });
 
+    $('#placeholderImage')
+      .on('click', function(e) {
+        console.log('clicked on placeholder image');
+        $('#fileInput').click();
+      });
+
     $('#fileInput')
       .on('change', function(e) {
         console.log(e.target.files[0]);
         if (e.target.files) {
-          d3.select('#placeholder').remove();
+          // d3.select('#placeholderImage').remove();
           loadFile(e.target.files[0]);
         }
       });
