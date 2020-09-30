@@ -88,6 +88,14 @@
     <div class="content">
       <form class="ui form plotSettingsForm">
         <h4 class="ui dividing header">Display Settings</h4>
+        <div class="field">
+          <div class="inline field">
+            <div class="ui checkbox showHistograms">
+              <input type="checkbox" checked="">
+              <label>Show Histograms</label>
+            </div>
+          </div>
+        </div>
         <div class="two fields">
           <div class="inline field">
             <div class="ui checked checkbox showAxisTicks">
@@ -175,6 +183,10 @@
       return $('.showAxisTicks').checkbox('is checked');
     };
 
+    const getShowHistograms = () => {
+      return $('.showHistograms').checkbox('is checked');
+    };
+
     const getShowAxisLabels = () => {
       return $('.showAxisLabels').checkbox('is checked');
     };
@@ -247,7 +259,6 @@
               }
             })
           };
-          // d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => {
@@ -290,7 +301,6 @@
               };
             })
           };
-          // d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => { console.log(error); });
@@ -319,7 +329,6 @@
               }
             })
           };
-          // d3.select('#placeholder').remove();
           createChart();
         })
         .catch(error => { console.log(error); });
@@ -350,6 +359,7 @@
           .selectedLineOpacity(getUnselectedLineOpacity())
           .showAxisTicks(getShowAxisTicks())
           .showAxisTickLabels(getShowAxisLabels())
+          .setShowHistograms(getShowHistograms())
           .margin(chartMargin);
         d3.select('#pcpChart').call(chart, chartData);
       }
@@ -400,6 +410,17 @@
       onUnchecked: function() {
         console.log('unchecked');
         chart ? chart.showAxisTicks(false) : null;
+      }
+    });
+
+    $('.ui.checkbox.showHistograms').checkbox({
+      onChecked: function() {
+        console.log('checked');
+        chart ? chart.setShowHistograms(true) : null;
+      },
+      onUnchecked: function() {
+        console.log('unchecked');
+        chart ? chart.setShowHistograms(false) : null;
       }
     });
 

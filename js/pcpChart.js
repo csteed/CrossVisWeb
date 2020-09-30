@@ -16,6 +16,7 @@ var pcpChart = function () {
   let showUnselected = true;
   let showAxisTicks = true;
   let showAxisTickLabels = true;
+  let showHistograms = false;
 
   let tuples;
   let tupleLines;
@@ -192,9 +193,9 @@ var pcpChart = function () {
         return `translate(${x(d.name)})`;
       });
     
-    // drawHistogramBins();
     calculateDimensionCorrelations();
     drawDimensions();
+    drawHistogramBins();
     computeTupleLines();
     selectTuples();
     drawLines();
@@ -242,31 +243,38 @@ var pcpChart = function () {
   function drawHistogramBins() {
     svg.selectAll(".dimension")
       .append("g")
-      .attr("class", "binRect")
+      .attr("class", "histogramBin")
       .each(function (dim) {
-        const histogramScale = d3
-          .scaleLinear()
-          .range([0, dimensionScale.bandwidth() / 2])
-          .domain([0, d3.max(dim.bins, (d) => d.length)]);
-        d3.select(this)
-          .append("g")
-          .attr("fill", "lightgray")
-          .attr("fill-opacity", 0.3)
-          .attr("stroke", "gray")
-          .selectAll("rect")
-          .data(dim.bins)
-          .join("rect")
-          .attr("x", (d) => valueScale[dim.name](d.x0) + 1)
-          .attr("width", (d) =>
-            Math.max(
-              0,
-              valueScale[dim.name](d.x1) - valueScale[dim.name](d.x0) - 1
-            )
-          )
-          .attr("y", (d) => -histogramScale(d.length))
-          .attr("height", (d) => histogramScale(d.length) - histogramScale(0))
-          .append("title")
-          .text((d) => `[${d.x0}, ${d.x1}]\nCount: ${d.length}`);
+        if (dim.type !== 'categorical') {
+          const histogramScale = d3
+            .scaleLinear()
+            .range([0, x.step() * x.padding()])
+            .domain([0, d3.max(dim.bins, (d) => d.length)]);
+          d3.select(this)
+            .append("g")
+            .attr('display', showHistograms ? null : 'none')
+            .attr("fill", "lightgray")
+            .attr("fill-opacity", 0.3)
+            .attr("stroke", "gray")
+            .selectAll("rect")
+            .data(dim.bins)
+            .join("rect")
+              .attr("x", axisBarWidth / 2)
+              .attr("width", d => histogramScale(d.length))
+              .attr("y", d => y[dim.name](d.x1))
+              .attr("height", d => y[dim.name](d.x0) - y[dim.name](d.x1))
+              // .attr("x", (d) => y[dim.name](d.x0) + 1)
+              // .attr("width", (d) =>
+              //   Math.max(
+              //     0,
+              //     y[dim.name](d.x1) - y[dim.name](d.x0) - 1
+              //   )
+              // )
+              // .attr("y", (d) => -histogramScale(d.length))
+              // .attr("height", (d) => histogramScale(d.length) - histogramScale(0))
+              .append("title")
+                .text((d) => `[${d.x0}, ${d.x1}]\nCount: ${d.length}`);
+        }
       });
   }
 
@@ -1095,6 +1103,19 @@ var pcpChart = function () {
     titleText = value;
     return chart;
   };
+
+  
+  chart.setShowHistograms = function (value) {
+    if (!arguments.length) {
+      return showHistograms;
+    }
+    showHistograms = value;
+    if (svg) {
+      svg.selectAll(".histogramBin")
+        .attr("display", showHistograms ? null : "none");
+    }
+    return chart;
+  }
 
   chart.showAxisTicks = function (value) {
     if (!arguments.length) {
