@@ -29,6 +29,7 @@ var pcpChart = function () {
   let dimensions;
   let x;
   let y = {};
+  let dimensionHeaderSize = 40;
   let canvasMargin = 6;
   let axisBarWidth = 24;
   let selectionIndicatorHeight = 40;
@@ -45,7 +46,7 @@ var pcpChart = function () {
     dimensions = data.dimensions.slice();
     // console.log(data);
 
-    pcpHeight = height - selectionIndicatorHeight - correlationRectPadding - correlationRectSize;
+    pcpHeight = height - selectionIndicatorHeight - correlationRectPadding - correlationRectSize - dimensionHeaderSize;
 
     selection.selectAll('*').remove();
 
@@ -55,7 +56,7 @@ var pcpChart = function () {
       .attr("width", width + canvasMargin * 2)
       .attr("height", pcpHeight + canvasMargin * 2)
       .style("position", "absolute")
-      .style("top", `${margin.top - canvasMargin}px`)
+      .style("top", `${margin.top + dimensionHeaderSize - canvasMargin}px`)
       .style("left", `${margin.left - canvasMargin}px`);
     background = backgroundCanvas.node().getContext("2d");
     background.strokeStyle = unselectedLineColor;
@@ -70,7 +71,7 @@ var pcpChart = function () {
       .attr("width", width + canvasMargin * 2)
       .attr("height", pcpHeight + canvasMargin * 2)
       .style("position", "absolute")
-      .style("top", `${margin.top - canvasMargin}px`)
+      .style("top", `${margin.top + dimensionHeaderSize - canvasMargin}px`)
       .style("left", `${margin.left - canvasMargin}px`);
     foreground = foregroundCanvas.node().getContext("2d");
     foreground.strokeStyle = selectedLineColor;
@@ -85,7 +86,7 @@ var pcpChart = function () {
       .attr("height", height + margin.top + margin.bottom)
       .style("position", "absolute")
       .append("svg:g")
-      .attr("transform", `translate(${margin.left},${margin.top})`);
+      .attr("transform", `translate(${margin.left},${margin.top + dimensionHeaderSize})`);
 
     svg.append("text")
       .attr("x", width / 2)
@@ -263,15 +264,6 @@ var pcpChart = function () {
               .attr("width", d => histogramScale(d.length))
               .attr("y", d => y[dim.name](d.x1))
               .attr("height", d => y[dim.name](d.x0) - y[dim.name](d.x1))
-              // .attr("x", (d) => y[dim.name](d.x0) + 1)
-              // .attr("width", (d) =>
-              //   Math.max(
-              //     0,
-              //     y[dim.name](d.x1) - y[dim.name](d.x0) - 1
-              //   )
-              // )
-              // .attr("y", (d) => -histogramScale(d.length))
-              // .attr("height", (d) => histogramScale(d.length) - histogramScale(0))
               .append("title")
                 .text((d) => `[${d.x0}, ${d.x1}]\nCount: ${d.length}`);
         }
@@ -418,48 +410,101 @@ var pcpChart = function () {
           //     .attr("pointer-events", "none")
           //     .text(c => c.name);
         }
-      })
-      .append("text")
-        .attr("class", "dimensionLabel")
-        .attr("id", d => `${d.name}`)
-        .style("text-anchor", "middle")
-        .attr("fill", "#646464")
-        .style("font-weight", "bold")
-        .style("font-family", "sans-serif")
-        .style("font-size", 11)
-        .attr("y", -9)
-        .text((d) => d.name)
-        .call(drag)
-        .on('click', function(d) {
-          if (d3.event.defaultPrevented) return;
+      });
+    //   .append("text")
+    //     .attr("class", "dimensionLabel")
+    //     .attr("id", d => `${d.name}`)
+    //     .style("text-anchor", "middle")
+    //     .attr("fill", "#646464")
+    //     .style("font-weight", "bold")
+    //     .style("font-family", "sans-serif")
+    //     .style("font-size", 11)
+    //     .attr("y", -9)
+    //     .text((d) => d.name)
+    //     .call(drag)
+    //     .on('click', function(d) {
+    //       if (d3.event.defaultPrevented) return;
 
-          if (selectedDimension === d) {
-            d3.select(this)
-              .style("fill", '#646464');
-              // .style('font-size', 10);
-            selectedDimension = null;
-          } else {
-            if (selectedDimension != null) {
-              d3.select(`#${selectedDimension.name}`)
-                .style('fill', '#646464');
-                // .style('font-size', 10);
-            }
-            selectedDimension = d;
-            d3.select(this)
-              .style('fill', '#000')
-              // .style('font-size', 12)
-              .raise();
-          }
-          updateCorrelationGraphics();
-        })
-        .on("mouseover", function (d) {
-          d3.select(this).style("cursor", "pointer");
-        })
-        .on("mouseout", function (d) {
-          d3.select(this).style("cursor", "default");
-        });
+    //       if (selectedDimension === d) {
+    //         d3.select(this)
+    //           .style("fill", '#646464');
+    //           // .style('font-size', 10);
+    //         selectedDimension = null;
+    //       } else {
+    //         if (selectedDimension != null) {
+    //           d3.select(`#${selectedDimension.name}`)
+    //             .style('fill', '#646464');
+    //             // .style('font-size', 10);
+    //         }
+    //         selectedDimension = d;
+    //         d3.select(this)
+    //           .style('fill', '#000')
+    //           // .style('font-size', 12)
+    //           .raise();
+    //       }
+    //       updateCorrelationGraphics();
+    //     })
+    //     .on("mouseover", function (d) {
+    //       d3.select(this).style("cursor", "pointer");
+    //     })
+    //     .on("mouseout", function (d) {
+    //       d3.select(this).style("cursor", "default");
+    //     });
 
-    // Add an axis and title.
+    // Add dimension label and close button
+    g.append("g")
+      .each(function(dim) {
+        d3.select(this)
+          .append("text")
+            .attr("class", "dimensionLabel")
+            .attr("id", d => `${d.name}`)
+            .style("text-anchor", "middle")
+            .attr("fill", "#646464")
+            .style("font-weight", "bold")
+            .style("font-family", "sans-serif")
+            .style("font-size", 11)
+            .attr("y", -9)
+            .text((d) => d.name)
+            .call(drag)
+            .on('click', function(d) {
+              if (d3.event.defaultPrevented) return;
+    
+              if (selectedDimension === d) {
+                d3.select(this)
+                  .style("fill", '#646464');
+                  // .style('font-size', 10);
+                selectedDimension = null;
+              } else {
+                if (selectedDimension != null) {
+                  d3.select(`#${selectedDimension.name}`)
+                    .style('fill', '#646464');
+                    // .style('font-size', 10);
+                }
+                selectedDimension = d;
+                d3.select(this)
+                  .style('fill', '#000')
+                  // .style('font-size', 12)
+                  .raise();
+              }
+              updateCorrelationGraphics();
+            })
+            .on("mouseover", function (d) {
+              d3.select(this).style("cursor", "pointer");
+            })
+            .on("mouseout", function (d) {
+              d3.select(this).style("cursor", "default");
+            });
+        d3.select(this)
+          .append("rect")
+            .attr("x", -4)
+            .attr("y", -30)
+            .attr("width", 8)
+            .attr("height", 8)
+            .attr("fill", "gray")
+            .attr("stroke", "#000");
+      });
+
+    // Add an axis.
     const axis = d3.axisLeft();
     g.append("g")
       .attr("class", "axis")
@@ -503,7 +548,6 @@ var pcpChart = function () {
               .attr("pointer-events", "none")
               .text(c => c.name);
         }
-
       });
     /*
     g.append("g")
