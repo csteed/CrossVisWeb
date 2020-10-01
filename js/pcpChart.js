@@ -44,7 +44,6 @@ var pcpChart = function () {
   function chart(selection, data) {
     tuples = data.tuples.slice();
     dimensions = data.dimensions.slice();
-    // console.log(data);
 
     pcpHeight = height - selectionIndicatorHeight - correlationRectPadding - correlationRectSize - dimensionHeaderSize;
 
@@ -245,6 +244,10 @@ var pcpChart = function () {
     svg.selectAll(".dimension")
       .append("g")
       .attr("class", "histogramBin")
+      .attr('display', showHistograms ? null : 'none')
+      .attr("fill", "lightgray")
+      .attr("fill-opacity", 0.5)
+      .attr("stroke", "gray")
       .each(function (dim) {
         if (dim.type !== 'categorical') {
           const histogramScale = d3
@@ -252,11 +255,10 @@ var pcpChart = function () {
             .range([0, x.step() * x.padding()])
             .domain([0, d3.max(dim.bins, (d) => d.length)]);
           d3.select(this)
-            .append("g")
-            .attr('display', showHistograms ? null : 'none')
-            .attr("fill", "lightgray")
-            .attr("fill-opacity", 0.3)
-            .attr("stroke", "gray")
+            // .append("g")
+            // .attr("fill", "lightgray")
+            // .attr("fill-opacity", 0.3)
+            // .attr("stroke", "gray")
             .selectAll("rect")
             .data(dim.bins)
             .join("rect")
@@ -494,14 +496,57 @@ var pcpChart = function () {
             .on("mouseout", function (d) {
               d3.select(this).style("cursor", "default");
             });
+
         d3.select(this)
           .append("rect")
-            .attr("x", -4)
+            .attr("x", -5)
             .attr("y", -30)
-            .attr("width", 8)
-            .attr("height", 8)
-            .attr("fill", "gray")
-            .attr("stroke", "#000");
+            .attr('rx', 2)
+            .attr('ry', 2)
+            .attr("width", 10)
+            .attr("height", 10)
+            .attr("fill", "ghostwhite")
+            .attr("stroke", "none")
+            .on('click', function(d) {
+              d3.select(`#dim_${dim.id}`).remove();
+              dimensions.splice(dimensions.findIndex(dd => dd.id === d.id), 1);
+              const dimensionNames = dimensions.map((d) => d.name);
+              x.domain(dimensionNames);
+              svg.selectAll(".dimension").each(function (dim) {
+                d3.select(this).attr("transform", function (d) {
+                  return `translate(${x(d.name)})`;
+                });
+              });
+              calculateDimensionCorrelations();
+              computeTupleLines();
+              brush();
+            })
+            .on('mouseover', function(d) {
+              d3.select(this).style('cursor', 'pointer');
+            })
+            .on('mouseout', function(d) {
+              d3.select(this).style('cursor', 'default');
+            });
+
+        d3.select(this)
+          .append("line")
+            .attr("x1", -4)
+            .attr("y1", -29)
+            .attr("x2", 4)
+            .attr("y2", -21)
+            .attr("stroke", "#646464")
+            .attr("stroke-width", 2)
+            .attr("pointer-events", "none");
+            
+        d3.select(this)
+          .append("line")
+            .attr("x1", -4)
+            .attr("y1", -21)
+            .attr("x2", 4)
+            .attr("y2", -29)
+            .attr("stroke", "#646464")
+            .attr("stroke-width", 2)
+            .attr("pointer-events", "none");
       });
 
     // Add an axis.
@@ -1155,8 +1200,9 @@ var pcpChart = function () {
     }
     showHistograms = value;
     if (svg) {
+      console.log(svg.selectAll("g.histogramBin"));
       svg.selectAll(".histogramBin")
-        .attr("display", showHistograms ? null : "none");
+        .attr('display', showHistograms ? null : 'none');
     }
     return chart;
   }
