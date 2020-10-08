@@ -495,7 +495,9 @@ var pcpChart = function () {
             })
             .on("mouseout", function (d) {
               d3.select(this).style("cursor", "default");
-            });
+            })
+            .append("title")
+              .text(d => `${d.name} column\n(click to select or drag to reposition)`);
 
         d3.select(this)
           .append("rect")
@@ -526,7 +528,9 @@ var pcpChart = function () {
             })
             .on('mouseout', function(d) {
               d3.select(this).style('cursor', 'default');
-            });
+            })
+            .append("title")
+              .text(d => `Click to hide ${d.name} column`);
 
         d3.select(this)
           .append("line")
