@@ -127,32 +127,39 @@ var pcpChart = function () {
         dim.categories.sort((a,b) => d3.descending(a.values.length, b.values.length));
         dim.selectedCategories = new Set();
       } else {
-        let values = tuples.map(d => d[dim.name])
-          .filter(d => d !== null && !isNaN(d))
-          .sort(d3.ascending);
-        dim.count = values.length;
+        let values = tuples.map(d => d[dim.name]);
+          // .filter(d => d !== null && !isNaN(d))
+          // .sort(d3.ascending);
         dim.bins = d3.bin().value((d) => d[dim.name])(tuples);
+
         if (dim.type === "numerical") {
-          dim.stats = {
-            mean: d3.mean(values),
-            median: d3.median(values),
-            count: d3.count(values),
-            extent: d3.extent(values),
-            stdev: d3.deviation(values),
-            q1: d3.quantileSorted(values, 0.25),
-            q3: d3.quantileSorted(values, 0.75)
-          }
-        }
+          dim.stats = getSummaryStatistics(values)
+          // dim.stats = {
+          //   mean: d3.mean(values),
+          //   median: d3.median(values),
+          //   count: d3.count(values),
+          //   extent: d3.extent(values),
+          //   stdev: d3.deviation(values),
+          //   q1: d3.quantileSorted(values, 0.25),
+          //   q3: d3.quantileSorted(values, 0.75)
+          // };
+          dim.selected = null;
+          // dim.selected = {
+          //   bins: null,
+          //   stats: {
+          //     mean: NaN,
+          //     median: NaN,
+          //     count: 0,
+          //     extent: NaN,
+          //     stdev: NaN,
+          //     q1: NaN,
+          //     q3: NaN
+          //   }
+          // };
+        };
       }
     });
     x.domain(dimensionNames);
-
-    // svg.append("rect")
-    //     .attr("y", pcpHeight)
-    //     .attr("height", selectionIndicatorHeight)
-    //     .attr("width", width)
-    //     .style("stroke", "#000")
-    //     .style("fill", "none");
 
     svg.append("text")
       .attr("class", "selection_indicator_label")
@@ -211,10 +218,9 @@ var pcpChart = function () {
       let srcIdx = dimensions.findIndex(
         (d) => d.name === draggingDimensionName
       );
-      let dstIdx =
-        d3.event.x > 0
-          ? Math.floor(d3.event.x / x.step())
-          : Math.ceil(d3.event.x / x.step());
+      let dstIdx = d3.event.x > 0
+        ? Math.floor(d3.event.x / x.step())
+        : Math.ceil(d3.event.x / x.step());
 
       d3.select(this).attr("x", 0);
       if (dstIdx != 0) {
@@ -279,6 +285,7 @@ var pcpChart = function () {
       .attr("class", "dimension_stats")
       .each(function(dim) {
         if (dim.type === "numerical") {
+          // overall statistical summary (box plot)
           d3.select(this)
             .append("rect")
               .attr('x', -axisBarWidth / 2)
@@ -305,6 +312,44 @@ var pcpChart = function () {
               .attr("y2", y[dim.name](dim.stats.median))
               .attr("stroke", "#00008B")
               .attr("stroke-width", 2);
+          
+          // selected dispersion rectangle
+          d3.select(this)
+            .append("rect")
+              .attr('id', 'selectedDispersionRect')
+              .attr('x', -(axisBarWidth / 4) - 2)
+              .attr('width', 4)
+              .attr("y", y[dim.name](dim.stats.q3))
+              .attr("height", y[dim.name](dim.stats.q1) - y[dim.name](dim.stats.q3))
+              .attr('stroke', 'gray')
+              .attr('stroke-width', 1)
+              .attr('fill', selectedLineColor)
+              .attr('fill-opacity', .6)
+              .attr('display', 'None');
+          d3.select(this)
+            .append("line")
+              .attr('id', 'selectedTypicalLine')
+              .attr("x1", -(axisBarWidth / 4) - 2)
+              .attr("x2", -(axisBarWidth / 4) + 2)
+              .attr("y1", y[dim.name](dim.stats.median))
+              .attr("y2", y[dim.name](dim.stats.median))
+              .attr("stroke", "#00008B")
+              .attr("stroke-width", 2)
+              .attr('display', 'None');
+
+          // unselected dispersion rectangle
+          d3.select(this)
+            .append("rect")
+              .attr('id', 'unselectedDispersionRect')
+              .attr('x', (axisBarWidth / 4) - 2)
+              .attr('width', 4)
+              .attr("y", y[dim.name](dim.stats.q3))
+              .attr("height", y[dim.name](dim.stats.q1) - y[dim.name](dim.stats.q3))
+              .attr('stroke', 'gray')
+              .attr('stroke-width', 1)
+              .attr('fill', unselectedLineColor)
+              .attr('fill-opacity', .6)
+              .attr('display', 'None');
           
           d3.select(this).append("rect")
             .attr('class', 'correlationRect')
@@ -855,7 +900,6 @@ var pcpChart = function () {
     dimensions.forEach(dim => {
       if (dim.type === 'categorical') {
         if (dim.selectedCategories.size > 0) {
-          console.log(dim);
           actives.push({
             dimension: dim,
             extent: [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name)
@@ -903,6 +947,52 @@ var pcpChart = function () {
       });
   }
 
+  function updateSelectionGraphics() {
+    const pctSelected = ((selected.length / tuples.length) * 100).toFixed(1);
+    svg.select(".selection_indicator_label")
+      .text(`${selected.length} / ${tuples.length} (${pctSelected}%) Lines Selected`);
+    const selectionLineWidth = width * (selected.length / tuples.length);
+    console.log(`selectionLineWidth: ${selectionLineWidth}`);
+    svg.select(".selection_indicator_line")
+      .transition()
+      .duration(200)
+      .delay(100)
+      .attr("x2", selectionLineWidth);
+
+    
+    svg.selectAll('.dimension')
+      .each(function(dim) {
+        if (dim.type === 'numerical') {
+          if (selected.length !== tuples.length && selected.length > 0) {
+            d3.select(this).select('#selectedDispersionRect')
+              .transition()
+                .duration(200)
+              .attr('y', y[dim.name](dim.selected.stats.q3))
+              .attr('height', y[dim.name](dim.selected.stats.q1) - y[dim.name](dim.selected.stats.q3))
+              .attr('display', null);
+            d3.select(this).select('#selectedTypicalLine')
+              .transition()
+                .duration(200)
+              .attr("y1", y[dim.name](dim.selected.stats.median))
+              .attr("y2", y[dim.name](dim.selected.stats.median))
+              .attr('display', null);
+          } else {
+            d3.select(this).select('#selectedDispersionRect')
+              .attr('display', 'None');
+            d3.select(this).select('#selectedTypicalLine')
+            .attr('display', 'None');
+          }
+          
+          // d3.select(this).select('#selectedDispersionRect')
+          //   .transition()
+          //     .duration(200)
+          //   .attr('y', y[dim.name](dim.selected.stats.q3))
+          //   .attr('height', y[dim.name](dim.selected.stats.q1) - y[dim.name](dim.selected.stats.q3))
+          //   .attr('display', selected.length === tuples.length ? 'None' : null)
+        }
+      });
+  }
+
   function calculateDimensionCorrelations() {
     const data = (selected && selected.length > 0) ? selected : tuples;
     dimensions.forEach(dim1 => {
@@ -946,6 +1036,81 @@ var pcpChart = function () {
     return (mulSum - (sum1 * sum2 / n)) / dense;
   }
 
+  /*
+        let values = tuples.map(d => d[dim.name])
+          .filter(d => d !== null && !isNaN(d))
+          .sort(d3.ascending);
+        dim.bins = d3.bin().value((d) => d[dim.name])(tuples);
+        if (dim.type === "numerical") {
+          dim.stats = {
+            mean: d3.mean(values),
+            median: d3.median(values),
+            count: d3.count(values),
+            extent: d3.extent(values),
+            stdev: d3.deviation(values),
+            q1: d3.quantileSorted(values, 0.25),
+            q3: d3.quantileSorted(values, 0.75)
+          };
+          dim.selection = {
+            stats: {
+              mean: NaN,
+              median: NaN,
+              count: 0,
+              extent: NaN,
+              stdev: NaN,
+              q1: NaN,
+              q3: NaN
+            }
+          };
+        }
+  */
+
+  function getSummaryStatistics(values) {
+    let sortedValues = values.filter(d => d!== null && !isNaN(d)).sort(d3.ascending);
+    const stats = {
+      mean: d3.mean(sortedValues),
+      median: d3.median(sortedValues),
+      count: values.length,
+      nullCount: values.length - sortedValues.length,
+      extent: d3.extent(sortedValues),
+      stdev: d3.deviation(sortedValues),
+      q1: d3.quantileSorted(sortedValues, 0.25),
+      q3: d3.quantileSorted(sortedValues, 0.75)
+    };
+    return stats;
+  }
+
+  function calculateSelectionStatistics() {
+    dimensions.forEach(dim => {
+      if (dim.type === "numerical") {
+        let values = selected.map(d => d[dim.name]);
+          // .filter(d => d!== null && !isNaN(d))
+          // .sort(d3.ascending);
+        const selectedStats = getSummaryStatistics(values);
+        const selectedBins = d3.bin()
+          .value(d => d[dim.name])
+          .thresholds(dim.bins.length)
+          .domain(dim.stats.extent)
+          (selected);
+        dim.selected = {
+          bins: selectedBins,
+          stats: selectedStats
+        };
+
+        // dim.selected.stats = {
+        //   mean: d3.mean(values),
+        //   median: d3.median(values),
+        //   count: d3.count(values),
+        //   extent: d3.extent(values),
+        //   stdev: d3.deviation(values),
+        //   q1: d3.quantileSorted(values, 0.25),
+        //   q3: d3.quantileSorted(values, 0.75)
+        // };
+      }
+      // console.log(dim);
+    });
+  }
+
   function selectTuples(actives) {
     unselected = [];
 
@@ -962,16 +1127,16 @@ var pcpChart = function () {
               t[active.dimension.name] >= active.extent[1]
             );
           }
-        })
-          ? selected.push(t)
-          : unselected.push(t);
+        }) ? selected.push(t) : unselected.push(t);
       });
     } else {
       selected = tuples;
     }
-    // console.log(selected);
+
+    calculateSelectionStatistics();
     calculateDimensionCorrelations();
     updateCorrelationGraphics();
+    updateSelectionGraphics();
   }
 
   function computeTupleLines() {
@@ -1089,15 +1254,15 @@ var pcpChart = function () {
     drawBackgroundLines();
     drawForegroundLines();
 
-    const pctSelected = ((selected.length / tuples.length) * 100).toFixed(1);
-    svg.select(".selection_indicator_label")
-      .text(`${selected.length} / ${tuples.length} (${pctSelected}%) Lines Selected`);
-    const selectionLineWidth = width * (selected.length / tuples.length);
-    svg.select(".selection_indicator_line")
-      .transition()
-      .duration(200)
-      .delay(100)
-      .attr("x2", selectionLineWidth);
+    // const pctSelected = ((selected.length / tuples.length) * 100).toFixed(1);
+    // svg.select(".selection_indicator_label")
+    //   .text(`${selected.length} / ${tuples.length} (${pctSelected}%) Lines Selected`);
+    // const selectionLineWidth = width * (selected.length / tuples.length);
+    // svg.select(".selection_indicator_line")
+    //   .transition()
+    //   .duration(200)
+    //   .delay(100)
+    //   .attr("x2", selectionLineWidth);
   }
 
   function drawForegroundLines() {
