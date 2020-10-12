@@ -37,7 +37,7 @@
           <div class="header">Load Sample Data</div>
           <div class="menu">
             <a class="item loadCarsDataItem">'83 ASA Cars Dataset</a>
-            <a class="item loadAAPLDataItem">S&amp;P500 Stock Data (AAPL)</a>
+            <a class="item loadAAPLDataItem">APPL Stock Data</a>
             <a class="item loadTop500DataItem">Top500 SuperComputing List</a>
           </div>
         </div>
@@ -339,7 +339,6 @@
         d3.select('#placeholderImage').remove();
         const chartWidth = document.getElementById('pcpChart').clientWidth;
         const chartHeight = getChartHeight();
-        console.log(`chartHeight is ${chartHeight}`);
      
         document.getElementById('pcpChart').style.height = `${chartHeight}px`;
 
@@ -348,8 +347,6 @@
         // selectedLineOpacityRange.value = opacity;
         // unselectedLineOpacityRange.value = opacity;
 
-        console.log('showAxisTicks = ' + getShowAxisTicks());
-        console.log(getShowAxisLabels());
         chart = pcpChart()
           .width(chartWidth)
           .height(chartHeight)
@@ -467,17 +464,14 @@
     
     $('.loadCarsDataItem')
       .on('click', () => {
-        console.log('loading cars data');
         loadCarsData();
       });
     $('.loadTop500DataItem')
       .on('click', () => {
-        console.log('loading top500 data');
         loadTop500Data();
       });
     $('.loadAAPLDataItem')
       .on('click', () => {
-        console.log('loading stock data');
         loadAAPLData();
       });
 

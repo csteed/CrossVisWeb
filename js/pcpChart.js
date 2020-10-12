@@ -144,6 +144,7 @@ var pcpChart = function () {
           //   q3: d3.quantileSorted(values, 0.75)
           // };
           dim.selected = null;
+          dim.unselected = null;
           // dim.selected = {
           //   bins: null,
           //   stats: {
@@ -349,6 +350,16 @@ var pcpChart = function () {
               .attr('stroke-width', 1)
               .attr('fill', unselectedLineColor)
               .attr('fill-opacity', .6)
+              .attr('display', 'None');
+          d3.select(this)
+            .append("line")
+              .attr('id', 'unselectedTypicalLine')
+              .attr("x1", (axisBarWidth / 4) - 2)
+              .attr("x2", (axisBarWidth / 4) + 2)
+              .attr("y1", y[dim.name](dim.stats.median))
+              .attr("y2", y[dim.name](dim.stats.median))
+              .attr("stroke", "#00008B")
+              .attr("stroke-width", 2)
               .attr('display', 'None');
           
           d3.select(this).append("rect")
@@ -952,7 +963,6 @@ var pcpChart = function () {
     svg.select(".selection_indicator_label")
       .text(`${selected.length} / ${tuples.length} (${pctSelected}%) Lines Selected`);
     const selectionLineWidth = width * (selected.length / tuples.length);
-    console.log(`selectionLineWidth: ${selectionLineWidth}`);
     svg.select(".selection_indicator_line")
       .transition()
       .duration(200)
@@ -964,6 +974,7 @@ var pcpChart = function () {
       .each(function(dim) {
         if (dim.type === 'numerical') {
           if (selected.length !== tuples.length && selected.length > 0) {
+            // update selected stats graphics
             d3.select(this).select('#selectedDispersionRect')
               .transition()
                 .duration(200)
@@ -976,11 +987,28 @@ var pcpChart = function () {
               .attr("y1", y[dim.name](dim.selected.stats.median))
               .attr("y2", y[dim.name](dim.selected.stats.median))
               .attr('display', null);
+            // update unselected stats graphics
+            d3.select(this).select('#unselectedDispersionRect')
+              .transition()
+                .duration(200)
+              .attr('y', y[dim.name](dim.unselected.stats.q3))
+              .attr('height', y[dim.name](dim.unselected.stats.q1) - y[dim.name](dim.unselected.stats.q3))
+              .attr('display', null);
+            d3.select(this).select('#unselectedTypicalLine')
+              .transition()
+                .duration(200)
+              .attr("y1", y[dim.name](dim.unselected.stats.median))
+              .attr("y2", y[dim.name](dim.unselected.stats.median))
+              .attr('display', null);
           } else {
             d3.select(this).select('#selectedDispersionRect')
               .attr('display', 'None');
+            d3.select(this).select('#unselectedDispersionRect')
+              .attr('display', 'None');
             d3.select(this).select('#selectedTypicalLine')
-            .attr('display', 'None');
+              .attr('display', 'None');
+            d3.select(this).select('#unselectedTypicalLine')
+              .attr('display', 'None');
           }
           
           // d3.select(this).select('#selectedDispersionRect')
@@ -1083,10 +1111,11 @@ var pcpChart = function () {
   function calculateSelectionStatistics() {
     dimensions.forEach(dim => {
       if (dim.type === "numerical") {
-        let values = selected.map(d => d[dim.name]);
+        // calculate stats for selected values
+        let selectedValues = selected.map(d => d[dim.name]);
           // .filter(d => d!== null && !isNaN(d))
           // .sort(d3.ascending);
-        const selectedStats = getSummaryStatistics(values);
+        const selectedStats = getSummaryStatistics(selectedValues);
         const selectedBins = d3.bin()
           .value(d => d[dim.name])
           .thresholds(dim.bins.length)
@@ -1095,6 +1124,20 @@ var pcpChart = function () {
         dim.selected = {
           bins: selectedBins,
           stats: selectedStats
+        };
+        // calculate stats for unselected values
+        let unselectedValues = unselected.map(d => d[dim.name]);
+          // .filter(d => d!== null && !isNaN(d))
+          // .sort(d3.ascending);
+        const unselectedStats = getSummaryStatistics(unselectedValues);
+        const unselectedBins = d3.bin()
+          .value(d => d[dim.name])
+          .thresholds(dim.bins.length)
+          .domain(dim.stats.extent)
+          (unselected);
+        dim.unselected = {
+          bins: unselectedBins,
+          stats: unselectedStats
         };
 
         // dim.selected.stats = {
