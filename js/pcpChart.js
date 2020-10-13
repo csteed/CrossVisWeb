@@ -123,7 +123,7 @@ var pcpChart = function () {
       }
 
       if (dim.type === "categorical") {
-        dim.categories = Array.from(d3.group(tuples, (d) => d[dim.name]), ([key,value],i) => ({name: key, id: i, values: value}));
+        dim.categories = Array.from(d3.group(tuples, (d) => d[dim.name]), ([key,value],i) => ({name: key, id: i, values: value, numSelected: 0}));
         dim.categories.sort((a,b) => d3.descending(a.values.length, b.values.length));
         dim.selectedCategories = new Set();
       } else {
@@ -157,7 +157,7 @@ var pcpChart = function () {
           //     q3: NaN
           //   }
           // };
-        };
+        }
       }
     });
     x.domain(dimensionNames);
@@ -414,45 +414,95 @@ var pcpChart = function () {
             .selectAll("rect")
               .data(dim.categories)
               .join("rect")
-              .attr("class", "category_rect")
-              .attr("id", cat => `cat_${cat.id}`)
-              .attr("x", -axisBarWidth / 2)
-              .attr("y", cat => cat.y)
-              .attr("rx", 3)
-              .attr("ry", 3)
-              .attr("width", axisBarWidth)
-              .attr("height", cat => cat.height)
-              .on("click", function(cat) {
-                if (dim.selectedCategories.has(cat.id)) {
-                  dim.selectedCategories.delete(cat.id);
-                  d3.select(this)
-                    .attr("stroke", null)
-                    .attr("stroke-width", null)
-                    .attr("fill", null)
-                    .attr("fill-opacity", null);
-                } else {
-                  dim.selectedCategories.add(cat.id);
-                  d3.select(this)
-                    .raise()
-                    .attr("fill", highlightColor)
-                    .attr("fill-opacity", 0.3)
-                    .attr("stroke", '#000')
-                    .attr("stroke-width", 1.2);
-                }
-                brush();
-                if (dimensionSelectionChangeHandler) {
-                  dimensionSelectionChangeHandler(dim.name, [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name));
-                }
-              })
-              .on("mouseover", function (d) {
-                d3.select(this).style("cursor", "pointer");
-              })
-              .on("mouseout", function (d) {
-                d3.select(this).style("cursor", "default");
-              })
-              .append("title")
-                .text(c => `${c.name}: ${c.values.length} tuples`);
+                .attr("class", "category_rect")
+                .attr("id", cat => `cat_${cat.id}`)
+                .attr("x", -axisBarWidth / 2)
+                .attr("y", cat => cat.y)
+                .attr("rx", 3)
+                .attr("ry", 3)
+                .attr("width", axisBarWidth)
+                .attr("height", cat => cat.height)
+                .on("click", function(cat) {
+                  if (dim.selectedCategories.has(cat.id)) {
+                    dim.selectedCategories.delete(cat.id);
+                    d3.select(this)
+                      .attr("stroke", null)
+                      .attr("stroke-width", null)
+                      .attr("fill", null)
+                      .attr("fill-opacity", null);
+                  } else {
+                    dim.selectedCategories.add(cat.id);
+                    d3.select(this)
+                      .raise()
+                      .attr("fill", highlightColor)
+                      .attr("fill-opacity", 0.4)
+                      .attr("stroke", '#000')
+                      .attr("stroke-width", 1.2);
+                  }
+                  brush();
+                  if (dimensionSelectionChangeHandler) {
+                    dimensionSelectionChangeHandler(dim.name, [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name));
+                  }
+                })
+                .on("mouseover", function (d) {
+                  d3.select(this).style("cursor", "pointer");
+                })
+                .on("mouseout", function (d) {
+                  d3.select(this).style("cursor", "default");
+                })
+                .append("title")
+                  .text(c => `${c.name}: ${c.values.length} tuples`);
 
+          // selected category percentages graphics
+          d3.select(this).append("g")
+            .attr("fill", selectedLineColor)
+            .attr("stroke", "none")
+            // .attr("stroke-width", .7)
+            .attr("class", "selectedCategoryRect")
+            .attr("display", "none")
+            .selectAll("rect")
+              .data(dim.categories)
+              .join("rect")
+                // .attr("class", "selectedCategoryRect")
+                .attr("id", cat => `cat_${cat.id}`)
+                .attr("x", (-axisBarWidth / 2) + 4)
+                .attr("y", cat => cat.y)
+                .attr("rx", 3)
+                .attr("ry", 3)
+                .attr("width", axisBarWidth - 8)
+                .attr("height", cat => cat.height)
+                .attr("pointer-events", "none");
+                // .on("click", function(cat) {
+                //   if (dim.selectedCategories.has(cat.id)) {
+                //     dim.selectedCategories.delete(cat.id);
+                //     d3.select(this)
+                //       .attr("stroke", null)
+                //       .attr("stroke-width", null)
+                //       .attr("fill", null)
+                //       .attr("fill-opacity", null);
+                //   } else {
+                //     dim.selectedCategories.add(cat.id);
+                //     d3.select(this)
+                //       .raise()
+                //       .attr("fill", highlightColor)
+                //       .attr("fill-opacity", 0.3)
+                //       .attr("stroke", '#000')
+                //       .attr("stroke-width", 1.2);
+                //   }
+                //   brush();
+                //   if (dimensionSelectionChangeHandler) {
+                //     dimensionSelectionChangeHandler(dim.name, [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name));
+                //   }
+                // })
+                // .on("mouseover", function (d) {
+                //   d3.select(this).style("cursor", "pointer");
+                // })
+                // .on("mouseout", function (d) {
+                //   d3.select(this).style("cursor", "default");
+                // })
+                // .append("title")
+                //   .text(c => `${c.name}: ${c.values.length} tuples`);
+    
           // d3.select(this).append("g")
           //   .selectAll("text")
           //   .data(dim.categories.filter(c => c.height > 14))
@@ -968,7 +1018,6 @@ var pcpChart = function () {
       .duration(200)
       .delay(100)
       .attr("x2", selectionLineWidth);
-
     
     svg.selectAll('.dimension')
       .each(function(dim) {
@@ -987,6 +1036,7 @@ var pcpChart = function () {
               .attr("y1", y[dim.name](dim.selected.stats.median))
               .attr("y2", y[dim.name](dim.selected.stats.median))
               .attr('display', null);
+
             // update unselected stats graphics
             d3.select(this).select('#unselectedDispersionRect')
               .transition()
@@ -1017,6 +1067,35 @@ var pcpChart = function () {
           //   .attr('y', y[dim.name](dim.selected.stats.q3))
           //   .attr('height', y[dim.name](dim.selected.stats.q1) - y[dim.name](dim.selected.stats.q3))
           //   .attr('display', selected.length === tuples.length ? 'None' : null)
+        } else if (dim.type === 'categorical') {
+          if (selected.length !== tuples.length && selected.length > 0) {
+            d3.select(this).select('.selectedCategoryRect')
+              .attr("display", null);
+            d3.select(this).select('.selectedCategoryRect').selectAll('rect')
+              .each(function (cat) {
+                let pctSelected = cat.numSelected / cat.values.length;
+                let pctHeight = pctSelected * (cat.height - 2);
+                pctHeight = pctHeight > 0 ? pctHeight : 0;
+                let pctY = (cat.y + cat.height - 1) - pctHeight;
+                pctY = pctY < cat.y ? cat.y : pctY;
+                d3.select(this)
+                  .transition()
+                    .duration(200)
+                  .attr("y", pctY)
+                  .attr("height", pctHeight);
+              });
+              d3.select(this).selectAll('.category_rect')
+                .each(function (cat) {
+                  d3.select(this).select('title').text(`${cat.name}: ${cat.numSelected} of ${cat.values.length} (${(cat.numSelected / cat.values.length * 100).toFixed(1)}%) tuples selected`);
+                });
+          } else {
+            d3.select(this).select('.selectedCategoryRect')
+              .attr("display", "none");
+            d3.select(this).selectAll('.category_rect')
+              .each(function (cat) {
+                d3.select(this).select('title').text(`${cat.name}: ${cat.values.length} tuples`);
+              });
+          }
         }
       });
   }
@@ -1064,35 +1143,6 @@ var pcpChart = function () {
     return (mulSum - (sum1 * sum2 / n)) / dense;
   }
 
-  /*
-        let values = tuples.map(d => d[dim.name])
-          .filter(d => d !== null && !isNaN(d))
-          .sort(d3.ascending);
-        dim.bins = d3.bin().value((d) => d[dim.name])(tuples);
-        if (dim.type === "numerical") {
-          dim.stats = {
-            mean: d3.mean(values),
-            median: d3.median(values),
-            count: d3.count(values),
-            extent: d3.extent(values),
-            stdev: d3.deviation(values),
-            q1: d3.quantileSorted(values, 0.25),
-            q3: d3.quantileSorted(values, 0.75)
-          };
-          dim.selection = {
-            stats: {
-              mean: NaN,
-              median: NaN,
-              count: 0,
-              extent: NaN,
-              stdev: NaN,
-              q1: NaN,
-              q3: NaN
-            }
-          };
-        }
-  */
-
   function getSummaryStatistics(values) {
     let sortedValues = values.filter(d => d!== null && !isNaN(d)).sort(d3.ascending);
     const stats = {
@@ -1109,6 +1159,8 @@ var pcpChart = function () {
   }
 
   function calculateSelectionStatistics() {
+    // TODO: Optimize when all tuples are selected and none are selected
+    // TODO: Complexity optimization as well
     dimensions.forEach(dim => {
       if (dim.type === "numerical") {
         // calculate stats for selected values
@@ -1139,18 +1191,21 @@ var pcpChart = function () {
           bins: unselectedBins,
           stats: unselectedStats
         };
-
-        // dim.selected.stats = {
-        //   mean: d3.mean(values),
-        //   median: d3.median(values),
-        //   count: d3.count(values),
-        //   extent: d3.extent(values),
-        //   stdev: d3.deviation(values),
-        //   q1: d3.quantileSorted(values, 0.25),
-        //   q3: d3.quantileSorted(values, 0.75)
-        // };
+      } else if (dim.type === 'categorical') {
+        if (selected.length === tuples.length || selected.length === 0) {
+          dim.categories.map(cat => cat.numSelected = selected.length === 0 ? 0 : cat.values.length);
+        } else {
+          let groupedValues = d3.group(selected, d => d[dim.name]);
+          dim.categories.map(cat => {
+            if (groupedValues.has(cat.name)) {
+              cat.numSelected = groupedValues.get(cat.name).length;
+            } else {
+              cat.numSelected = 0;
+            }
+          });
+        }
+        // dim.categories.map(cat => console.log(`${cat.name}: numSelected is ${cat.numSelected}`));
       }
-      // console.log(dim);
     });
   }
 

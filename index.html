@@ -363,12 +363,10 @@
     }
 
     document.getElementById('selectedLineOpacityRange').addEventListener('change', () => {
-      console.log(`selected line opacity range is now ${getSelectedLineOpacity()}`);
       chart ? chart.selectedLineOpacity(getSelectedLineOpacity()) : null;
     });
       
     document.getElementById('unselectedLineOpacityRange').addEventListener('change', () => {
-      console.log(`unselected line opacity range is now ${getUnselectedLineOpacity()}`);
       chart ? chart.unselectedLineOpacity(getUnselectedLineOpacity()) : null;
     });
 
