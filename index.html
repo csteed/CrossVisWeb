@@ -149,12 +149,13 @@
     </div>
   </div>
   
-  <script
+  <!-- <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous">
-  </script>
-  <script src="./js/Semantic-UI/semantic.min.js"></script>
+  </script> -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/Semantic-UI/semantic.min.js"></script>
   <script src="js/d3.min.js"></script>
   <script src="js/d3-array.min.js"></script>
   <script src="js/pcpChart.js"></script>
@@ -192,11 +193,11 @@
     };
 
     const getShowSelectedLines = () => {
-      return $('#showSelectedLinesCheck').checkbox('is checked');
+      return $('.showSelectedLines').checkbox('is checked');
     };
 
     const getShowUnselectedLines = () => {
-      return $('#showUnselectedLinesCheck').checkbox('is checked');
+      return $('.showUnselectedLines').checkbox('is checked');
     };
 
     const loadFile = (file) => {
@@ -342,18 +343,13 @@
      
         document.getElementById('pcpChart').style.height = `${chartHeight}px`;
 
-        // let opacity = chartData.tuples.length > 2000 ? 0.1 : chartData.tuples.length < 500 ? 0.7 : 1 - chartData.tuples.length / 2500;
-        // console.log(opacity);
-        // selectedLineOpacityRange.value = opacity;
-        // unselectedLineOpacityRange.value = opacity;
-
         chart = pcpChart()
           .width(chartWidth)
           .height(chartHeight)
           .showUnselectedLines(getShowUnselectedLines())
           .showSelectedLines(getShowSelectedLines())
           .unselectedLineOpacity(getUnselectedLineOpacity())
-          .selectedLineOpacity(getUnselectedLineOpacity())
+          .selectedLineOpacity(getSelectedLineOpacity())
           .showAxisTicks(getShowAxisTicks())
           .showAxisTickLabels(getShowAxisLabels())
           .setShowHistograms(getShowHistograms())
@@ -376,25 +372,35 @@
     });
 
     $('.ui.checkbox.showSelectedLines').checkbox({
-      onChecked: function() {
-        console.log('checked');
-        chart ? chart.showSelectedLines(true) : null;
-      },
-      onUnchecked: function() {
-        console.log('unchecked');
-        chart ? chart.showSelectedLines(false) : null;
+      onChange: function() {
+        if (chart) {
+          chart.showSelectedLines(getShowSelectedLines());
+        }
       }
+      // onChecked: function() {
+      //   console.log('checked');
+      //   chart ? chart.showSelectedLines(true) : null;
+      // },
+      // onUnchecked: function() {
+      //   console.log('unchecked');
+      //   chart ? chart.showSelectedLines(false) : null;
+      // }
     });
 
     $('.ui.checkbox.showUnselectedLines').checkbox({
-      onChecked: function() {
-        console.log('checked');
-        chart ? chart.showUnselectedLines(true) : null;
-      },
-      onUnchecked: function() {
-        console.log('unchecked');
-        chart ? chart.showUnselectedLines(false) : null;
+      onChange: function() {
+        if (chart) {
+          chart.showUnselectedLines(getShowUnselectedLines());
+        }
       }
+      // onChecked: function() {
+      //   console.log('checked');
+      //   chart ? chart.showUnselectedLines(true) : null;
+      // },
+      // onUnchecked: function() {
+      //   console.log('unchecked');
+      //   chart ? chart.showUnselectedLines(false) : null;
+      // }
     });
 
     $('.ui.checkbox.showAxisTicks').checkbox({
@@ -473,22 +479,12 @@
         loadAAPLData();
       });
 
-    // $("input:text").click(function() {
-    //   $(this).parent().find('input:file').click();
-    // });
-
-    // $('input:file', '.ui.action.input')
-    //   .on('change', function(e) {
-    //     if (e.target.files) {
-    //       loadFile(e.target.files[0]);
-    //       $('input:text', $(e.target).parent()).val(e.target.files[0].name);
-    //     } else {
-    //       $('input:text', $(e.target).parent()).val('');
-    //     }
-    //   });
-
     $('.redrawItem')
       .on('click', () => createChart());
+
+    window.addEventListener("resize", () => {
+      createChart();
+    });
   </script>
 </body>
 

@@ -134,29 +134,8 @@ var pcpChart = function () {
 
         if (dim.type === "numerical") {
           dim.stats = getSummaryStatistics(values)
-          // dim.stats = {
-          //   mean: d3.mean(values),
-          //   median: d3.median(values),
-          //   count: d3.count(values),
-          //   extent: d3.extent(values),
-          //   stdev: d3.deviation(values),
-          //   q1: d3.quantileSorted(values, 0.25),
-          //   q3: d3.quantileSorted(values, 0.75)
-          // };
           dim.selected = null;
           dim.unselected = null;
-          // dim.selected = {
-          //   bins: null,
-          //   stats: {
-          //     mean: NaN,
-          //     median: NaN,
-          //     count: 0,
-          //     extent: NaN,
-          //     stdev: NaN,
-          //     q1: NaN,
-          //     q3: NaN
-          //   }
-          // };
         }
       }
     });
@@ -472,92 +451,8 @@ var pcpChart = function () {
                 .attr("width", axisBarWidth - 8)
                 .attr("height", cat => cat.height)
                 .attr("pointer-events", "none");
-                // .on("click", function(cat) {
-                //   if (dim.selectedCategories.has(cat.id)) {
-                //     dim.selectedCategories.delete(cat.id);
-                //     d3.select(this)
-                //       .attr("stroke", null)
-                //       .attr("stroke-width", null)
-                //       .attr("fill", null)
-                //       .attr("fill-opacity", null);
-                //   } else {
-                //     dim.selectedCategories.add(cat.id);
-                //     d3.select(this)
-                //       .raise()
-                //       .attr("fill", highlightColor)
-                //       .attr("fill-opacity", 0.3)
-                //       .attr("stroke", '#000')
-                //       .attr("stroke-width", 1.2);
-                //   }
-                //   brush();
-                //   if (dimensionSelectionChangeHandler) {
-                //     dimensionSelectionChangeHandler(dim.name, [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name));
-                //   }
-                // })
-                // .on("mouseover", function (d) {
-                //   d3.select(this).style("cursor", "pointer");
-                // })
-                // .on("mouseout", function (d) {
-                //   d3.select(this).style("cursor", "default");
-                // })
-                // .append("title")
-                //   .text(c => `${c.name}: ${c.values.length} tuples`);
-    
-          // d3.select(this).append("g")
-          //   .selectAll("text")
-          //   .data(dim.categories.filter(c => c.height > 14))
-          //   // .data(dim.categories)
-          //   .join("text")
-          //     .attr("class", "categoryRectLabel")
-          //     // .attr("fill", "#000")
-          //     .attr('fill', '#000')
-          //     .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff')
-          //     .attr("y", c => c.center)
-          //     .attr("text-anchor", "middle")
-          //     .attr("font-size", 10)
-          //     .attr("pointer-events", "none")
-          //     .text(c => c.name);
         }
       });
-    //   .append("text")
-    //     .attr("class", "dimensionLabel")
-    //     .attr("id", d => `${d.name}`)
-    //     .style("text-anchor", "middle")
-    //     .attr("fill", "#646464")
-    //     .style("font-weight", "bold")
-    //     .style("font-family", "sans-serif")
-    //     .style("font-size", 11)
-    //     .attr("y", -9)
-    //     .text((d) => d.name)
-    //     .call(drag)
-    //     .on('click', function(d) {
-    //       if (d3.event.defaultPrevented) return;
-
-    //       if (selectedDimension === d) {
-    //         d3.select(this)
-    //           .style("fill", '#646464');
-    //           // .style('font-size', 10);
-    //         selectedDimension = null;
-    //       } else {
-    //         if (selectedDimension != null) {
-    //           d3.select(`#${selectedDimension.name}`)
-    //             .style('fill', '#646464');
-    //             // .style('font-size', 10);
-    //         }
-    //         selectedDimension = d;
-    //         d3.select(this)
-    //           .style('fill', '#000')
-    //           // .style('font-size', 12)
-    //           .raise();
-    //       }
-    //       updateCorrelationGraphics();
-    //     })
-    //     .on("mouseover", function (d) {
-    //       d3.select(this).style("cursor", "pointer");
-    //     })
-    //     .on("mouseout", function (d) {
-    //       d3.select(this).style("cursor", "default");
-    //     });
 
     // Add dimension label and close button
     g.append("g")
@@ -679,13 +574,9 @@ var pcpChart = function () {
               .attr("display", showAxisTicks ? null : "none"))
             .call(g => g.select(".domain").remove())
             .call(g => g.selectAll(".axis text")
-              // .attr("dx", -axisBarWidth)
               .attr("fill", "#646464")
               .attr("display", showAxisTickLabels ? null : "none")
               .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff'));
-          // d3.select(this).selectAll('.axis text')
-          //   .attr('fill', '#646464')
-          //   .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff');
         } else if (dim.type === 'categorical') {
           d3.select(this).append("g")
             .selectAll("text")
@@ -693,7 +584,6 @@ var pcpChart = function () {
             // .data(dim.categories)
             .join("text")
               .attr("class", "categoryRectLabel")
-              // .attr("fill", "#000")
               .attr('fill', '#000')
               .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff')
               .attr("y", c => c.center)
@@ -704,191 +594,7 @@ var pcpChart = function () {
               .text(c => c.name);
         }
       });
-    /*
-    g.append("g")
-      .attr("class", "axis")
-      .each(function (dim) {
-        if (dim.type === "numerical" || dim.type === "temporal") {
-          if (dim.type === "numerical") {
-            d3.select(this)
-              .append("rect")
-                .attr('x', -axisBarWidth / 2)
-                .attr('width', axisBarWidth)
-                .attr('height', pcpHeight)
-                .attr('rx', 3)
-                .attr('ry', 3)
-                .attr('stroke', 'gray')
-                .attr('fill', 'whitesmoke');
-            d3.select(this)
-              .append("rect")
-                .attr("x", -axisBarWidth / 2)
-                .attr("width", axisBarWidth)
-                .attr("y", y[dim.name](dim.stats.q3))
-                .attr("height", y[dim.name](dim.stats.q1) - y[dim.name](dim.stats.q3))
-                .attr("stroke", "gray")
-                .attr("stroke-width", 1)
-                .attr('fill', 'lightgray');
-            d3.select(this)
-              .append("line")
-                .attr("x1", -axisBarWidth / 2)
-                .attr("x2", axisBarWidth / 2)
-                .attr("y1", y[dim.name](dim.stats.median))
-                .attr("y2", y[dim.name](dim.stats.median))
-                .attr("stroke", "#00008B")
-                .attr("stroke-width", 2);
-          }
-
-          d3.select(this).append("rect")
-            .attr('class', 'correlationRect')
-            .attr('x', -(correlationRectSize / 2.))
-            .attr('y', y[dim.name].range()[0] + correlationRectPadding)
-            .attr('width', correlationRectSize)
-            .attr('height', correlationRectSize)
-            .attr('rx', 2)
-            .attr('ry', 2)
-            .attr('fill', 'ghostwhite')
-            .attr('stroke', 'gray');
-
-          d3.select(this).append('text')
-            .attr('class', 'correlationLabel')
-            .style('text-anchor', 'middle')
-            .style('font-size', 10)
-            .style('font-family', 'sans-serif')
-            .attr('y', y[dim.name].range()[0] + correlationRectPadding + correlationRectSize + correlationLabelHeight)
-            .text("r");
-
-          d3.select(this)
-            .call(axis.scale(y[dim.name]).ticks(pcpHeight / 20))
-          
-          d3.select(this).selectAll('.axis text')
-            .attr('fill', '#646464')
-            .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff');
-            
-
-        } else {
-          let grpHeight = y[dim.name].bandwidth();
-          dim.categories.map((cat,i) => {
-            i === 0 ? cat.y = 0 : cat.y = dim.categories[i-1].y + dim.categories[i-1].height;
-            cat.height = (cat.values.length / tuples.length) * pcpHeight;
-            cat.center = cat.y + (cat.height / 2);
-          });
-
-          // d3.select(this).append("line")
-          //   .attr("x1", 0)
-          //   .attr("y1", -4)
-          //   .attr("x2", 0)
-          //   .attr("y2", pcpHeight + 4)
-          //   .attr("stroke", "#AAA")
-          //   .attr("stroke-width", 3)
-          //   .attr("stroke-linecap", "round");
-
-          d3.select(this).append("g")
-            .attr("fill", "#DDD")
-            .attr("stroke", "gray")
-            .attr("stroke-width", .7)
-            .selectAll("rect")
-              .data(dim.categories)
-              .join("rect")
-              .attr("class", "category_rect")
-              .attr("id", cat => `cat_${cat.id}`)
-              .attr("x", -axisBarWidth / 2)
-              .attr("y", cat => cat.y)
-              .attr("rx", 3)
-              .attr("ry", 3)
-              .attr("width", axisBarWidth)
-              .attr("height", cat => cat.height)
-              .on("click", function(cat) {
-                console.log(`${cat.name} of ${dim.name} clicked`);
-                console.log(dim.selectedCategories);
-                if (dim.selectedCategories.has(cat.id)) {
-                  dim.selectedCategories.delete(cat.id);
-                  // console.log(dim.selectedCategories);
-                  d3.select(this)
-                    .attr("stroke", null)
-                    .attr("stroke-width", null)
-                    .attr("fill", null)
-                    .attr("fill-opacity", null);
-                } else {
-                  dim.selectedCategories.add(cat.id);
-                  // console.log(dim.selectedCategories);
-                  d3.select(this)
-                    .raise()
-                    .attr("fill", highlightColor)
-                    .attr("fill-opacity", 0.3)
-                    .attr("stroke", '#000')
-                    .attr("stroke-width", 1.2);
-                }
-                console.log(dim.selectedCategories);
-                brush();
-                if (dimensionSelectionChangeHandler) {
-                  dimensionSelectionChangeHandler(dim.name, [...dim.selectedCategories].map(d => dim.categories.find(cat => cat.id === d).name));
-                }
-              })
-              .on("mouseover", function (d) {
-                d3.select(this).style("cursor", "pointer");
-              })
-              .on("mouseout", function (d) {
-                d3.select(this).style("cursor", "default");
-              })
-              .append("title")
-                .text(c => `${c.name}: ${c.values.length} tuples`);
-
-          d3.select(this).append("g")
-            .selectAll("text")
-            .data(dim.categories.filter(c => c.height > 14))
-            // .data(dim.categories)
-            .join("text")
-              .attr("class", "categoryRectLabel")
-              // .attr("fill", "#000")
-              .attr('fill', '#000')
-              .style('text-shadow', '0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff')
-              .attr("y", c => c.center)
-              .attr("text-anchor", "middle")
-              .attr("font-size", 10)
-              .attr("pointer-events", "none")
-              .text(c => c.name);
-        }
-      })
-      .append("text")
-      .attr("class", "dimensionLabel")
-      .attr("id", d => `${d.name}`)
-      .style("text-anchor", "middle")
-      .attr("fill", "#646464")
-      .style("font-weight", "bold")
-      .style("font-family", "sans-serif")
-      .style("font-size", 11)
-      .attr("y", -9)
-      .text((d) => d.name)
-      .call(drag)
-      .on('click', function(d) {
-        if (d3.event.defaultPrevented) return;
-
-        if (selectedDimension === d) {
-          d3.select(this)
-            .style("fill", '#646464');
-            // .style('font-size', 10);
-          selectedDimension = null;
-        } else {
-          if (selectedDimension != null) {
-            d3.select(`#${selectedDimension.name}`)
-              .style('fill', '#646464');
-              // .style('font-size', 10);
-          }
-          selectedDimension = d;
-          d3.select(this)
-            .style('fill', '#000')
-            // .style('font-size', 12)
-            .raise();
-        }
-        updateCorrelationGraphics();
-      })
-      .on("mouseover", function (d) {
-        d3.select(this).style("cursor", "pointer");
-      })
-      .on("mouseout", function (d) {
-        d3.select(this).style("cursor", "default");
-      });
-*/
+  
     // Add and store a brush for each axis.
     g.append("g")
       .attr("class", "brush")
@@ -1290,77 +996,10 @@ var pcpChart = function () {
       }
     });
   }
-  // function path(tuple, ctx) {
-  //   let yCoordinates = tupleLines.get(tuple);
-  //   ctx.beginPath();
-  //   dimensions.map(function (dim, i) {
-  //     if (dim.type === 'categorical') {
-  //       if (i === 0) {
-  //         ctx.moveTo(x(dim.name) - axisBarWidth / 2, yCoordinates[i]);
-  //         ctx.moveTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
-  //       } else {
-  //         ctx.lineTo(x(dim.name) - axisBarWidth / 2, yCoordinates[i]);
-  //         ctx.lineTo(x(dim.name) + axisBarWidth / 2, yCoordinates[i]);
-  //       }
-  //     } else {
-  //       if (i === 0) {
-  //         ctx.moveTo(x(dim.name), yCoordinates[i]);
-  //       } else {
-  //         ctx.lineTo(x(dim.name), yCoordinates[i]);
-  //       }
-  //     }
-  //   });
-
-    /*
-    dimensions.map(function (dim, i) {
-      if (i == 0) {
-        if (dim.type === "categorical") {
-          const cat = dim.categories.find(cat => cat.name === d[dim.name]);
-          const jitter = Math.random() * (cat.height / 4) - (cat.height / 8);
-          const yPos = cat.center + jitter;
-          // const jitter = Math.random() * (y[dim.name].bandwidth() / 4) - y[dim.name].bandwidth() / 8;
-          // const yPos = dim.categories.find(cat => cat.name === d[dim.name]).center;
-          ctx.moveTo(x(dim.name) - axisBarWidth / 2, yPos);
-          ctx.moveTo(x(dim.name) + axisBarWidth / 2, yPos);
-          // ctx.moveTo(x(dim.name) - axisBarWidth / 2, dim.groups.get(d[dim.name]).center + jitter);
-          // ctx.moveTo(x(dim.name) + axisBarWidth / 2, dim.groups.get(d[dim.name]).center + jitter);
-        } else {
-          ctx.moveTo(x(dim.name), y[dim.name](d[dim.name]));
-        }
-      } else {
-        if (dim.type === "categorical") {
-          const cat = dim.categories.find(cat => cat.name === d[dim.name]);
-          const jitter = Math.random() * (cat.height / 4) - (cat.height / 8);
-          const yPos = cat.center + jitter;
-          // const jitter = Math.random() * (y[dim.name].bandwidth() / 4) - y[dim.name].bandwidth() / 8;
-          // const yPos = dim.categories.find(cat => cat.name === d[dim.name]).center;
-          ctx.lineTo(x(dim.name) - axisBarWidth / 2, yPos);
-          ctx.lineTo(x(dim.name) + axisBarWidth / 2, yPos);
-          // ctx.lineTo(x(dim.name) - axisBarWidth / 2, dim.groups.get(d[dim.name]).center + jitter);
-          // ctx.lineTo(x(dim.name) + axisBarWidth / 2, dim.groups.get(d[dim.name]).center + jitter);
-          // ctx.lineTo(x(dim.name), dim.groups.get(d[dim.name]).center);
-        } else {
-          ctx.lineTo(x(dim.name), y[dim.name](d[dim.name]));
-        }
-      }
-    });
-    */
-  //   ctx.stroke();
-  // }
 
   function drawLines() {
     drawBackgroundLines();
     drawForegroundLines();
-
-    // const pctSelected = ((selected.length / tuples.length) * 100).toFixed(1);
-    // svg.select(".selection_indicator_label")
-    //   .text(`${selected.length} / ${tuples.length} (${pctSelected}%) Lines Selected`);
-    // const selectionLineWidth = width * (selected.length / tuples.length);
-    // svg.select(".selection_indicator_line")
-    //   .transition()
-    //   .duration(200)
-    //   .delay(100)
-    //   .attr("x2", selectionLineWidth);
   }
 
   function drawForegroundLines() {
@@ -1553,14 +1192,6 @@ var pcpChart = function () {
     margin = value;
     width = oldChartWidth - margin.left - margin.right;
     height = oldChartHeight - margin.top - margin.bottom;
-    return chart;
-  };
-
-  chart.orientation = function (value) {
-    if (!arguments.length) {
-      return orientation;
-    }
-    orientation = value;
     return chart;
   };
 
