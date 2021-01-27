@@ -271,8 +271,8 @@ var pcpChart = function () {
               .attr('x', -axisBarWidth / 2)
               .attr('width', axisBarWidth)
               .attr('height', pcpHeight)
-              .attr('rx', 3)
-              .attr('ry', 3)
+              // .attr('rx', 3)
+              // .attr('ry', 3)
               .attr('stroke', 'gray')
               .attr('fill', 'whitesmoke');
           d3.select(this)
