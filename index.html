@@ -52,11 +52,11 @@
     <a class="ui item helpItem">
       Help
     </a>
-    <div class="right menu">
+    <!-- <div class="right menu">
       <div class="ui item">
         <img class="ui image" src="./img/vista-logo.png" height="34px">
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div style="padding: 90px 15px 0px;">
@@ -72,7 +72,7 @@
 
   <div class="ui divider"></div>
     <center>
-      <h4>&copy; <a href="https://www.ornl.gov">Oak Ridge National Laboratory</a>
+      <h4>&copy; <a href="https://csteed.com">Chad A.&nbsp;Steed</a>
           <script type="text/javascript">
               document.write(new Date().getFullYear());
           </script>
@@ -149,11 +149,6 @@
     </div>
   </div>
   
-  <!-- <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous">
-  </script> -->
   <script src="js/jquery/jquery.min.js"></script>
   <script src="js/Semantic-UI/semantic.min.js"></script>
   <script src="js/d3.min.js"></script>
@@ -335,12 +330,18 @@
         .catch(error => { console.log(error); });
     };
 
+    // function handlePCPAxisSelection(activeSelections) {
+    //   console.log(activeSelections);
+    // }
+
     function createChart() {
       if (chartData) {
         d3.select('#placeholderImage').remove();
         const chartWidth = document.getElementById('pcpChart').clientWidth;
         const chartHeight = getChartHeight();
      
+        d3.select('#pcpChart').selectAll("*").remove();
+
         document.getElementById('pcpChart').style.height = `${chartHeight}px`;
 
         chart = pcpChart()
@@ -353,8 +354,18 @@
           .showAxisTicks(getShowAxisTicks())
           .showAxisTickLabels(getShowAxisLabels())
           .setShowHistograms(getShowHistograms())
+          // .selectionChangeHandler(handlePCPAxisSelection)
           .margin(chartMargin);
         d3.select('#pcpChart').call(chart, chartData);
+      }
+    }
+
+    function resizeChart() {
+      if (chart) {
+        const chartWidth = document.getElementById('pcpChart').clientWidth;
+        const chartHeight = getChartHeight();
+        document.getElementById('pcpChart').style.height = `${chartHeight}px`;
+        chart.size([chartWidth, chartHeight]);
       }
     }
 
@@ -368,7 +379,8 @@
 
     document.getElementById('chartHeightRange').addEventListener('change', () => {
       // TODO: Replace with call to chart to recreate chart elements without recreating the whole chart and losing selections
-      chart ? createChart() : null;
+      // chart ? createChart() : null;
+      resizeChart();
     });
 
     $('.ui.checkbox.showSelectedLines').checkbox({
@@ -483,7 +495,13 @@
       .on('click', () => createChart());
 
     window.addEventListener("resize", () => {
-      createChart();
+      resizeChart();
+      // if (chart) {
+      //   const chartWidth = document.getElementById('pcpChart').clientWidth;
+      //   const chartHeight = getChartHeight();
+      //   chart.size([chartWidth, chartHeight]);
+      // }
+      // createChart();
     });
   </script>
 </body>
